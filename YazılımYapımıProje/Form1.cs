@@ -72,5 +72,30 @@ namespace YazılımYapımıProje
             }
             baglanti.Close();
         }
+
+        private void lblSifeyiUnuttum_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblKullaniciAdiGiris_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSifreGiris_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGirisKullaniciAdi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGirisSifre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
