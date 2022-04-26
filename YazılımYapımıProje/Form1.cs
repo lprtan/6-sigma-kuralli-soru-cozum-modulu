@@ -35,10 +35,11 @@ namespace YazılımYapımıProje
         private void btnGiris_Click(object sender, EventArgs e)
         {
 
-            SqlConnection baglanti = new SqlConnection(@"Data Source=DELL-BILGISAYAR;Initial Catalog=Proje;Integrated Security=True");
-            SqlCommand giris = new SqlCommand("SELECT * FROM dbo.Users where UserName='" + txtGirisKullaniciAdi.Text + "' AND Password='" + txtGirisSifre.Text + "'" );
-            baglanti.Open();
-            giris.Connection = baglanti;
+            DataBase db = new DataBase();
+
+            SqlCommand giris = new SqlCommand("SELECT * FROM Users where UserName='" + txtGirisKullaniciAdi.Text + "' AND Password='" + txtGirisSifre.Text + "'" );
+            db.baglanti.Open();
+            giris.Connection = db.baglanti;
             SqlDataReader kontrol = giris.ExecuteReader();
 
             if (kontrol.Read())
@@ -53,12 +54,12 @@ namespace YazılımYapımıProje
                     case 2:
                         FrmAdmin AdminEkran = new FrmAdmin();
                         AdminEkran.Show();
-                        this.Dispose();
+                        this.Hide();
                         break;
                     case 3:
                         FrmOgretmen OgretmenEkran = new FrmOgretmen();
                         OgretmenEkran.Show();
-                        this.Dispose();
+                        this.Hide();
                         break;
 
                     default:
@@ -70,7 +71,7 @@ namespace YazılımYapımıProje
                 MessageBox.Show("Kullanıcı adı veya şifre hatalı tekrar giriniz");
 
             }
-            baglanti.Close();
+            db.baglanti.Close();
         }
     }
 }

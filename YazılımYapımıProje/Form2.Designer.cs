@@ -170,7 +170,7 @@
             // btnAnaSayfa
             // 
             this.btnAnaSayfa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAnaSayfa.Location = new System.Drawing.Point(641, 51);
+            this.btnAnaSayfa.Location = new System.Drawing.Point(535, 61);
             this.btnAnaSayfa.Name = "btnAnaSayfa";
             this.btnAnaSayfa.Size = new System.Drawing.Size(105, 44);
             this.btnAnaSayfa.TabIndex = 4;
