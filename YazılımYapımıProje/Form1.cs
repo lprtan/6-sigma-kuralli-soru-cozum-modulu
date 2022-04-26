@@ -11,14 +11,14 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class Form1 : Form
+    public partial class FrmGiris : Form
     {
-        public int Authorize { get; set; }
-        public Form1()
+
+        public FrmGiris()
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DELL-BILGISAYAR;Initial Catalog=Proje;Integrated Security=True;MultipleActiveResultSets=True");
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -27,45 +27,43 @@ namespace YazılımYapımıProje
 
         private void btnKatıtOl_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Show();  
-            this.Hide();   
+            FrmKayitOl KayitOl = new FrmKayitOl();
+            KayitOl.Show();  
+            this.Hide();
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
+
+            SqlConnection baglanti = new SqlConnection(@"Data Source=DELL-BILGISAYAR;Initial Catalog=Proje;Integrated Security=True");
+            SqlCommand giris = new SqlCommand("SELECT * FROM dbo.Users where UserName='" + txtGirisKullaniciAdi.Text + "' AND Password='" + txtGirisSifre.Text + "'" );
             baglanti.Open();
-            SqlCommand giris = new SqlCommand("select UserName=@Ad , Password=@Sifre  from Users where  UserTypeID=@UserID ", baglanti );
-            giris.Parameters.AddWithValue("@Ad", textBox1.Text);
-            giris.Parameters.AddWithValue("@Sifre", textBox2.Text);
-            giris.Parameters.AddWithValue("@UserID", Authorize);
+            giris.Connection = baglanti;
             SqlDataReader kontrol = giris.ExecuteReader();
 
-            if (kontrol.Read()==true)
-            {
-              //  SqlCommand authorize = new SqlCommand("select * from Users where UserTypeID=@UserID",baglanti);
-                
-             //   SqlDataReader rd = authorize.ExecuteReader();
-                
-                    if (Authorize == 0)
-                    {
-                        Form3 form3 = new Form3();
-                        form3.Show();
+            if (kontrol.Read())
+            {              
+                switch (kontrol["UserTypeID"])
+                {
+                    case 1:
+                        FrmOgrenci OgrenciEkran = new FrmOgrenci();
+                        OgrenciEkran.Show();
                         this.Hide();
-                    }
-                    else if (Authorize == 1)
-                    {
-                        Form4 form4 = new Form4();
-                        form4.Show();
-                        this.Hide();
-                    }
-                    else if (Authorize == 2)
-                    {
-                        Form5 form5 = new Form5();
-                        form5.Show();
-                        this.Hide();
-                    }
- 
+                        break;
+                    case 2:
+                        FrmAdmin AdminEkran = new FrmAdmin();
+                        AdminEkran.Show();
+                        this.Dispose();
+                        break;
+                    case 3:
+                        FrmOgretmen OgretmenEkran = new FrmOgretmen();
+                        OgretmenEkran.Show();
+                        this.Dispose();
+                        break;
+
+                    default:
+                        break;
+                }
             }
             else
             {

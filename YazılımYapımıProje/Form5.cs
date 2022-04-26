@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YazılımYapımıProje
 {
-    public partial class Form5 : Form
+    public partial class FrmOgretmen : Form
     {
-        public Form5()
+        public FrmOgretmen()
         {
             InitializeComponent();
         }

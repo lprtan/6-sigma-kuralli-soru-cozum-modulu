@@ -1,6 +1,6 @@
 ﻿namespace YazılımYapımıProje
 {
-    partial class Form3
+    partial class FrmOgrenci
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmOgrenci
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form3";
+            this.ClientSize = new System.Drawing.Size(800, 466);
+            this.Name = "FrmOgrenci";
+            this.Text = "ÖĞRENCİ EKRANI";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -1,6 +1,6 @@
 ﻿namespace YazılımYapımıProje
 {
-    partial class Form2
+    partial class FrmKayitOl
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.cbxKullaniciType = new System.Windows.Forms.ComboBox();
             this.btnKullaniciKayit = new System.Windows.Forms.Button();
+            this.btnAnaSayfa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblKullaniciAdiKayit
@@ -166,11 +167,23 @@
             this.btnKullaniciKayit.UseVisualStyleBackColor = true;
             this.btnKullaniciKayit.Click += new System.EventHandler(this.btnKullaniciKayit_Click);
             // 
-            // Form2
+            // btnAnaSayfa
+            // 
+            this.btnAnaSayfa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAnaSayfa.Location = new System.Drawing.Point(641, 51);
+            this.btnAnaSayfa.Name = "btnAnaSayfa";
+            this.btnAnaSayfa.Size = new System.Drawing.Size(105, 44);
+            this.btnAnaSayfa.TabIndex = 4;
+            this.btnAnaSayfa.Text = "Ana Sayfa";
+            this.btnAnaSayfa.UseVisualStyleBackColor = true;
+            this.btnAnaSayfa.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FrmKayitOl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 497);
+            this.Controls.Add(this.btnAnaSayfa);
             this.Controls.Add(this.btnKullaniciKayit);
             this.Controls.Add(this.cbxKullaniciType);
             this.Controls.Add(this.txtSifre);
@@ -184,8 +197,8 @@
             this.Controls.Add(this.lblSoyism);
             this.Controls.Add(this.lblAd);
             this.Controls.Add(this.lblKullaniciAdiKayit);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "FrmKayitOl";
+            this.Text = "KAYIT OL";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +219,6 @@
         private TextBox txtSifre;
         private ComboBox cbxKullaniciType;
         private Button btnKullaniciKayit;
+        private Button btnAnaSayfa;
     }
 }

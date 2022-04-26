@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YazılımYapımıProje
 {
-    public partial class Form4 : Form
+    public partial class FrmAdmin : Form
     {
-        public Form4()
+        public FrmAdmin()
         {
             InitializeComponent();
         }

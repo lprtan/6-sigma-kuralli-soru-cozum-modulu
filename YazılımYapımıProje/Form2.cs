@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class Form2 : Form
+    public partial class FrmKayitOl : Form
     {
-        public Form2()
+        public FrmKayitOl()
         {
             InitializeComponent();
         }
@@ -23,19 +23,26 @@ namespace YazılımYapımıProje
             baglanti.Open();
             SqlCommand kayitekle = new SqlCommand("insert into Users (UserName,Name,Surname,Mail,Password,UserTypeID) values (@p1,@p2,@p3,@p4,@p5,@p6)", baglanti);
 
-
             kayitekle.Parameters.AddWithValue("@p1",txtKullaniciAdiKayit.Text);
             kayitekle.Parameters.AddWithValue("@p2",txtAd.Text);
             kayitekle.Parameters.AddWithValue("@p3",txtSoyad.Text);
             kayitekle.Parameters.AddWithValue("@p4",txtMail.Text);
             kayitekle.Parameters.AddWithValue("@p5",txtSifre.Text);
-            kayitekle.Parameters.AddWithValue("@p6",cbxKullaniciType.SelectedIndex);
+            kayitekle.Parameters.AddWithValue("@p6",(cbxKullaniciType.SelectedIndex)+1);
          
             kayitekle.ExecuteNonQuery();
             baglanti.Close();
 
             MessageBox.Show("Kaydınız Başarıyla alınmıştır");
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmGiris GirisEkran = new FrmGiris();
+            GirisEkran.Show();
+            this.Hide();
+            this.Close();
+            this.Dispose();
         }
     }
 }

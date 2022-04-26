@@ -1,6 +1,6 @@
 ﻿namespace YazılımYapımıProje
 {
-    partial class Form1
+    partial class FrmGiris
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,8 +30,8 @@
         {
             this.lblKullaniciAdiGiris = new System.Windows.Forms.Label();
             this.lblSifreGiris = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGirisKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.txtGirisSifre = new System.Windows.Forms.TextBox();
             this.btnKayıtOl = new System.Windows.Forms.Button();
             this.btnGiris = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -60,21 +60,21 @@
             this.lblSifreGiris.TabIndex = 0;
             this.lblSifreGiris.Text = "Şifre:";
             // 
-            // textBox1
+            // txtGirisKullaniciAdi
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(334, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 25);
-            this.textBox1.TabIndex = 1;
+            this.txtGirisKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGirisKullaniciAdi.Location = new System.Drawing.Point(334, 122);
+            this.txtGirisKullaniciAdi.Name = "txtGirisKullaniciAdi";
+            this.txtGirisKullaniciAdi.Size = new System.Drawing.Size(166, 25);
+            this.txtGirisKullaniciAdi.TabIndex = 1;
             // 
-            // textBox2
+            // txtGirisSifre
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(334, 182);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 25);
-            this.textBox2.TabIndex = 1;
+            this.txtGirisSifre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGirisSifre.Location = new System.Drawing.Point(334, 182);
+            this.txtGirisSifre.Name = "txtGirisSifre";
+            this.txtGirisSifre.Size = new System.Drawing.Size(166, 25);
+            this.txtGirisSifre.TabIndex = 1;
             // 
             // btnKayıtOl
             // 
@@ -107,7 +107,7 @@
             this.checkBox1.Text = "Şifremi Unuttum";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FrmGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,15 +115,15 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.btnKayıtOl);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtGirisSifre);
+            this.Controls.Add(this.txtGirisKullaniciAdi);
             this.Controls.Add(this.lblSifreGiris);
             this.Controls.Add(this.lblKullaniciAdiGiris);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "FrmGiris";
             this.RightToLeftLayout = true;
-            this.Text = "Form1";
+            this.Text = "ANA SAYFA";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,8 +134,8 @@
 
         private Label lblKullaniciAdiGiris;
         private Label lblSifreGiris;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtGirisKullaniciAdi;
+        private TextBox txtGirisSifre;
         private Button btnKayıtOl;
         private Button btnGiris;
         private CheckBox checkBox1;
