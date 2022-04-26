@@ -17,11 +17,11 @@ namespace YazılımYapımıProje
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DELL-BILGISAYAR;Initial Catalog=Proje;Integrated Security=True;MultipleActiveResultSets=True");
+        DataBase db = new DataBase();
         private void btnKullaniciKayit_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
-            SqlCommand kayitekle = new SqlCommand("insert into Users (UserName,Name,Surname,Mail,Password,UserTypeID) values (@p1,@p2,@p3,@p4,@p5,@p6)", baglanti);
+            db.baglanti.Open();
+            SqlCommand kayitekle = new SqlCommand("insert into Users (UserName,Name,Surname,Mail,Password,UserTypeID) values (@p1,@p2,@p3,@p4,@p5,@p6)", db.baglanti);
 
             kayitekle.Parameters.AddWithValue("@p1",txtKullaniciAdiKayit.Text);
             kayitekle.Parameters.AddWithValue("@p2",txtAd.Text);
@@ -31,7 +31,7 @@ namespace YazılımYapımıProje
             kayitekle.Parameters.AddWithValue("@p6",(cbxKullaniciType.SelectedIndex)+1);
          
             kayitekle.ExecuteNonQuery();
-            baglanti.Close();
+            db.baglanti.Close();
 
             MessageBox.Show("Kaydınız Başarıyla alınmıştır");
         }
