@@ -44,6 +44,7 @@ namespace YazılımYapımıProje
 
             if (kontrol.Read())
             {              
+
                 switch (kontrol["UserTypeID"])
                 {
                     case 1:
