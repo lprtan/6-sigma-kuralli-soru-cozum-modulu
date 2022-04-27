@@ -31,15 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGiris));
             this.lblKullaniciAdiGiris = new System.Windows.Forms.Label();
+            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.lblSifreGiris = new System.Windows.Forms.Label();
+            this.ımageList3 = new System.Windows.Forms.ImageList(this.components);
             this.txtGirisKullaniciAdi = new System.Windows.Forms.TextBox();
             this.txtGirisSifre = new System.Windows.Forms.TextBox();
             this.btnKayıtOl = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnGiris = new System.Windows.Forms.Button();
-            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.lblSifeyiUnuttum = new System.Windows.Forms.Label();
-            this.ımageList3 = new System.Windows.Forms.ImageList(this.components);
+            this.lkbSifremiUnuttum = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblKullaniciAdiGiris
@@ -59,6 +60,13 @@
             this.lblKullaniciAdiGiris.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblKullaniciAdiGiris.Click += new System.EventHandler(this.lblKullaniciAdiGiris_Click);
             // 
+            // ımageList2
+            // 
+            this.ımageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
+            this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList2.Images.SetKeyName(0, "user icon.ico");
+            // 
             // lblSifreGiris
             // 
             this.lblSifreGiris.AutoSize = true;
@@ -74,6 +82,13 @@
             this.lblSifreGiris.Text = "     Şifre:";
             this.lblSifreGiris.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblSifreGiris.Click += new System.EventHandler(this.lblSifreGiris_Click);
+            // 
+            // ımageList3
+            // 
+            this.ımageList3.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.ımageList3.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList3.ImageStream")));
+            this.ımageList3.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList3.Images.SetKeyName(0, "password icn.ico");
             // 
             // txtGirisKullaniciAdi
             // 
@@ -128,29 +143,26 @@
             this.btnGiris.UseVisualStyleBackColor = true;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
-            // ımageList2
-            // 
-            this.ımageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.ımageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList2.ImageStream")));
-            this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList2.Images.SetKeyName(0, "user icon.ico");
-            // 
             // lblSifeyiUnuttum
             // 
             this.lblSifeyiUnuttum.AutoSize = true;
-            this.lblSifeyiUnuttum.Location = new System.Drawing.Point(291, 243);
+            this.lblSifeyiUnuttum.Location = new System.Drawing.Point(56, 284);
             this.lblSifeyiUnuttum.Name = "lblSifeyiUnuttum";
             this.lblSifeyiUnuttum.Size = new System.Drawing.Size(120, 21);
             this.lblSifeyiUnuttum.TabIndex = 3;
             this.lblSifeyiUnuttum.Text = "Şifreyi Unuttum";
             this.lblSifeyiUnuttum.Click += new System.EventHandler(this.lblSifeyiUnuttum_Click);
             // 
-            // ımageList3
+            // lkbSifremiUnuttum
             // 
-            this.ımageList3.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.ımageList3.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList3.ImageStream")));
-            this.ımageList3.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList3.Images.SetKeyName(0, "password icn.ico");
+            this.lkbSifremiUnuttum.AutoSize = true;
+            this.lkbSifremiUnuttum.Location = new System.Drawing.Point(301, 254);
+            this.lkbSifremiUnuttum.Name = "lkbSifremiUnuttum";
+            this.lkbSifremiUnuttum.Size = new System.Drawing.Size(126, 21);
+            this.lkbSifremiUnuttum.TabIndex = 4;
+            this.lkbSifremiUnuttum.TabStop = true;
+            this.lkbSifremiUnuttum.Text = "Şifremi Unuttum";
+            this.lkbSifremiUnuttum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkbSifremiUnuttum_LinkClicked);
             // 
             // FrmGiris
             // 
@@ -158,6 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.lkbSifremiUnuttum);
             this.Controls.Add(this.lblSifeyiUnuttum);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.btnKayıtOl);
@@ -188,5 +201,6 @@
         private ImageList ımageList1;
         private ImageList ımageList2;
         private ImageList ımageList3;
+        private LinkLabel lkbSifremiUnuttum;
     }
 }

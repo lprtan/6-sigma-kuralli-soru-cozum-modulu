@@ -99,5 +99,12 @@ namespace YazılımYapımıProje
         {
 
         }
+
+        private void lkbSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmSifremiUnuttum SifremiUnuttum = new FrmSifremiUnuttum();
+            SifremiUnuttum.Show();
+            this.Hide();
+        }
     }
 }
