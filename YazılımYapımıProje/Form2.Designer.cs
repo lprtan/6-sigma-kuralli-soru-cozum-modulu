@@ -48,7 +48,7 @@
             // 
             this.lblKullaniciAdiKayit.AutoSize = true;
             this.lblKullaniciAdiKayit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKullaniciAdiKayit.Location = new System.Drawing.Point(114, 61);
+            this.lblKullaniciAdiKayit.Location = new System.Drawing.Point(147, 61);
             this.lblKullaniciAdiKayit.Name = "lblKullaniciAdiKayit";
             this.lblKullaniciAdiKayit.Size = new System.Drawing.Size(98, 21);
             this.lblKullaniciAdiKayit.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             this.lblAd.AutoSize = true;
             this.lblAd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAd.Location = new System.Drawing.Point(170, 97);
+            this.lblAd.Location = new System.Drawing.Point(203, 92);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(42, 21);
             this.lblAd.TabIndex = 0;
@@ -68,7 +68,7 @@
             // 
             this.lblSoyism.AutoSize = true;
             this.lblSoyism.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSoyism.Location = new System.Drawing.Point(144, 128);
+            this.lblSoyism.Location = new System.Drawing.Point(177, 119);
             this.lblSoyism.Name = "lblSoyism";
             this.lblSoyism.Size = new System.Drawing.Size(68, 21);
             this.lblSoyism.TabIndex = 0;
@@ -78,7 +78,7 @@
             // 
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMail.Location = new System.Drawing.Point(167, 164);
+            this.lblMail.Location = new System.Drawing.Point(202, 150);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(43, 21);
             this.lblMail.TabIndex = 0;
@@ -88,7 +88,7 @@
             // 
             this.lblKullaniciType.AutoSize = true;
             this.lblKullaniciType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKullaniciType.Location = new System.Drawing.Point(112, 249);
+            this.lblKullaniciType.Location = new System.Drawing.Point(145, 214);
             this.lblKullaniciType.Name = "lblKullaniciType";
             this.lblKullaniciType.Size = new System.Drawing.Size(100, 21);
             this.lblKullaniciType.TabIndex = 0;
@@ -98,7 +98,7 @@
             // 
             this.lblSifreKayit.AutoSize = true;
             this.lblSifreKayit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSifreKayit.Location = new System.Drawing.Point(171, 203);
+            this.lblSifreKayit.Location = new System.Drawing.Point(200, 181);
             this.lblSifreKayit.Name = "lblSifreKayit";
             this.lblSifreKayit.Size = new System.Drawing.Size(45, 21);
             this.lblSifreKayit.TabIndex = 0;
@@ -107,7 +107,7 @@
             // txtKullaniciAdiKayit
             // 
             this.txtKullaniciAdiKayit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtKullaniciAdiKayit.Location = new System.Drawing.Point(262, 61);
+            this.txtKullaniciAdiKayit.Location = new System.Drawing.Point(251, 57);
             this.txtKullaniciAdiKayit.Name = "txtKullaniciAdiKayit";
             this.txtKullaniciAdiKayit.Size = new System.Drawing.Size(145, 25);
             this.txtKullaniciAdiKayit.TabIndex = 1;
@@ -115,7 +115,7 @@
             // txtAd
             // 
             this.txtAd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAd.Location = new System.Drawing.Point(262, 97);
+            this.txtAd.Location = new System.Drawing.Point(251, 88);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(145, 25);
             this.txtAd.TabIndex = 1;
@@ -123,7 +123,7 @@
             // txtSoyad
             // 
             this.txtSoyad.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSoyad.Location = new System.Drawing.Point(262, 133);
+            this.txtSoyad.Location = new System.Drawing.Point(251, 119);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(145, 25);
             this.txtSoyad.TabIndex = 1;
@@ -131,7 +131,7 @@
             // txtMail
             // 
             this.txtMail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMail.Location = new System.Drawing.Point(262, 164);
+            this.txtMail.Location = new System.Drawing.Point(251, 150);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(145, 25);
             this.txtMail.TabIndex = 1;
@@ -139,7 +139,7 @@
             // txtSifre
             // 
             this.txtSifre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSifre.Location = new System.Drawing.Point(262, 199);
+            this.txtSifre.Location = new System.Drawing.Point(251, 181);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(145, 25);
             this.txtSifre.TabIndex = 1;
@@ -151,7 +151,7 @@
             "ÖĞRENCİ",
             "ADMİN",
             "ÖĞRETMEN"});
-            this.cbxKullaniciType.Location = new System.Drawing.Point(262, 247);
+            this.cbxKullaniciType.Location = new System.Drawing.Point(251, 212);
             this.cbxKullaniciType.Name = "cbxKullaniciType";
             this.cbxKullaniciType.Size = new System.Drawing.Size(145, 23);
             this.cbxKullaniciType.TabIndex = 2;
@@ -159,20 +159,20 @@
             // btnKullaniciKayit
             // 
             this.btnKullaniciKayit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnKullaniciKayit.Location = new System.Drawing.Point(296, 292);
+            this.btnKullaniciKayit.Location = new System.Drawing.Point(251, 241);
             this.btnKullaniciKayit.Name = "btnKullaniciKayit";
-            this.btnKullaniciKayit.Size = new System.Drawing.Size(111, 31);
+            this.btnKullaniciKayit.Size = new System.Drawing.Size(145, 31);
             this.btnKullaniciKayit.TabIndex = 3;
-            this.btnKullaniciKayit.Text = "Kayıt OL";
+            this.btnKullaniciKayit.Text = "Kayıt Ol";
             this.btnKullaniciKayit.UseVisualStyleBackColor = true;
             this.btnKullaniciKayit.Click += new System.EventHandler(this.btnKullaniciKayit_Click);
             // 
             // btnAnaSayfa
             // 
             this.btnAnaSayfa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAnaSayfa.Location = new System.Drawing.Point(535, 61);
+            this.btnAnaSayfa.Location = new System.Drawing.Point(251, 278);
             this.btnAnaSayfa.Name = "btnAnaSayfa";
-            this.btnAnaSayfa.Size = new System.Drawing.Size(105, 44);
+            this.btnAnaSayfa.Size = new System.Drawing.Size(145, 44);
             this.btnAnaSayfa.TabIndex = 4;
             this.btnAnaSayfa.Text = "Ana Sayfa";
             this.btnAnaSayfa.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 497);
+            this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.btnAnaSayfa);
             this.Controls.Add(this.btnKullaniciKayit);
             this.Controls.Add(this.cbxKullaniciType);
