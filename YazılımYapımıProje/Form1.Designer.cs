@@ -39,7 +39,6 @@
             this.btnKayıtOl = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnGiris = new System.Windows.Forms.Button();
-            this.lblSifeyiUnuttum = new System.Windows.Forms.Label();
             this.lkbSifremiUnuttum = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
@@ -54,7 +53,7 @@
             this.lblKullaniciAdiGiris.Location = new System.Drawing.Point(56, 117);
             this.lblKullaniciAdiGiris.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKullaniciAdiGiris.Name = "lblKullaniciAdiGiris";
-            this.lblKullaniciAdiGiris.Size = new System.Drawing.Size(185, 32);
+            this.lblKullaniciAdiGiris.Size = new System.Drawing.Size(225, 41);
             this.lblKullaniciAdiGiris.TabIndex = 0;
             this.lblKullaniciAdiGiris.Text = "     Kullanıcı Adı:";
             this.lblKullaniciAdiGiris.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -77,7 +76,7 @@
             this.lblSifreGiris.Location = new System.Drawing.Point(139, 162);
             this.lblSifreGiris.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSifreGiris.Name = "lblSifreGiris";
-            this.lblSifreGiris.Size = new System.Drawing.Size(102, 32);
+            this.lblSifreGiris.Size = new System.Drawing.Size(123, 41);
             this.lblSifreGiris.TabIndex = 0;
             this.lblSifreGiris.Text = "     Şifre:";
             this.lblSifreGiris.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -95,7 +94,7 @@
             this.txtGirisKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtGirisKullaniciAdi.Location = new System.Drawing.Point(248, 114);
             this.txtGirisKullaniciAdi.Name = "txtGirisKullaniciAdi";
-            this.txtGirisKullaniciAdi.Size = new System.Drawing.Size(216, 39);
+            this.txtGirisKullaniciAdi.Size = new System.Drawing.Size(216, 47);
             this.txtGirisKullaniciAdi.TabIndex = 1;
             this.txtGirisKullaniciAdi.TextChanged += new System.EventHandler(this.txtGirisKullaniciAdi_TextChanged);
             // 
@@ -104,7 +103,7 @@
             this.txtGirisSifre.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtGirisSifre.Location = new System.Drawing.Point(248, 159);
             this.txtGirisSifre.Name = "txtGirisSifre";
-            this.txtGirisSifre.Size = new System.Drawing.Size(216, 39);
+            this.txtGirisSifre.Size = new System.Drawing.Size(216, 47);
             this.txtGirisSifre.TabIndex = 1;
             this.txtGirisSifre.TextChanged += new System.EventHandler(this.txtGirisSifre_TextChanged);
             // 
@@ -143,22 +142,12 @@
             this.btnGiris.UseVisualStyleBackColor = true;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
-            // lblSifeyiUnuttum
-            // 
-            this.lblSifeyiUnuttum.AutoSize = true;
-            this.lblSifeyiUnuttum.Location = new System.Drawing.Point(56, 284);
-            this.lblSifeyiUnuttum.Name = "lblSifeyiUnuttum";
-            this.lblSifeyiUnuttum.Size = new System.Drawing.Size(120, 21);
-            this.lblSifeyiUnuttum.TabIndex = 3;
-            this.lblSifeyiUnuttum.Text = "Şifreyi Unuttum";
-            this.lblSifeyiUnuttum.Click += new System.EventHandler(this.lblSifeyiUnuttum_Click);
-            // 
             // lkbSifremiUnuttum
             // 
             this.lkbSifremiUnuttum.AutoSize = true;
             this.lkbSifremiUnuttum.Location = new System.Drawing.Point(301, 254);
             this.lkbSifremiUnuttum.Name = "lkbSifremiUnuttum";
-            this.lkbSifremiUnuttum.Size = new System.Drawing.Size(126, 21);
+            this.lkbSifremiUnuttum.Size = new System.Drawing.Size(156, 28);
             this.lkbSifremiUnuttum.TabIndex = 4;
             this.lkbSifremiUnuttum.TabStop = true;
             this.lkbSifremiUnuttum.Text = "Şifremi Unuttum";
@@ -166,12 +155,11 @@
             // 
             // FrmGiris
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.lkbSifremiUnuttum);
-            this.Controls.Add(this.lblSifeyiUnuttum);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.btnKayıtOl);
             this.Controls.Add(this.txtGirisSifre);
@@ -197,7 +185,6 @@
         private TextBox txtGirisSifre;
         private Button btnKayıtOl;
         private Button btnGiris;
-        private Label lblSifeyiUnuttum;
         private ImageList ımageList1;
         private ImageList ımageList2;
         private ImageList ımageList3;

@@ -58,7 +58,7 @@ namespace YazılımYapımıProje
                         this.Hide();
                         break;
                     case 3:
-                        FrmOgretmen OgretmenEkran = new FrmOgretmen();
+                        SoruEkle OgretmenEkran = new SoruEkle();
                         OgretmenEkran.Show();
                         this.Hide();
                         break;
