@@ -9,6 +9,6 @@ namespace YazılımYapımıProje
 {
     public class DataBase
     {
-        public SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-3DO8R5T;Initial Catalog=Proje;Integrated Security=True");
+        public SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-FH90DII;Initial Catalog=Proje;Integrated Security=True");
     }
 }

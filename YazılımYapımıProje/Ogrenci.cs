@@ -16,5 +16,12 @@ namespace YazılımYapımıProje
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Sinav s = new Sinav();
+            s.Show();
+            this.Hide();
+        }
     }
 }

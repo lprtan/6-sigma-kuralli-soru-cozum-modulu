@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
 using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
@@ -18,8 +19,8 @@ namespace YazılımYapımıProje
         {
             InitializeComponent();
         }
-       
 
+        public static string AlinanKullaniciAdi = "";
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -48,6 +49,9 @@ namespace YazılımYapımıProje
                 switch (kontrol["UserTypeID"])
                 {
                     case 1:
+                        AlinanKullaniciAdi = txtGirisKullaniciAdi.Text;
+                        Sinav sinavForm = new Sinav();
+
                         FrmOgrenci OgrenciEkran = new FrmOgrenci();
                         OgrenciEkran.Show();
                         this.Hide();
