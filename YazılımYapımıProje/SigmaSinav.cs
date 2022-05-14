@@ -1,0 +1,169 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
+namespace YazılımYapımıProje
+{
+    public partial class SigmaSinav : Form
+    {
+        DataBase db = new DataBase();
+        public void verileriGoster(string veriler)
+        {
+            SqlDataAdapter dz = new SqlDataAdapter(veriler, db.baglanti);
+            DataSet ds = new DataSet();
+            dz.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+
+        }
+        private string x = null!;
+        int buttonIndex = 0;
+        public int UserID { get; set; }
+
+        public void UserIDCek()
+        {
+            db.baglanti.Open();
+            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + FrmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
+            UserIDAl.Connection = db.baglanti;
+            SqlDataReader kontrol = UserIDAl.ExecuteReader();
+            if (kontrol.Read())
+            {
+                UserID = Convert.ToInt16(kontrol["UserID"]);
+            }
+            else
+            {
+                MessageBox.Show("Veritabanı hatası!!!");
+            }
+            kontrol.Close();
+            db.baglanti.Close();
+        }
+
+        public void deneme() {
+
+            if (buttonIndex >= dataGridView1.Rows.Count || dataGridView1.Rows[buttonIndex].IsNewRow)
+                buttonIndex = 0;
+
+            if (dataGridView1.AllowUserToAddRows == true)
+            {
+                if (dataGridView1.RowCount > 1)
+                {
+                    x = dataGridView1.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();
+                    textBox1.Text = dataGridView1.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();
+                    SoruCek();
+                }
+
+                else
+                    textBox1.Text = "";
+            }
+            else
+            {
+                if (dataGridView1.RowCount > 0)
+                {
+
+                    x = dataGridView1.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();
+                    textBox1.Text = dataGridView1.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();
+                    SoruCek();
+
+                }
+
+                else
+                    textBox1.Text = "";
+            }
+            buttonIndex++;
+
+        }
+        public void SoruCek()
+        {
+             db.baglanti.Open();
+            SqlCommand cmd = new SqlCommand("SELECT QuestionID,QuestionText,PicturePath,RightAnswer,a,b,c,d FROM Question where QuestionID='" + x + "' ", db.baglanti); ;
+
+             cmd.Connection = db.baglanti;
+             SqlDataReader kontrol = cmd.ExecuteReader();
+
+             if (kontrol.Read())
+             {
+                 rtbSoru.Text = kontrol["QuestionText"].ToString();
+                 pbResim.ImageLocation = kontrol["PicturePath"].ToString();
+                 txtA.Text = kontrol["a"].ToString();
+                 txtB.Text = kontrol["b"].ToString();
+                 txtC.Text = kontrol["c"].ToString();
+                 txtD.Text = kontrol["d"].ToString();
+                 label2.Text = kontrol["RightAnswer"].ToString();
+
+             }
+             else
+             {
+                 MessageBox.Show("veritabanı hatası");
+             }
+             db.baglanti.Close();
+        }
+        public SigmaSinav()
+        {
+            InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmOgrenci ogrnci=new FrmOgrenci();
+            ogrnci.Show();
+            this.Hide();
+        }
+
+        private void SigmaSinav_Load(object sender, EventArgs e)
+        {
+            UserIDCek();
+            db.baglanti.Open();
+            string veriler = "Select QuestionID from Sinav where UserID='"+ UserID + "' AND CorrectAnswerCount between 0 and 7 ";
+            SqlCommand komut = new SqlCommand(veriler, db.baglanti);
+            komut.ExecuteNonQuery();
+            db.baglanti.Close();
+            verileriGoster(veriler);
+            deneme();
+            label1.Text = "0";
+            timer1.Interval = 60000;
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+            progressBar1.Step = 1;
+            dataGridView1.Visible = true;
+        }
+        int zamansayac = 0;
+        int sayac = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            sayac++;
+            deneme();
+            timer1.Start();
+            progressBar1.Value = zamansayac * 10;
+            if (dataGridView1.Rows.Count == sayac)
+            {
+                button1.Text = "Sınavı Bitir";
+                button1.Enabled = false;
+                return;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            zamansayac++;
+            label1.Text = zamansayac.ToString();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
