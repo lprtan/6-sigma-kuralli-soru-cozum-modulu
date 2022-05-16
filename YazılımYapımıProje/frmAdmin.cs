@@ -63,7 +63,6 @@ namespace YazılımYapımıProje
                     komut.Parameters.AddWithValue("@SoruNo", dgvAdminSoruOnay.SelectedCells[0].Value);
                     komut.ExecuteNonQuery();
                     db.baglanti.Close();
-                    return;
                 }
             }
             MessageBox.Show("Soru Onaylandı!");

@@ -14,8 +14,9 @@ namespace YazılımYapımıProje
 {
     public partial class frmDenemeSinav : Form
     {
-
+        frmSigmaSinav sigmaSinav=new frmSigmaSinav();
         DataBase db = new DataBase();
+        public int UserID { get; set; }
         public void verileriGoster(string veriler)
         {
             SqlDataAdapter dz = new SqlDataAdapter(veriler, db.baglanti);
@@ -24,30 +25,12 @@ namespace YazılımYapımıProje
             dataGridView1.DataSource = ds.Tables[0];
 
         }
+
         private string x = null!;
         int buttonIndex = 0;
         int zamansayac = 0;
         int sayac = 0;
-        public int UserID { get; set; }
-        public int UserIDCek()
-        {
-            db.baglanti.Open();
-            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + frmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
-            UserIDAl.Connection = db.baglanti;
-            SqlDataReader kontrol = UserIDAl.ExecuteReader();
-            if (kontrol.Read())
-            {
-                UserID = Convert.ToInt16(kontrol["UserID"]);
-            }
-            else
-            {
-                MessageBox.Show("Veritabanı hatası!!!");
-            }
-            kontrol.Close();
-            return UserID;
-            db.baglanti.Close();
-        
-        }
+
         public void SiraylaGetir()
         {
 
@@ -98,6 +81,7 @@ namespace YazılımYapımıProje
             {
                 MessageBox.Show("veritabanı hatası");
             }
+            kontrol.Close();
             db.baglanti.Close();
         }
         public frmDenemeSinav()
@@ -157,7 +141,7 @@ namespace YazılımYapımıProje
 
         private void frmDenemeSinav_Load(object sender, EventArgs e)
         {
-            UserIDCek();
+            sigmaSinav.UserIDCek();
 
             db.baglanti.Open();
 

@@ -17,7 +17,7 @@ namespace YazılımYapımıProje
     public partial class frmOgrenciRapor : Form
     {
         DataBase db=new DataBase();
-        frmDenemeSinav sinav = new frmDenemeSinav();
+        frmSigmaSinav sigmaSinav = new frmSigmaSinav();
         DataSet ds = new DataSet();
         public int UserID { get; set; }
         public frmOgrenciRapor()
@@ -33,7 +33,7 @@ namespace YazılımYapımıProje
         
         private void frmOgrenciRapor_Load(object sender, EventArgs e)
         {
-            UserID = sinav.UserIDCek();
+            UserID = sigmaSinav.UserIDCek();
             db.baglanti.Open();
             string RaporVerileri = "SELECT Sections.SectionName,Sinav.CorrectAnswerCount*16.67 As BaşarıOranı From Question INNER JOIN Sections ON Question.SectionID = Sections.SectionID INNER JOIN Sinav ON  Question.QuestionID = Sinav.QuestionID where Sinav.UserID ='" + UserID + "'";
             SqlCommand OgrenciRaporAl = new SqlCommand(RaporVerileri, db.baglanti);
