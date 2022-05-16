@@ -370,10 +370,10 @@ namespace YazılımYapımıProje
         }
         public void verileriGoster(string veriler)
         {
+
             SqlDataAdapter dz = new SqlDataAdapter(veriler, db.baglanti);
             dz.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
-
         }
         private void Sinav_Load_1(object sender, EventArgs e)
         {

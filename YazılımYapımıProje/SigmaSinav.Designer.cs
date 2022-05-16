@@ -79,6 +79,7 @@
             this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 46;
             this.label1.Text = "Süre : ";
+            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtD

@@ -82,7 +82,7 @@ namespace YazılımYapımıProje
         public void SoruCek()
         {
              db.baglanti.Open();
-            SqlCommand cmd = new SqlCommand("SELECT QuestionID,QuestionText,PicturePath,RightAnswer,a,b,c,d FROM Question where QuestionID='" + x + "' ", db.baglanti); ;
+            SqlCommand cmd = new SqlCommand("Select QuestionText,PicturePath,RightAnswer,a,b,c,d from Sinav INNER JOIN  Question on Question.QuestionID=Sinav.QuestionID where UserID = 20 and CorrectAnswerCount < 4", db.baglanti); 
 
              cmd.Connection = db.baglanti;
              SqlDataReader kontrol = cmd.ExecuteReader();
@@ -120,7 +120,7 @@ namespace YazılımYapımıProje
         {
             UserIDCek();
             db.baglanti.Open();
-            string veriler = "Select QuestionID from Sinav where UserID='"+ UserID + "' AND CorrectAnswerCount between 0 and 7 ";
+            string veriler = "SELECT Question.QuestionID From Question INNER JOIN Sections ON Question.SectionID = Sections.SectionID INNER JOIN Sinav ON  Question.QuestionID = Sinav.QuestionID where Sinav.UserID = 20 and Sinav.CorrectAnswerCount < 4";
             SqlCommand komut = new SqlCommand(veriler, db.baglanti);
             komut.ExecuteNonQuery();
             db.baglanti.Close();
@@ -131,6 +131,7 @@ namespace YazılımYapımıProje
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
             progressBar1.Step = 1;
+
             dataGridView1.Visible = true;
         }
         int zamansayac = 0;
@@ -142,11 +143,11 @@ namespace YazılımYapımıProje
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+           
             sayac++;
             deneme();
             timer1.Start();
-            progressBar1.Value = zamansayac * 10;
+           
             if (dataGridView1.Rows.Count == sayac)
             {
                 button1.Text = "Sınavı Bitir";
@@ -159,11 +160,18 @@ namespace YazılımYapımıProje
         {
             zamansayac++;
             label1.Text = zamansayac.ToString();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_TextChanged(object sender, EventArgs e)
+        {
+
+            progressBar1.Value = zamansayac * 10;
         }
     }
 }
