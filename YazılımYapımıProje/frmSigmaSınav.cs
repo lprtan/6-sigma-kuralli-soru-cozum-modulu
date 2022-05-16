@@ -12,13 +12,13 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class frmSinav : Form
+    public partial class frmSigmaSınav : Form
     {
-        public frmSinav()
+        public frmSigmaSınav()
         {
             InitializeComponent();
         }
-        public int ID { get; set; }
+        public int QuestionID { get; set; }
         public int UserID { get; set; }
         public int CAC { get; set; }
         public int nGun { get; set; }
@@ -28,11 +28,12 @@ namespace YazılımYapımıProje
         public DateTime SorununCozulduguTarih { get; set; }
 
         DataBase db = new DataBase();
+        DataSet ds = new DataSet();
+
         private string x = null!;
         int buttonIndex = 0;
-        int sayac=1;
+        int sayac = 1;
         int DogruSayisi;
-        DataSet ds = new DataSet();
 
         public void Ayarlar()
         {
@@ -43,68 +44,63 @@ namespace YazılımYapımıProje
 
             if (Ayarkontrol.Read())
             {
-                 nGun = Convert.ToInt32(Ayarkontrol["Gun"]);
-                 nHafta = Convert.ToInt32(Ayarkontrol["Hafta"]);
-                 nAy = Convert.ToInt32(Ayarkontrol["AY"]);
+                nGun = Convert.ToInt32(Ayarkontrol["Gun"]);
+                nHafta = Convert.ToInt32(Ayarkontrol["Hafta"]);
+                nAy = Convert.ToInt32(Ayarkontrol["Ay"]);
             }
             db.baglanti.Close();
         }
         public void SoruYazdir()
         {
-            //db.baglanti.Open();
-            SqlCommand DogruSoruCek = new SqlCommand("SELECT Question.QuestionID, RightAnswer, QuestionText, SectionID, UnitID, PicturePath, a, b, c, d FROM"+
+            SqlCommand DogruSoruCek = new SqlCommand("SELECT Question.QuestionID, RightAnswer, QuestionText, SectionID, UnitID, PicturePath, a, b, c, d FROM" +
             " Question INNER JOIN Sinav ON Question.QuestionID = Sinav.QuestionID AND UserID='" + UserID + "'  where CorrectAnswerCount='" + DogruSayisi + "'", db.baglanti);
 
             DogruSoruCek.Connection = db.baglanti;
-            SqlDataReader kontrol3 = DogruSoruCek.ExecuteReader();
+            SqlDataReader DogruSoruCekKontrol = DogruSoruCek.ExecuteReader();
 
-            if (kontrol3.Read())
+            if (DogruSoruCekKontrol.Read())
             {
-                rtbSoru.Text = kontrol3["QuestionText"].ToString();
-                pbResim.ImageLocation = kontrol3["PicturePath"].ToString();
-                txtA.Text = kontrol3["a"].ToString();
-                txtB.Text = kontrol3["b"].ToString();
-                txtC.Text = kontrol3["c"].ToString();
-                txtD.Text = kontrol3["d"].ToString();
-                label2.Text = kontrol3["RightAnswer"].ToString();
-                ID = Convert.ToInt32(kontrol3["QuestionID"]);
-                label3.Text = ID.ToString();
-                kontrol3.Close();
+                rtbSoru.Text = DogruSoruCekKontrol["QuestionText"].ToString();
+                pbResim.ImageLocation = DogruSoruCekKontrol["PicturePath"].ToString();
+                txtA.Text = DogruSoruCekKontrol["a"].ToString();
+                txtB.Text = DogruSoruCekKontrol["b"].ToString();
+                txtC.Text = DogruSoruCekKontrol["c"].ToString();
+                txtD.Text = DogruSoruCekKontrol["d"].ToString();
+                lblDogruCevap.Text = DogruSoruCekKontrol["RightAnswer"].ToString();
+                QuestionID = Convert.ToInt32(DogruSoruCekKontrol["QuestionID"]);
+                DogruSoruCekKontrol.Close();
             }
             else
             {
-                button2.Enabled=true;
+                btnSonraki.Enabled = true;
                 MessageBox.Show("Sınav bitti ");
             }
-           db.baglanti.Close();
+            db.baglanti.Close();
         }
         public void DogruSoruCek()
         {
-
             Ayarlar();
 
             db.baglanti.Open();
-            SqlCommand CozumTarihi = new SqlCommand("select * from Sinav where UserID='" + UserID + "' and QuestionID='"+ID+"'", db.baglanti);
+            SqlCommand CozumTarihi = new SqlCommand("select * from Sinav where UserID='" + UserID + "' and QuestionID='" + QuestionID + "'", db.baglanti);
             CozumTarihi.Connection = db.baglanti;
             SqlDataReader Tarihkontrol = CozumTarihi.ExecuteReader();
             if (Tarihkontrol.Read())
             {
                 SorununCozulduguTarih = Convert.ToDateTime(Tarihkontrol["CozumTarihi"]);
             }
-            BugununTarihi =DateTime.Now;
-           
+            BugununTarihi = DateTime.Now;
 
             TimeSpan GunSayisi = BugununTarihi - SorununCozulduguTarih;
-           
 
-            if (Math.Abs(GunSayisi.Days)>=nGun && Math.Abs(GunSayisi.Days) <7)
+            if (Math.Abs(GunSayisi.Days) >= nGun && Math.Abs(GunSayisi.Days) < 7)
             {
                 DogruSayisi = 1;
                 Tarihkontrol.Close();
-                SoruYazdir();  
+                SoruYazdir();
             }
             else if (Math.Abs(GunSayisi.Days) >= nHafta && Math.Abs(GunSayisi.Days) < 30)
-            {              
+            {
                 DogruSayisi = 2;
                 Tarihkontrol.Close();
                 SoruYazdir();
@@ -135,62 +131,61 @@ namespace YazılımYapımıProje
             }
             else
             {
-                //db.baglanti.Close();
-                MessageBox.Show("CAC hatası");
+                MessageBox.Show("Sınavınız Bitmiştir." + "\n" + " Öğrenci Ekranına Yönlendiriliyorsunuz...");
+                FrmOgrenci frmOgrenci = new FrmOgrenci();
+                frmOgrenci.Show();
+                this.Hide();
             }
             db.baglanti.Close();
         }
         public void SiraylaGetir()
         {
-
-            if (buttonIndex >= dataGridView1.Rows.Count || dataGridView1.Rows[buttonIndex].IsNewRow)
+            if (buttonIndex >= dgvList.Rows.Count || dgvList.Rows[buttonIndex].IsNewRow)
                 buttonIndex = 0;
 
-            if (dataGridView1.AllowUserToAddRows == true)
+            if (dgvList.AllowUserToAddRows == true)
             {
-                 if (dataGridView1.RowCount > 1)
+                if (dgvList.RowCount > 1)
                 {
-                    x = dataGridView1.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();
-                    textBox1.Text = dataGridView1.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();
+                    x = dgvList.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();
                     SoruCek();
                 }
-                else if(dataGridView1.RowCount >0 || dataGridView1.RowCount <1)
+                else if (dgvList.RowCount > 0 || dgvList.RowCount < 1)
                 {
-                 DogruSoruCek();
+                    DogruSoruCek();
+                    return;
                 }
-                else
-                textBox1.Text = "";
             }
             buttonIndex++;
         }
-        public  void YanlısSoruGuncelle()
+        public void YanlısSoruGuncelle()
         {
-           SqlCommand YanlisGuncelle = new SqlCommand("Update Sinav set CorrectAnswer=@p1, CorrectAnswerCount=@p2 where QuestionID='" + ID + "' AND UserID= '" + UserID + "'", db.baglanti);
+            SqlCommand YanlisGuncelle = new SqlCommand("Update Sinav set CorrectAnswer=@p1, CorrectAnswerCount=@p2 where QuestionID='" + QuestionID + "' AND UserID= '" + UserID + "'", db.baglanti);
             YanlisGuncelle.Parameters.AddWithValue("@p1", 0);
             YanlisGuncelle.Parameters.AddWithValue("@p2", 0);
             YanlisGuncelle.ExecuteNonQuery();
         }
-        public void Guncelle()
+        public void DogruSoruGuncelle()
         {
-            SqlCommand CACGuncelle = new SqlCommand("update Sinav set CorrectAnswerCount=@p1 where QuestionID='" + ID + "' AND UserID= '" + UserID + "'", db.baglanti);
+            SqlCommand CACGuncelle = new SqlCommand("update Sinav set CorrectAnswerCount=@p1 where QuestionID='" + QuestionID + "' AND UserID= '" + UserID + "'", db.baglanti);
             CACGuncelle.Parameters.AddWithValue("@p1", (CAC + 1));
             CACGuncelle.ExecuteNonQuery();
         }
         public int UserIDCek()
         {
             db.baglanti.Open();
-            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + frmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
+            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + FrmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
             UserIDAl.Connection = db.baglanti;
-            SqlDataReader kontrol = UserIDAl.ExecuteReader();
-            if (kontrol.Read())
+            SqlDataReader UserIDKontrol = UserIDAl.ExecuteReader();
+            if (UserIDKontrol.Read())
             {
-                UserID = Convert.ToInt16(kontrol["UserID"]);
+                UserID = Convert.ToInt16(UserIDKontrol["UserID"]);
             }
             else
             {
-                MessageBox.Show("Veritabanı hatası!!!");
+                MessageBox.Show("Kullanıcı Bulunamadı!");
             }
-            kontrol.Close();
+            UserIDKontrol.Close();
             db.baglanti.Close();
             return UserID;
         }
@@ -200,27 +195,13 @@ namespace YazılımYapımıProje
         "(QuestionID,UserID,CorrectAnswer,CozumTarihi) " +
         "values (@c1,@c2,@c3,@c4)", db.baglanti);
 
-            sinavekle.Parameters.AddWithValue("@c1", ID);
+            sinavekle.Parameters.AddWithValue("@c1", QuestionID);
             sinavekle.Parameters.AddWithValue("@c2", UserID);
             sinavekle.Parameters.AddWithValue("@c4", DateTime.Now);
 
-            if (radioButton1.Checked == true)
+            if (rdbA.Checked == true)
             {
-                if (radioButton1.Text == label2.Text)
-                {
-                    sinavekle.Parameters.AddWithValue("@c3", 1);
-                    sinavekle.ExecuteNonQuery();
-                }
-                else
-                {
-                    sinavekle.Parameters.AddWithValue("@c3", 0);
-                    sinavekle.ExecuteNonQuery();
-                }
-
-            }
-            else if (radioButton2.Checked == true)
-            {
-                if (radioButton2.Text == label2.Text)
+                if (rdbA.Text == lblDogruCevap.Text)
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 1);
                     sinavekle.ExecuteNonQuery();
@@ -231,9 +212,9 @@ namespace YazılımYapımıProje
                     sinavekle.ExecuteNonQuery();
                 }
             }
-            else if (radioButton3.Checked == true)
+            else if (rdbB.Checked == true)
             {
-                if (radioButton3.Text == label2.Text)
+                if (rdbB.Text == lblDogruCevap.Text)
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 1);
                     sinavekle.ExecuteNonQuery();
@@ -244,9 +225,22 @@ namespace YazılımYapımıProje
                     sinavekle.ExecuteNonQuery();
                 }
             }
-            else if (radioButton4.Checked == true)
+            else if (rdbC.Checked == true)
             {
-                if (radioButton4.Text == label2.Text)
+                if (rdbC.Text == lblDogruCevap.Text)
+                {
+                    sinavekle.Parameters.AddWithValue("@c3", 1);
+                    sinavekle.ExecuteNonQuery();
+                }
+                else
+                {
+                    sinavekle.Parameters.AddWithValue("@c3", 0);
+                    sinavekle.ExecuteNonQuery();
+                }
+            }
+            else if (rdbD.Checked == true)
+            {
+                if (rdbD.Text == lblDogruCevap.Text)
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 1);
                     sinavekle.ExecuteNonQuery();
@@ -262,80 +256,79 @@ namespace YazılımYapımıProje
                 sinavekle.Parameters.AddWithValue("@c3", 0);
                 sinavekle.ExecuteNonQuery();
             }
-
         }
         public void CorrectAnswerCount()
         {
             db.baglanti.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Sinav where QuestionID='" + ID + "' AND UserID= '" + UserID + "' ", db.baglanti);
-            cmd.Connection = db.baglanti;
-            SqlDataReader kontrol = cmd.ExecuteReader();
+            SqlCommand DogruSoruSayisi = new SqlCommand("SELECT * from Sinav where QuestionID='" + QuestionID + "' AND UserID= '" + UserID + "' ", db.baglanti);
+            DogruSoruSayisi.Connection = db.baglanti;
+            SqlDataReader DogruSoruSayisiKontrol = DogruSoruSayisi.ExecuteReader();
 
-            if (kontrol.Read())
+            if (DogruSoruSayisiKontrol.Read())
             {
-                CAC = Convert.ToInt32(kontrol["CorrectAnswerCount"]);
+                CAC = Convert.ToInt32(DogruSoruSayisiKontrol["CorrectAnswerCount"]);
 
-                if (radioButton1.Checked == true)
+                if (rdbA.Checked == true)
                 {
-                    if (radioButton1.Text == label2.Text)
+                    if (rdbA.Text == lblDogruCevap.Text)
                     {
-                        kontrol.Close();
-                        Guncelle();
+                        DogruSoruSayisiKontrol.Close();
+                        DogruSoruGuncelle();
                     }
                     else
                     {
-                        kontrol.Close();
+                        DogruSoruSayisiKontrol.Close();
                         YanlısSoruGuncelle();
                     }
                 }
-                else if (radioButton2.Checked == true)
+                else if (rdbB.Checked == true)
                 {
-                    if (radioButton2.Text == label2.Text)
+                    if (rdbB.Text == lblDogruCevap.Text)
                     {
-                        kontrol.Close();
-                        Guncelle();
+                        DogruSoruSayisiKontrol.Close();
+                        DogruSoruGuncelle();
                     }
                     else
                     {
-                        kontrol.Close();
+                        DogruSoruSayisiKontrol.Close();
                         YanlısSoruGuncelle();
                     }
                 }
-                else if (radioButton3.Checked == true)
+                else if (rdbC.Checked == true)
                 {
-                    if (radioButton3.Text == label2.Text)
+                    if (rdbC.Text == lblDogruCevap.Text)
                     {
-                        kontrol.Close();
-                        Guncelle();
+                        DogruSoruSayisiKontrol.Close();
+                        DogruSoruGuncelle();
                     }
                     else
                     {
-                        kontrol.Close();
+                        DogruSoruSayisiKontrol.Close();
                         YanlısSoruGuncelle();
                     }
                 }
-                else if (radioButton4.Checked == true)
+                else if (rdbD.Checked == true)
                 {
-                    if (radioButton4.Text == label2.Text)
+                    if (rdbD.Text == lblDogruCevap.Text)
                     {
-                        kontrol.Close();
-                        Guncelle();
+                        DogruSoruSayisiKontrol.Close();
+                        DogruSoruGuncelle();
                     }
                     else
                     {
-                        kontrol.Close();
+                        DogruSoruSayisiKontrol.Close();
                         YanlısSoruGuncelle();
                     }
                 }
                 else
                 {
-                    kontrol.Close();
+                    DogruSoruSayisiKontrol.Close();
                     YanlısSoruGuncelle();
                 }
             }
             else
             {
-                kontrol.Close();
+                DogruSoruSayisiKontrol.Close();
                 SoruKontrol();
             }
             db.baglanti.Close();
@@ -344,38 +337,35 @@ namespace YazılımYapımıProje
         {
             db.baglanti.Open();
             string veriler = "SELECT QuestionID,QuestionText,PicturePath,RightAnswer,a,b,c,d,QuestionID FROM Question where QuestionID='" + x + "'";
-            SqlCommand cmd = new SqlCommand(veriler, db.baglanti);
+            SqlCommand SoruCek = new SqlCommand(veriler, db.baglanti);
+            SoruCek.Connection = db.baglanti;
+            SqlDataReader SoruCekKontrol = SoruCek.ExecuteReader();
 
-            cmd.Connection = db.baglanti;
-            SqlDataReader kontrol = cmd.ExecuteReader();
-
-            if (kontrol.Read())
+            if (SoruCekKontrol.Read())
             {
-                rtbSoru.Text = kontrol["QuestionText"].ToString();
-                pbResim.ImageLocation = kontrol["PicturePath"].ToString();
-                txtA.Text = kontrol["a"].ToString();
-                txtB.Text = kontrol["b"].ToString();
-                txtC.Text = kontrol["c"].ToString();
-                txtD.Text = kontrol["d"].ToString();
-                label2.Text = kontrol["RightAnswer"].ToString();
-                ID = Convert.ToInt32(kontrol["QuestionID"]);
-                label3.Text = ID.ToString();
-
+                rtbSoru.Text = SoruCekKontrol["QuestionText"].ToString();
+                pbResim.ImageLocation = SoruCekKontrol["PicturePath"].ToString();
+                txtA.Text = SoruCekKontrol["a"].ToString();
+                txtB.Text = SoruCekKontrol["b"].ToString();
+                txtC.Text = SoruCekKontrol["c"].ToString();
+                txtD.Text = SoruCekKontrol["d"].ToString();
+                lblDogruCevap.Text = SoruCekKontrol["RightAnswer"].ToString();
+                QuestionID = Convert.ToInt32(SoruCekKontrol["QuestionID"]);
             }
             else
             {
-                MessageBox.Show("veritabanı hatası");
+                MessageBox.Show("Soru Bulunamadı!");
             }
             db.baglanti.Close();
         }
         public void verileriGoster(string veriler)
         {
-
             SqlDataAdapter dz = new SqlDataAdapter(veriler, db.baglanti);
             dz.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
+            dgvList.DataSource = ds.Tables[0];
         }
-        private void Sinav_Load_1(object sender, EventArgs e)
+
+        private void frmSigmaSınav_Load(object sender, EventArgs e)
         {
             UserIDCek();
             db.baglanti.Open();
@@ -386,34 +376,43 @@ namespace YazılımYapımıProje
             verileriGoster(veriler);
             SiraylaGetir();
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void btnSonraki_Click(object sender, EventArgs e)
         {
             CorrectAnswerCount();
             SiraylaGetir();
             sayac++;
-            if (dataGridView1.Rows.Count == sayac)
+            if (dgvList.Rows.Count == sayac)
             {
-                button2.Text = "Sınavı Bitir";
+                btnSonraki.Text = "Sınavı Bitir";
                 ds.Tables[0].Rows.Clear();
                 SiraylaGetir();
                 return;
             }
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
-            radioButton3.Checked = false;
-            radioButton4.Checked = false;
 
+            rdbA.Checked = false;
+            rdbB.Checked = false;
+            rdbC.Checked = false;
+            rdbD.Checked = false;
         }
-        private void button3_Click(object sender, EventArgs e)
+
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            frmOgrenci ogrnci = new frmOgrenci();
+            frmOgrenci frmOgrenci = new frmOgrenci();
+            frmOgrenci.Show();
+            this.Hide();
+        }
+
+        private void btnHomePage_Click(object sender, EventArgs e)
+        {
+            frmGiris ogrnci = new frmGiris();
             ogrnci.Show();
             this.Hide();
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
-           // CorrectAnswerCount();
-          //  DogruSoruCek();
+            Application.Exit();
         }
     }
 }
