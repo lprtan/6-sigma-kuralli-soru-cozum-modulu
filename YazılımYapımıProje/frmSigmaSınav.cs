@@ -132,7 +132,7 @@ namespace YazılımYapımıProje
             else
             {
                 MessageBox.Show("Sınavınız Bitmiştir." + "\n" + " Öğrenci Ekranına Yönlendiriliyorsunuz...");
-                FrmOgrenci frmOgrenci = new FrmOgrenci();
+                frmOgrenci frmOgrenci = new frmOgrenci();
                 frmOgrenci.Show();
                 this.Hide();
             }
@@ -174,7 +174,7 @@ namespace YazılımYapımıProje
         public int UserIDCek()
         {
             db.baglanti.Open();
-            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + FrmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
+            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + frmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
             UserIDAl.Connection = db.baglanti;
             SqlDataReader UserIDKontrol = UserIDAl.ExecuteReader();
             if (UserIDKontrol.Read())
