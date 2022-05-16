@@ -1,6 +1,6 @@
 ﻿namespace YazılımYapımıProje
 {
-    partial class SoruEkle
+    partial class frmSoruEkle
     {
         /// <summary>
         /// Required designer variable.

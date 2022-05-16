@@ -15,7 +15,7 @@ namespace YazılımYapımıProje
     {
         DataBase db = new DataBase();
         DataSet ds = new DataSet();
-        Sinav sinav = new Sinav();
+        frmSinav sinav = new frmSinav();
         public int AyarlarGun { get; set; }
         public int AyarlarHafta { get; set; }
         public int AyarlarAy { get; set; }
@@ -67,7 +67,7 @@ namespace YazılımYapımıProje
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Sinav s = new Sinav();
+            frmSinav s = new frmSinav();
             s.Show();
             this.Hide();
         }

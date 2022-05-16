@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,61 +10,58 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
 
+
 namespace YazılımYapımıProje
 {
-    public partial class FrmGiris : Form
+    public partial class frmGiris : Form
     {
-
-        public FrmGiris()
+        public frmGiris()
         {
             InitializeComponent();
         }
-
         public static string AlinanKullaniciAdi = "";
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
+        private void frmGiris_Load(object sender, EventArgs e)
+        {
+            txtGirisSifre.UseSystemPasswordChar = true;
         }
 
-        private void btnKatıtOl_Click(object sender, EventArgs e)
+        private void btnKayıtOl_Click(object sender, EventArgs e)
         {
             FrmKayitOl KayitOl = new FrmKayitOl();
-            KayitOl.Show();  
+            KayitOl.Show();
             this.Hide();
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-
             DataBase db = new DataBase();
 
-            SqlCommand giris = new SqlCommand("SELECT * FROM Users where UserName='" + txtGirisKullaniciAdi.Text + "' AND Password='" + txtGirisSifre.Text + "'" );
+            SqlCommand giris = new SqlCommand("SELECT * FROM Users where UserName='" + txtGirisKullaniciAdi.Text + "' AND Password='" + txtGirisSifre.Text + "'");
             db.baglanti.Open();
             giris.Connection = db.baglanti;
             SqlDataReader kontrol = giris.ExecuteReader();
 
             if (kontrol.Read())
-            {              
+            {
 
                 switch (kontrol["UserTypeID"])
                 {
                     case 1:
                         AlinanKullaniciAdi = txtGirisKullaniciAdi.Text;
-                        Sinav sinavForm = new Sinav();
-                        SigmaSinav sigmaForm = new SigmaSinav();
-                        FrmOgrenci frmOgrenci= new FrmOgrenci();
+                        frmSinav sinavForm = new frmSinav();
 
                         FrmOgrenci OgrenciEkran = new FrmOgrenci();
                         OgrenciEkran.Show();
                         this.Hide();
                         break;
-                    case 2:
-                        FrmAdmin AdminEkran = new FrmAdmin();
+                    case 3:
+                        frmAdmin AdminEkran = new frmAdmin();
                         AdminEkran.Show();
                         this.Hide();
                         break;
-                    case 3:
-                        SoruEkle OgretmenEkran = new SoruEkle();
+                    case 2:
+                        frmSoruEkle OgretmenEkran = new frmSoruEkle();
                         OgretmenEkran.Show();
                         this.Hide();
                         break;
@@ -75,35 +72,10 @@ namespace YazılımYapımıProje
             }
             else
             {
-                MessageBox.Show("Kullanıcı adı veya şifre hatalı tekrar giriniz");
+                MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı! Lütfen Tekrar Deneyiniz.");
 
             }
             db.baglanti.Close();
-        }
-
-        private void lblSifeyiUnuttum_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lblKullaniciAdiGiris_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSifreGiris_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtGirisKullaniciAdi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtGirisSifre_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void lkbSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -111,6 +83,28 @@ namespace YazılımYapımıProje
             FrmSifremiUnuttum SifremiUnuttum = new FrmSifremiUnuttum();
             SifremiUnuttum.Show();
             this.Hide();
+        }
+
+        private void ckbSifreyiGoster_CheckedChanged(object sender, EventArgs e)
+        {
+
+            {
+                {
+                    if (ckbSifreyiGoster.Checked)
+                    {
+                        txtGirisSifre.UseSystemPasswordChar = false;
+                    }
+                    else
+                    {
+                        txtGirisSifre.UseSystemPasswordChar = true;
+                    }
+                }
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

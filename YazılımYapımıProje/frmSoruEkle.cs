@@ -12,9 +12,9 @@ using System.Data.SqlTypes;
 
 namespace YazılımYapımıProje
 {
-    public partial class SoruEkle : Form
+    public partial class frmSoruEkle : Form
     {
-        public SoruEkle()
+        public frmSoruEkle()
         {
             InitializeComponent();
         }
