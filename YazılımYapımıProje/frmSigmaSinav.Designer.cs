@@ -1,6 +1,6 @@
 ﻿namespace YazılımYapımıProje
 {
-    partial class SigmaSinav
+    partial class frmSigmaSinav
     {
         /// <summary>
         /// Required designer variable.

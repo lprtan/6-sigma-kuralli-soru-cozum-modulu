@@ -11,42 +11,41 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class FrmOgrenci : Form
+    public partial class frmOgrenci : Form
     {
-        DataBase db = new DataBase();
-        DataSet ds = new DataSet();
-        frmSinav sinav = new frmSinav();
         public int AyarlarGun { get; set; }
         public int AyarlarHafta { get; set; }
         public int AyarlarAy { get; set; }
-        public int UserID { get; set; }
-        public FrmOgrenci()
+        public frmOgrenci()
         {
             InitializeComponent();
         }
         public void SoruSıklıgıAyar()
         {
-            UserID = sinav.UserIDCek();
+            DataBase db = new DataBase();
+
+            frmSigmaSinav sinav = new frmSigmaSinav();
+
+            int UserID = sinav.UserIDCek();
 
             AyarlarGun = Convert.ToInt32(cbxGun.SelectedItem);
-            AyarlarHafta= Convert.ToInt32(cbxHafta.SelectedItem);
-            AyarlarAy=Convert.ToInt32(cbxAy.SelectedItem);
+            AyarlarHafta = Convert.ToInt32(cbxHafta.SelectedItem);
+            AyarlarAy = Convert.ToInt32(cbxAy.SelectedItem);
 
             db.baglanti.Open();
             SqlCommand AyarlarCek = new SqlCommand("SELECT * from Sinav where  UserID= '" + UserID + "' ", db.baglanti);
             AyarlarCek.Connection = db.baglanti;
             SqlDataReader kontrol = AyarlarCek.ExecuteReader();
-   
+
             if (kontrol.Read())
             {
-                
-                SqlCommand AyarlarGuncelle = new SqlCommand("update Settings set Gun=@G,Hafta=@H,Ay=@A where UserID= '" + UserID + "' ",db.baglanti);
+                SqlCommand AyarlarGuncelle = new SqlCommand("update Settings set Gun=@G,Hafta=@H,Ay=@A where UserID= '" + UserID + "' ", db.baglanti);
                 AyarlarGuncelle.Parameters.AddWithValue("@G", AyarlarGun);
                 AyarlarGuncelle.Parameters.AddWithValue("@H", AyarlarHafta);
                 AyarlarGuncelle.Parameters.AddWithValue("@A", AyarlarAy);
                 kontrol.Close();
-                AyarlarGuncelle.ExecuteNonQuery(); 
-               
+                AyarlarGuncelle.ExecuteNonQuery();
+
                 MessageBox.Show("Soru kontrol sıklığınız başarıyla güncellenmiştir :)");
             }
             else
@@ -61,39 +60,49 @@ namespace YazılımYapımıProje
 
                 MessageBox.Show("Soru kontrol sıklığınız başarıyla kaydedilmiştir :)");
             }
-            db.baglanti.Close();    
-   
+            db.baglanti.Close();
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAyarKaydet_Click(object sender, EventArgs e)
+        {
+            SoruSıklıgıAyar();
+        }
+
+        private void btnSigma6_Click(object sender, EventArgs e)
+        {
+            frmSigmaSinav ss = new frmSigmaSinav();
+            ss.Show();
+            this.Hide();
+        }
+
+        private void btnDenemeSinavi_Click(object sender, EventArgs e)
         {
             frmSinav s = new frmSinav();
             s.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            SigmaSinav ss = new SigmaSinav();
-            ss.Show();
+            Application.Exit();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmGiris giris = new frmGiris();
+            giris.Show();
             this.Hide();
         }
-        private void FrmOgrenci_Load(object sender, EventArgs e)
-        {
 
-        }
-        private void btnAyarKaydet_Click(object sender, EventArgs e)
+        private void btnAyarlar_Click(object sender, EventArgs e)
         {
-           
-            SoruSıklıgıAyar();
-
-        }
-
-        private void btnRapor_Click(object sender, EventArgs e)
-        {
-            frmOgrenciRapor frmOgrenciRapor = new frmOgrenciRapor();
-            frmOgrenciRapor.Show();
-            this.Show();
+            int sayac = 0;
+            sayac++;
+            if (sayac % 2 == 0)
+                grpAyarlar.Visible = false;
+            else
+                grpAyarlar.Visible = true;
         }
     }
 }

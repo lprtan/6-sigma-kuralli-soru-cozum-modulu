@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class SigmaSinav : Form
+    public partial class frmSigmaSinav : Form
     {
         DataBase db = new DataBase();
         public void verileriGoster(string veriler)
@@ -30,7 +30,7 @@ namespace YazılımYapımıProje
         public void UserIDCek()
         {
             db.baglanti.Open();
-            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + FrmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
+            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + frmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
             UserIDAl.Connection = db.baglanti;
             SqlDataReader kontrol = UserIDAl.ExecuteReader();
             if (kontrol.Read())
@@ -104,14 +104,14 @@ namespace YazılımYapımıProje
              }
              db.baglanti.Close();
         }
-        public SigmaSinav()
+        public frmSigmaSinav()
         {
             InitializeComponent();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmOgrenci ogrnci=new FrmOgrenci();
+            frmOgrenci ogrnci=new frmOgrenci();
             ogrnci.Show();
             this.Hide();
         }

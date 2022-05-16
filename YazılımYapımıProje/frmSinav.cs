@@ -179,7 +179,7 @@ namespace YazılımYapımıProje
         public int UserIDCek()
         {
             db.baglanti.Open();
-            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + FrmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
+            SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + frmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
             UserIDAl.Connection = db.baglanti;
             SqlDataReader kontrol = UserIDAl.ExecuteReader();
             if (kontrol.Read())
@@ -406,7 +406,7 @@ namespace YazılımYapımıProje
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmOgrenci ogrnci = new FrmOgrenci();
+            frmOgrenci ogrnci = new frmOgrenci();
             ogrnci.Show();
             this.Hide();
         }
