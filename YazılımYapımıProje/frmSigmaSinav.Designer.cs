@@ -1,6 +1,6 @@
 ﻿namespace YazılımYapımıProje
 {
-    partial class frmSigmaSınav
+    partial class frmSigmaSinav
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSigmaSınav));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSigmaSinav));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.btnHomePage = new System.Windows.Forms.PictureBox();

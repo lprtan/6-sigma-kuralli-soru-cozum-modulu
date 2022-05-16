@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class frmSigmaSınav : Form
+    public partial class frmSigmaSinav : Form
     {
-        public frmSigmaSınav()
+        public frmSigmaSinav()
         {
             InitializeComponent();
         }
