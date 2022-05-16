@@ -46,6 +46,7 @@ namespace YazılımYapımıProje
             kontrol.Close();
             return UserID;
             db.baglanti.Close();
+        
         }
         public void SiraylaGetir()
         {
@@ -157,13 +158,15 @@ namespace YazılımYapımıProje
         private void frmDenemeSinav_Load(object sender, EventArgs e)
         {
             UserIDCek();
+
             db.baglanti.Open();
-            string veriler = "SELECT Question.QuestionID From Question INNER JOIN Sections ON Question.SectionID = Sections.SectionID INNER JOIN Sinav ON  Question.QuestionID = Sinav.QuestionID where Sinav.UserID = 20 and Sinav.CorrectAnswerCount < 4";
+
+            string veriler = "SELECT Question.QuestionID From Question INNER JOIN Sections ON Question.SectionID = Sections.SectionID INNER JOIN Sinav ON  Question.QuestionID = Sinav.QuestionID where Sinav.UserID = '"+UserID+"' and Sinav.CorrectAnswerCount < 4";
             SqlCommand komut = new SqlCommand(veriler, db.baglanti);
             komut.ExecuteNonQuery();
-            db.baglanti.Close();
             verileriGoster(veriler);
             SiraylaGetir();
+            db.baglanti.Close();
             lblSure.Text = "0";
             tmrKronometre.Interval = 6000;
             progressBar1.Minimum = 0;
