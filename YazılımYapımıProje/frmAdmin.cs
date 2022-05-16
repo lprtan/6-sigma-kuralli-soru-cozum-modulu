@@ -12,25 +12,23 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class FrmAdmin : Form
+    public partial class frmAdmin : Form
     {
-        public FrmAdmin()
+        public frmAdmin()
         {
             InitializeComponent();
         }
 
         DataBase db = new DataBase();
-
         public void verileriGoster(string veriler)
         {
             SqlDataAdapter dz = new SqlDataAdapter(veriler, db.baglanti);
             DataSet ds = new DataSet();
             dz.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-
+            dgvAdminSoruOnay.DataSource = ds.Tables[0];
         }
 
-        private void FrmAdmin_Load(object sender, EventArgs e)
+        private void frmAdmin_Load(object sender, EventArgs e)
         {
             db.baglanti.Open();
             string veriler = "Select * from Question where SoruOnay='" + 0 + "'";
@@ -40,43 +38,54 @@ namespace YazılımYapımıProje
             verileriGoster(veriler);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnGirisSayfası_Click(object sender, EventArgs e)
         {
-            db.baglanti.Open();
-            foreach (DataGridViewRow dgrow in dataGridView1.SelectedRows)
-            {
-                if (dataGridView1.RowCount > 0)
-               {
-                    string kayit = "update Question set SoruOnay=@soruonay where QuestionID=@a1";
-                    SqlCommand komut = new SqlCommand(kayit, db.baglanti);
-                    komut.Parameters.AddWithValue("@SoruOnay", 1);
-                    komut.Parameters.AddWithValue("@a1", dataGridView1.SelectedCells[0].Value);
-                    komut.ExecuteNonQuery();
-                    db.baglanti.Close();
-                }
-            }
-
-            MessageBox.Show("Soru Onaylandı");
+            FrmGiris giris = new FrmGiris();
+            giris.Show();
+            this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow dgrow in dataGridView1.SelectedRows)
+            Application.Exit();
+        }
+
+        private void btnOnay_Click(object sender, EventArgs e)
+        {
+            db.baglanti.Open();
+            foreach (DataGridViewRow dgrow in dgvAdminSoruOnay.SelectedRows)
             {
-                if (dataGridView1.RowCount > 0)
+                if (dgvAdminSoruOnay.RowCount > 0)
                 {
-                    db.baglanti.Open();
-                    string silinecek = "Delete from Question where QuestionID=@frkn ";
-                    SqlCommand komut = new SqlCommand(silinecek, db.baglanti);
-                    komut.Parameters.AddWithValue("@frkn", dataGridView1.SelectedCells[0].Value);
+                    string kayit = "update Question set SoruOnay=@soruonay where QuestionID=@SoruNo";
+                    SqlCommand komut = new SqlCommand(kayit, db.baglanti);
+                    komut.Parameters.AddWithValue("@SoruOnay", 1);
+                    komut.Parameters.AddWithValue("@SoruNo", dgvAdminSoruOnay.SelectedCells[0].Value);
                     komut.ExecuteNonQuery();
                     db.baglanti.Close();
-                    MessageBox.Show("Kayıt Başarıyla Silindi");
+                    return;
+                }
+            }
+            MessageBox.Show("Soru Onaylandı!");
+        }
 
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow dgrow in dgvAdminSoruOnay.SelectedRows)
+            {
+                if (dgvAdminSoruOnay.RowCount > 0)
+                {
+                    db.baglanti.Open();
+                    string silinecek = "Delete from Question where QuestionID=@SoruNo ";
+                    SqlCommand komut = new SqlCommand(silinecek, db.baglanti);
+                    komut.Parameters.AddWithValue("@SoruNo", dgvAdminSoruOnay.SelectedCells[0].Value);
+                    komut.ExecuteNonQuery();
+                    db.baglanti.Close();
+                    MessageBox.Show("Kayıt Başarıyla Silindi!");
                 }
                 else
                 {
-                    MessageBox.Show("Veritabanı Hatası");
+                    MessageBox.Show("Kayıt Bulunamadı!");
                 }
             }
         }
