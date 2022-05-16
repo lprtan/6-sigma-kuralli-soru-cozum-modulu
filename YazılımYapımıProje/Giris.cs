@@ -52,6 +52,7 @@ namespace YazılımYapımıProje
                         AlinanKullaniciAdi = txtGirisKullaniciAdi.Text;
                         Sinav sinavForm = new Sinav();
                         SigmaSinav sigmaForm = new SigmaSinav();
+                        FrmOgrenci frmOgrenci= new FrmOgrenci();
 
                         FrmOgrenci OgrenciEkran = new FrmOgrenci();
                         OgrenciEkran.Show();

@@ -45,6 +45,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.cbxGun = new System.Windows.Forms.ComboBox();
+            this.cbxHafta = new System.Windows.Forms.ComboBox();
+            this.cbxAy = new System.Windows.Forms.ComboBox();
+            this.lblGun = new System.Windows.Forms.Label();
+            this.lblHafta = new System.Windows.Forms.Label();
+            this.lblAy = new System.Windows.Forms.Label();
+            this.btnAyarKaydet = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -208,12 +215,89 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 3;
             // 
+            // cbxGun
+            // 
+            this.cbxGun.FormattingEnabled = true;
+            this.cbxGun.Items.AddRange(new object[] {
+            "1",
+            "3"});
+            this.cbxGun.Location = new System.Drawing.Point(490, 357);
+            this.cbxGun.Name = "cbxGun";
+            this.cbxGun.Size = new System.Drawing.Size(151, 28);
+            this.cbxGun.TabIndex = 4;
+            // 
+            // cbxHafta
+            // 
+            this.cbxHafta.FormattingEnabled = true;
+            this.cbxHafta.Items.AddRange(new object[] {
+            "7",
+            "14"});
+            this.cbxHafta.Location = new System.Drawing.Point(490, 414);
+            this.cbxHafta.Name = "cbxHafta";
+            this.cbxHafta.Size = new System.Drawing.Size(151, 28);
+            this.cbxHafta.TabIndex = 5;
+            // 
+            // cbxAy
+            // 
+            this.cbxAy.FormattingEnabled = true;
+            this.cbxAy.Items.AddRange(new object[] {
+            "30",
+            "60"});
+            this.cbxAy.Location = new System.Drawing.Point(490, 468);
+            this.cbxAy.Name = "cbxAy";
+            this.cbxAy.Size = new System.Drawing.Size(151, 28);
+            this.cbxAy.TabIndex = 6;
+            // 
+            // lblGun
+            // 
+            this.lblGun.AutoSize = true;
+            this.lblGun.Location = new System.Drawing.Point(424, 357);
+            this.lblGun.Name = "lblGun";
+            this.lblGun.Size = new System.Drawing.Size(38, 20);
+            this.lblGun.TabIndex = 7;
+            this.lblGun.Text = "Gün:";
+            // 
+            // lblHafta
+            // 
+            this.lblHafta.AutoSize = true;
+            this.lblHafta.Location = new System.Drawing.Point(413, 417);
+            this.lblHafta.Name = "lblHafta";
+            this.lblHafta.Size = new System.Drawing.Size(49, 20);
+            this.lblHafta.TabIndex = 7;
+            this.lblHafta.Text = "Hafta:";
+            // 
+            // lblAy
+            // 
+            this.lblAy.AutoSize = true;
+            this.lblAy.Location = new System.Drawing.Point(433, 471);
+            this.lblAy.Name = "lblAy";
+            this.lblAy.Size = new System.Drawing.Size(29, 20);
+            this.lblAy.TabIndex = 7;
+            this.lblAy.Text = "Ay:";
+            // 
+            // btnAyarKaydet
+            // 
+            this.btnAyarKaydet.Location = new System.Drawing.Point(513, 516);
+            this.btnAyarKaydet.Name = "btnAyarKaydet";
+            this.btnAyarKaydet.Size = new System.Drawing.Size(128, 37);
+            this.btnAyarKaydet.TabIndex = 8;
+            this.btnAyarKaydet.Text = "Ayarları Kaydet";
+            this.btnAyarKaydet.UseVisualStyleBackColor = true;
+            this.btnAyarKaydet.Click += new System.EventHandler(this.btnAyarKaydet_Click);
+            // 
             // FrmOgrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1078, 621);
+            this.Controls.Add(this.btnAyarKaydet);
+            this.Controls.Add(this.lblAy);
+            this.Controls.Add(this.lblHafta);
+            this.Controls.Add(this.lblGun);
+            this.Controls.Add(this.cbxAy);
+            this.Controls.Add(this.cbxHafta);
+            this.Controls.Add(this.cbxGun);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
@@ -225,6 +309,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -247,5 +332,12 @@
         private Button button3;
         private Label label1;
         private MonthCalendar monthCalendar1;
+        private ComboBox cbxGun;
+        private ComboBox cbxHafta;
+        private ComboBox cbxAy;
+        private Label lblGun;
+        private Label lblHafta;
+        private Label lblAy;
+        private Button btnAyarKaydet;
     }
 }

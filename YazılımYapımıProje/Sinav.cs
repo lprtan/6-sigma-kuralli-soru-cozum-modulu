@@ -21,22 +21,42 @@ namespace YazılımYapımıProje
         public int ID { get; set; }
         public int UserID { get; set; }
         public int CAC { get; set; }
+        public int nGun { get; set; }
+        public int nHafta { get; set; }
+        public int nAy { get; set; }
+        public DateTime BugununTarihi { get; set; }
+        public DateTime SorununCozulduguTarih { get; set; }
 
         DataBase db = new DataBase();
         private string x = null!;
         int buttonIndex = 0;
         int sayac=1;
-        int Z;
+        int DogruSayisi;
         DataSet ds = new DataSet();
-        public void SoruYazdir()
+
+        public void Ayarlar()
         {
             db.baglanti.Open();
+            SqlCommand Ayarlar = new SqlCommand("select Gun,Hafta,Ay from Settings where UserID='" + UserID + "'", db.baglanti);
+            Ayarlar.Connection = db.baglanti;
+            SqlDataReader Ayarkontrol = Ayarlar.ExecuteReader();
+
+            if (Ayarkontrol.Read())
+            {
+                 nGun = Convert.ToInt32(Ayarkontrol["Gun"]);
+                 nHafta = Convert.ToInt32(Ayarkontrol["Hafta"]);
+                 nAy = Convert.ToInt32(Ayarkontrol["AY"]);
+            }
+            db.baglanti.Close();
+        }
+        public void SoruYazdir()
+        {
+            //db.baglanti.Open();
             SqlCommand DogruSoruCek = new SqlCommand("SELECT Question.QuestionID, RightAnswer, QuestionText, SectionID, UnitID, PicturePath, a, b, c, d FROM"+
-            " Question INNER JOIN Sinav ON Question.QuestionID = Sinav.QuestionID AND UserID='" + UserID + "'  where CorrectAnswerCount='" + Z + "'", db.baglanti);
+            " Question INNER JOIN Sinav ON Question.QuestionID = Sinav.QuestionID AND UserID='" + UserID + "'  where CorrectAnswerCount='" + DogruSayisi + "'", db.baglanti);
 
             DogruSoruCek.Connection = db.baglanti;
             SqlDataReader kontrol3 = DogruSoruCek.ExecuteReader();
-
 
             if (kontrol3.Read())
             {
@@ -53,60 +73,72 @@ namespace YazılımYapımıProje
             }
             else
             {
-                MessageBox.Show("veritabanı hatası");
+                button2.Enabled=true;
+                MessageBox.Show("Sınav bitti ");
             }
-            db.baglanti.Close();
-
+           db.baglanti.Close();
         }
         public void DogruSoruCek()
         {
-            /*SqlCommand cmd = new SqlCommand("SELECT * from Sinav where QuestionID='" + ID + "' AND UserID= '" + UserID + "' ", db.baglanti);
-            cmd.Connection = db.baglanti;
-            SqlDataReader kontrol = cmd.ExecuteReader();
 
-            if (kontrol.Read())
-            {
-                CAC = Convert.ToInt32(kontrol["CorrectAnswerCount"]);
-            }*/
+            Ayarlar();
 
-            CAC = 2;
+            db.baglanti.Open();
+            SqlCommand CozumTarihi = new SqlCommand("select * from Sinav where UserID='" + UserID + "' and QuestionID='"+ID+"'", db.baglanti);
+            CozumTarihi.Connection = db.baglanti;
+            SqlDataReader Tarihkontrol = CozumTarihi.ExecuteReader();
+            if (Tarihkontrol.Read())
+            {
+                SorununCozulduguTarih = Convert.ToDateTime(Tarihkontrol["CozumTarihi"]);
+            }
+            BugununTarihi =DateTime.Now;
+           
 
-                if (CAC == 1)
-            {
-                Z = 1;
-                SoruYazdir();
+            TimeSpan GunSayisi = BugununTarihi - SorununCozulduguTarih;
+           
 
-            }
-            else if (CAC == 2)
+            if (Math.Abs(GunSayisi.Days)>=nGun && Math.Abs(GunSayisi.Days) <7)
             {
-                Z = 2;
+                DogruSayisi = 1;
+                Tarihkontrol.Close();
+                SoruYazdir();  
+            }
+            else if (Math.Abs(GunSayisi.Days) >= nHafta && Math.Abs(GunSayisi.Days) < 30)
+            {              
+                DogruSayisi = 2;
+                Tarihkontrol.Close();
                 SoruYazdir();
             }
-            else if (CAC == 3)
+            else if (Math.Abs(GunSayisi.Days) >= nAy && Math.Abs(GunSayisi.Days) < 90)
             {
-                Z = 3;
+                DogruSayisi = 3;
+                Tarihkontrol.Close();
                 SoruYazdir();
             }
-            else if (CAC == 4)
+            else if (Math.Abs(GunSayisi.Days) >= 90 && Math.Abs(GunSayisi.Days) < 180)
             {
-                Z = 4;
+                DogruSayisi = 4;
+                Tarihkontrol.Close();
                 SoruYazdir();
             }
-            else if (CAC == 5)
+            else if (Math.Abs(GunSayisi.Days) >= 180 && Math.Abs(GunSayisi.Days) < 365)
             {
-                Z = 5;
+                DogruSayisi = 5;
+                Tarihkontrol.Close();
                 SoruYazdir();
             }
-            else if (CAC == 6)
-            { 
-                Z=6;
+            else if (Math.Abs(GunSayisi.Days) >= 365)
+            {
+                DogruSayisi = 6;
+                Tarihkontrol.Close();
                 SoruYazdir();
             }
             else
             {
-                db.baglanti.Close();
+                //db.baglanti.Close();
                 MessageBox.Show("CAC hatası");
             }
+            db.baglanti.Close();
         }
         public void SiraylaGetir()
         {
@@ -121,13 +153,12 @@ namespace YazılımYapımıProje
                     x = dataGridView1.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();
                     textBox1.Text = dataGridView1.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();
                     SoruCek();
-
                 }
                 else if(dataGridView1.RowCount >0 || dataGridView1.RowCount <1)
                 {
                  DogruSoruCek();
                 }
-                 else
+                else
                 textBox1.Text = "";
             }
             buttonIndex++;
@@ -145,7 +176,7 @@ namespace YazılımYapımıProje
             CACGuncelle.Parameters.AddWithValue("@p1", (CAC + 1));
             CACGuncelle.ExecuteNonQuery();
         }
-        public void UserIDCek()
+        public int UserIDCek()
         {
             db.baglanti.Open();
             SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + FrmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
@@ -161,6 +192,7 @@ namespace YazılımYapımıProje
             }
             kontrol.Close();
             db.baglanti.Close();
+            return UserID;
         }
         public void SoruKontrol()
         {
