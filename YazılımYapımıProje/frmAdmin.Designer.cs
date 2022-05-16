@@ -37,6 +37,7 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnOnay = new System.Windows.Forms.Button();
             this.dgvAdminSoruOnay = new System.Windows.Forms.DataGridView();
+            this.imgListInterface = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGirisSayfası)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +92,7 @@
             this.btnSil.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSil.ImageKey = "bin.png";
+            this.btnSil.ImageList = this.imgListInterface;
             this.btnSil.Location = new System.Drawing.Point(674, 194);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(114, 27);
@@ -106,6 +108,7 @@
             this.btnOnay.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnOnay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOnay.ImageKey = "save.png";
+            this.btnOnay.ImageList = this.imgListInterface;
             this.btnOnay.Location = new System.Drawing.Point(674, 161);
             this.btnOnay.Name = "btnOnay";
             this.btnOnay.Size = new System.Drawing.Size(114, 27);
@@ -125,6 +128,14 @@
             this.dgvAdminSoruOnay.RowTemplate.Height = 25;
             this.dgvAdminSoruOnay.Size = new System.Drawing.Size(656, 333);
             this.dgvAdminSoruOnay.TabIndex = 9;
+            // 
+            // imgListInterface
+            // 
+            this.imgListInterface.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imgListInterface.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListInterface.ImageStream")));
+            this.imgListInterface.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgListInterface.Images.SetKeyName(0, "bin.png");
+            this.imgListInterface.Images.SetKeyName(1, "save.png");
             // 
             // frmAdmin
             // 
@@ -159,5 +170,6 @@
         private Button btnSil;
         private Button btnOnay;
         private DataGridView dgvAdminSoruOnay;
+        private ImageList imgListInterface;
     }
 }
