@@ -11,38 +11,42 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class FrmKayitOl : Form
+    public partial class frmKayitOl : Form
     {
-        public FrmKayitOl()
+        public frmKayitOl()
         {
             InitializeComponent();
         }
         DataBase db = new DataBase();
+
         private void btnKullaniciKayit_Click(object sender, EventArgs e)
         {
             db.baglanti.Open();
             SqlCommand kayitekle = new SqlCommand("insert into Users (UserName,Name,Surname,Mail,Password,UserTypeID) values (@p1,@p2,@p3,@p4,@p5,@p6)", db.baglanti);
 
-            kayitekle.Parameters.AddWithValue("@p1",txtKullaniciAdiKayit.Text);
-            kayitekle.Parameters.AddWithValue("@p2",txtAd.Text);
-            kayitekle.Parameters.AddWithValue("@p3",txtSoyad.Text);
-            kayitekle.Parameters.AddWithValue("@p4",txtMail.Text);
-            kayitekle.Parameters.AddWithValue("@p5",txtSifre.Text);
-            kayitekle.Parameters.AddWithValue("@p6",(cbxKullaniciType.SelectedIndex)+1);
-         
+            kayitekle.Parameters.AddWithValue("@p1", txtKullaniciAdiKayit.Text);
+            kayitekle.Parameters.AddWithValue("@p2", txtAd.Text);
+            kayitekle.Parameters.AddWithValue("@p3", txtSoyad.Text);
+            kayitekle.Parameters.AddWithValue("@p4", txtMail.Text);
+            kayitekle.Parameters.AddWithValue("@p5", txtSifre.Text);
+            kayitekle.Parameters.AddWithValue("@p6", (cbxKullaniciType.SelectedIndex) + 1);
+
             kayitekle.ExecuteNonQuery();
             db.baglanti.Close();
 
-            MessageBox.Show("Kaydınız Başarıyla alınmıştır");
+            MessageBox.Show("Kaydınız Başarıyla Alınmıştır...");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            FrmGiris GirisEkran = new FrmGiris();
+            frmGiris GirisEkran = new frmGiris();
             GirisEkran.Show();
             this.Hide();
-            this.Close();
-            this.Dispose();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
