@@ -180,6 +180,7 @@
             this.Controls.Add(this.txtSifremiUnuttumMail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSifremiUnuttum";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSifremiUnuttum";
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSifreyiUnuttumIcon)).EndInit();

@@ -40,7 +40,7 @@ namespace YazılımYapımıProje
 
         private void btnGirisSayfası_Click(object sender, EventArgs e)
         {
-            FrmGiris giris = new FrmGiris();
+            frmGiris giris = new frmGiris();
             giris.Show();
             this.Hide();
         }

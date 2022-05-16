@@ -340,6 +340,7 @@
             this.Controls.Add(this.rtbSoru);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDenemeSinav";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDenemeSinav";
             this.Load += new System.EventHandler(this.frmDenemeSinav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

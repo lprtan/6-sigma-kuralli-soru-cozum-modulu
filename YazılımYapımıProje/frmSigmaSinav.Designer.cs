@@ -256,7 +256,7 @@
             this.pbResim.TabIndex = 72;
             this.pbResim.TabStop = false;
             // 
-            // frmSigmaSınav
+            // frmSigmaSinav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -280,7 +280,8 @@
             this.Controls.Add(this.rtbSoru);
             this.Controls.Add(this.pbResim);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmSigmaSınav";
+            this.Name = "frmSigmaSinav";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSigmaSınav";
             this.Load += new System.EventHandler(this.frmSigmaSınav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();

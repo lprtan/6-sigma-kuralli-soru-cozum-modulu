@@ -29,7 +29,7 @@ namespace YazılımYapımıProje
         int zamansayac = 0;
         int sayac = 0;
         public int UserID { get; set; }
-        public void UserIDCek()
+        public int UserIDCek()
         {
             db.baglanti.Open();
             SqlCommand UserIDAl = new SqlCommand("select * from Users where UserName='" + frmGiris.AlinanKullaniciAdi.ToString() + "'", db.baglanti);
@@ -44,6 +44,7 @@ namespace YazılımYapımıProje
                 MessageBox.Show("Veritabanı hatası!!!");
             }
             kontrol.Close();
+            return UserID;
             db.baglanti.Close();
         }
         public void SiraylaGetir()

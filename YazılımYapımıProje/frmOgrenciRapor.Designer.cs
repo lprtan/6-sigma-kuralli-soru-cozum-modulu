@@ -36,18 +36,20 @@
             // dvgOgrenciRapor
             // 
             this.dvgOgrenciRapor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgOgrenciRapor.Location = new System.Drawing.Point(152, 93);
+            this.dvgOgrenciRapor.Location = new System.Drawing.Point(133, 70);
+            this.dvgOgrenciRapor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dvgOgrenciRapor.Name = "dvgOgrenciRapor";
             this.dvgOgrenciRapor.RowHeadersWidth = 51;
             this.dvgOgrenciRapor.RowTemplate.Height = 29;
-            this.dvgOgrenciRapor.Size = new System.Drawing.Size(426, 200);
+            this.dvgOgrenciRapor.Size = new System.Drawing.Size(373, 150);
             this.dvgOgrenciRapor.TabIndex = 0;
             // 
             // btnYazdir
             // 
-            this.btnYazdir.Location = new System.Drawing.Point(484, 313);
+            this.btnYazdir.Location = new System.Drawing.Point(424, 235);
+            this.btnYazdir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnYazdir.Name = "btnYazdir";
-            this.btnYazdir.Size = new System.Drawing.Size(94, 29);
+            this.btnYazdir.Size = new System.Drawing.Size(82, 22);
             this.btnYazdir.TabIndex = 1;
             this.btnYazdir.Text = "Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = true;
@@ -55,12 +57,14 @@
             // 
             // frmOgrenciRapor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 420);
+            this.ClientSize = new System.Drawing.Size(669, 315);
             this.Controls.Add(this.btnYazdir);
             this.Controls.Add(this.dvgOgrenciRapor);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmOgrenciRapor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOgrenciRapor";
             this.Load += new System.EventHandler(this.frmOgrenciRapor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgOgrenciRapor)).EndInit();

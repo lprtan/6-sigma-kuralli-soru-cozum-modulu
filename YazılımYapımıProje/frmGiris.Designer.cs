@@ -36,12 +36,12 @@
             this.pbGirisIcon = new System.Windows.Forms.PictureBox();
             this.lkbSifremiUnuttum = new System.Windows.Forms.LinkLabel();
             this.btnGiris = new System.Windows.Forms.Button();
+            this.imgListIntrefaces = new System.Windows.Forms.ImageList(this.components);
             this.btnKayıtOl = new System.Windows.Forms.Button();
             this.txtGirisSifre = new System.Windows.Forms.TextBox();
             this.txtGirisKullaniciAdi = new System.Windows.Forms.TextBox();
             this.lblSifreGiris = new System.Windows.Forms.Label();
             this.lblKullaniciAdiGiris = new System.Windows.Forms.Label();
-            this.imgListIntrefaces = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGirisIcon)).BeginInit();
             this.SuspendLayout();
@@ -116,6 +116,28 @@
             this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
+            // imgListIntrefaces
+            // 
+            this.imgListIntrefaces.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imgListIntrefaces.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListIntrefaces.ImageStream")));
+            this.imgListIntrefaces.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgListIntrefaces.Images.SetKeyName(0, "user (6).png");
+            this.imgListIntrefaces.Images.SetKeyName(1, "user (7).png");
+            this.imgListIntrefaces.Images.SetKeyName(2, "user (8).png");
+            this.imgListIntrefaces.Images.SetKeyName(3, "user (9).png");
+            this.imgListIntrefaces.Images.SetKeyName(4, "user (11).png");
+            this.imgListIntrefaces.Images.SetKeyName(5, "user (12).png");
+            this.imgListIntrefaces.Images.SetKeyName(6, "user (13).png");
+            this.imgListIntrefaces.Images.SetKeyName(7, "user (14).png");
+            this.imgListIntrefaces.Images.SetKeyName(8, "user (15).png");
+            this.imgListIntrefaces.Images.SetKeyName(9, "user (16).png");
+            this.imgListIntrefaces.Images.SetKeyName(10, "user (17).png");
+            this.imgListIntrefaces.Images.SetKeyName(11, "user (17).png");
+            this.imgListIntrefaces.Images.SetKeyName(12, "user (18).png");
+            this.imgListIntrefaces.Images.SetKeyName(13, "user (19).png");
+            this.imgListIntrefaces.Images.SetKeyName(14, "user (20).png");
+            this.imgListIntrefaces.Images.SetKeyName(15, "user (21).png");
+            // 
             // btnKayıtOl
             // 
             this.btnKayıtOl.BackColor = System.Drawing.Color.Orange;
@@ -186,28 +208,6 @@
             this.lblKullaniciAdiGiris.Text = "      Kullanıcı Adı:";
             this.lblKullaniciAdiGiris.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // imgListIntrefaces
-            // 
-            this.imgListIntrefaces.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imgListIntrefaces.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListIntrefaces.ImageStream")));
-            this.imgListIntrefaces.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgListIntrefaces.Images.SetKeyName(0, "user (6).png");
-            this.imgListIntrefaces.Images.SetKeyName(1, "user (7).png");
-            this.imgListIntrefaces.Images.SetKeyName(2, "user (8).png");
-            this.imgListIntrefaces.Images.SetKeyName(3, "user (9).png");
-            this.imgListIntrefaces.Images.SetKeyName(4, "user (11).png");
-            this.imgListIntrefaces.Images.SetKeyName(5, "user (12).png");
-            this.imgListIntrefaces.Images.SetKeyName(6, "user (13).png");
-            this.imgListIntrefaces.Images.SetKeyName(7, "user (14).png");
-            this.imgListIntrefaces.Images.SetKeyName(8, "user (15).png");
-            this.imgListIntrefaces.Images.SetKeyName(9, "user (16).png");
-            this.imgListIntrefaces.Images.SetKeyName(10, "user (17).png");
-            this.imgListIntrefaces.Images.SetKeyName(11, "user (17).png");
-            this.imgListIntrefaces.Images.SetKeyName(12, "user (18).png");
-            this.imgListIntrefaces.Images.SetKeyName(13, "user (19).png");
-            this.imgListIntrefaces.Images.SetKeyName(14, "user (20).png");
-            this.imgListIntrefaces.Images.SetKeyName(15, "user (21).png");
-            // 
             // frmGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -226,6 +226,7 @@
             this.Controls.Add(this.lblKullaniciAdiGiris);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGiris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGiris";
             this.Load += new System.EventHandler(this.frmGiris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();

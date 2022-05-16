@@ -35,9 +35,9 @@
             this.btnGirisSayfası = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSil = new System.Windows.Forms.Button();
+            this.imgListInterface = new System.Windows.Forms.ImageList(this.components);
             this.btnOnay = new System.Windows.Forms.Button();
             this.dgvAdminSoruOnay = new System.Windows.Forms.DataGridView();
-            this.imgListInterface = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGirisSayfası)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,6 +101,14 @@
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
+            // imgListInterface
+            // 
+            this.imgListInterface.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imgListInterface.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListInterface.ImageStream")));
+            this.imgListInterface.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgListInterface.Images.SetKeyName(0, "bin.png");
+            this.imgListInterface.Images.SetKeyName(1, "save.png");
+            // 
             // btnOnay
             // 
             this.btnOnay.BackColor = System.Drawing.Color.Orange;
@@ -129,14 +137,6 @@
             this.dgvAdminSoruOnay.Size = new System.Drawing.Size(656, 333);
             this.dgvAdminSoruOnay.TabIndex = 9;
             // 
-            // imgListInterface
-            // 
-            this.imgListInterface.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imgListInterface.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListInterface.ImageStream")));
-            this.imgListInterface.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgListInterface.Images.SetKeyName(0, "bin.png");
-            this.imgListInterface.Images.SetKeyName(1, "save.png");
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -151,6 +151,7 @@
             this.Controls.Add(this.dgvAdminSoruOnay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmin";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();

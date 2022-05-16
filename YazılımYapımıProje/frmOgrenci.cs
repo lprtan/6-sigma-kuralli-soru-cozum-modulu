@@ -78,7 +78,7 @@ namespace YazılımYapımıProje
 
         private void btnDenemeSinavi_Click(object sender, EventArgs e)
         {
-            frmSinav s = new frmSinav();
+            frmDenemeSinav s = new frmDenemeSinav();
             s.Show();
             this.Hide();
         }

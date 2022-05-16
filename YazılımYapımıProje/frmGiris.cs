@@ -28,7 +28,7 @@ namespace YazılımYapımıProje
 
         private void btnKayıtOl_Click(object sender, EventArgs e)
         {
-            FrmKayitOl KayitOl = new FrmKayitOl();
+            frmKayitOl KayitOl = new frmKayitOl();
             KayitOl.Show();
             this.Hide();
         }
@@ -49,9 +49,9 @@ namespace YazılımYapımıProje
                 {
                     case 1:
                         AlinanKullaniciAdi = txtGirisKullaniciAdi.Text;
-                        frmSinav sinavForm = new frmSinav();
+                        frmDenemeSinav sinavForm = new frmDenemeSinav();
 
-                        FrmOgrenci OgrenciEkran = new FrmOgrenci();
+                        frmOgrenci OgrenciEkran = new frmOgrenci();
                         OgrenciEkran.Show();
                         this.Hide();
                         break;
@@ -80,7 +80,7 @@ namespace YazılımYapımıProje
 
         private void lkbSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmSifremiUnuttum SifremiUnuttum = new FrmSifremiUnuttum();
+            frmSifremiUnuttum SifremiUnuttum = new frmSifremiUnuttum();
             SifremiUnuttum.Show();
             this.Hide();
         }

@@ -17,7 +17,7 @@ namespace YazılımYapımıProje
     public partial class frmOgrenciRapor : Form
     {
         DataBase db=new DataBase();
-        frmSinav sinav = new frmSinav();
+        frmDenemeSinav sinav = new frmDenemeSinav();
         DataSet ds = new DataSet();
         public int UserID { get; set; }
         public frmOgrenciRapor()
