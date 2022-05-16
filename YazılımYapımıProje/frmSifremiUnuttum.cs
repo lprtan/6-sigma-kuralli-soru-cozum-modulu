@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace YazılımYapımıProje
 {
-    public partial class FrmSifremiUnuttum : Form
+    public partial class frmSifremiUnuttum : Form
     {
-        public FrmSifremiUnuttum()
+        public frmSifremiUnuttum()
         {
             InitializeComponent();
         }
@@ -31,6 +31,18 @@ namespace YazılımYapımıProje
             SifreGuncelle.ExecuteNonQuery();
             db.baglanti.Close();
             MessageBox.Show("Şifreniz Başarıyla Güncellendi.");
+        }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+            frmGiris giris = new frmGiris();
+            giris.Show();
+            this.Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
