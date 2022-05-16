@@ -19,7 +19,8 @@ namespace YazılımYapımıProje
             InitializeComponent();
         }
         DataBase db = new DataBase();
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnEkle_Click(object sender, EventArgs e)
         {
             db.baglanti.Open();
             SqlCommand Soruekle = new SqlCommand("insert into Question " +
@@ -62,7 +63,6 @@ namespace YazılımYapımıProje
 
             }
 
-
             Soruekle.ExecuteNonQuery();
             db.baglanti.Close();
 
@@ -74,6 +74,18 @@ namespace YazılımYapımıProje
             openFileDialog1.ShowDialog(this);
             pictureSoru.ImageLocation = openFileDialog1.FileName;
             lblPath.Text = openFileDialog1.FileName;
+        }
+
+        private void btnGirisSayfası_Click(object sender, EventArgs e)
+        {
+            frmGiris giris = new frmGiris();
+            giris.Show();
+            this.Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
