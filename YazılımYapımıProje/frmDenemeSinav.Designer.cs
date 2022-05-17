@@ -130,7 +130,7 @@
             // 
             // txtD
             // 
-            this.txtD.BackColor = System.Drawing.Color.LightYellow;
+            this.txtD.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtD.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtD.Location = new System.Drawing.Point(232, 336);
             this.txtD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -143,7 +143,7 @@
             // 
             // txtC
             // 
-            this.txtC.BackColor = System.Drawing.Color.LightYellow;
+            this.txtC.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtC.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtC.Location = new System.Drawing.Point(12, 336);
             this.txtC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -156,7 +156,7 @@
             // 
             // txtB
             // 
-            this.txtB.BackColor = System.Drawing.Color.LightYellow;
+            this.txtB.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtB.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtB.Location = new System.Drawing.Point(233, 273);
             this.txtB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -169,7 +169,7 @@
             // 
             // txtA
             // 
-            this.txtA.BackColor = System.Drawing.Color.LightYellow;
+            this.txtA.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtA.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtA.Location = new System.Drawing.Point(12, 273);
             this.txtA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -230,7 +230,7 @@
             // rdbD
             // 
             this.rdbD.AutoSize = true;
-            this.rdbD.BackColor = System.Drawing.Color.LightYellow;
+            this.rdbD.BackColor = System.Drawing.Color.LemonChiffon;
             this.rdbD.Enabled = false;
             this.rdbD.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rdbD.Location = new System.Drawing.Point(402, 347);
@@ -245,7 +245,7 @@
             // rdbC
             // 
             this.rdbC.AutoSize = true;
-            this.rdbC.BackColor = System.Drawing.Color.LightYellow;
+            this.rdbC.BackColor = System.Drawing.Color.LemonChiffon;
             this.rdbC.Enabled = false;
             this.rdbC.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rdbC.Location = new System.Drawing.Point(182, 347);
@@ -260,7 +260,7 @@
             // rdbB
             // 
             this.rdbB.AutoSize = true;
-            this.rdbB.BackColor = System.Drawing.Color.LightYellow;
+            this.rdbB.BackColor = System.Drawing.Color.LemonChiffon;
             this.rdbB.Enabled = false;
             this.rdbB.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rdbB.Location = new System.Drawing.Point(404, 283);
@@ -275,7 +275,7 @@
             // rdbA
             // 
             this.rdbA.AutoSize = true;
-            this.rdbA.BackColor = System.Drawing.Color.LightYellow;
+            this.rdbA.BackColor = System.Drawing.Color.LemonChiffon;
             this.rdbA.Enabled = false;
             this.rdbA.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rdbA.Location = new System.Drawing.Point(182, 283);

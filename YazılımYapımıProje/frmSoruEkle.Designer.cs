@@ -95,7 +95,7 @@
             // pbSoruEkleIcon
             // 
             this.pbSoruEkleIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbSoruEkleIcon.Image")));
-            this.pbSoruEkleIcon.Location = new System.Drawing.Point(754, 296);
+            this.pbSoruEkleIcon.Location = new System.Drawing.Point(756, 268);
             this.pbSoruEkleIcon.Name = "pbSoruEkleIcon";
             this.pbSoruEkleIcon.Size = new System.Drawing.Size(100, 100);
             this.pbSoruEkleIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,7 +157,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LemonChiffon;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(684, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
@@ -167,7 +169,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LemonChiffon;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Orange;
             this.label1.Location = new System.Drawing.Point(677, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 16);

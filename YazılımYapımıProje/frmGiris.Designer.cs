@@ -157,7 +157,7 @@
             // 
             // txtGirisSifre
             // 
-            this.txtGirisSifre.BackColor = System.Drawing.Color.LightYellow;
+            this.txtGirisSifre.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtGirisSifre.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtGirisSifre.Location = new System.Drawing.Point(223, 214);
             this.txtGirisSifre.Name = "txtGirisSifre";
@@ -166,7 +166,7 @@
             // 
             // txtGirisKullaniciAdi
             // 
-            this.txtGirisKullaniciAdi.BackColor = System.Drawing.Color.LightYellow;
+            this.txtGirisKullaniciAdi.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtGirisKullaniciAdi.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtGirisKullaniciAdi.Location = new System.Drawing.Point(223, 171);
             this.txtGirisKullaniciAdi.Name = "txtGirisKullaniciAdi";

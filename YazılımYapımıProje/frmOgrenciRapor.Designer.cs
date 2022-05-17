@@ -36,6 +36,7 @@
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.btnGiris = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
+            this.imgListInterface = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dvgOgrenciRapor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGiris)).BeginInit();
@@ -44,7 +45,7 @@
             // 
             // dvgOgrenciRapor
             // 
-            this.dvgOgrenciRapor.BackgroundColor = System.Drawing.Color.LightYellow;
+            this.dvgOgrenciRapor.BackgroundColor = System.Drawing.Color.LemonChiffon;
             this.dvgOgrenciRapor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgOgrenciRapor.Location = new System.Drawing.Point(12, 58);
             this.dvgOgrenciRapor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -59,12 +60,15 @@
             this.btnYazdir.BackColor = System.Drawing.Color.Orange;
             this.btnYazdir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnYazdir.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnYazdir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYazdir.ImageKey = "printer.png";
+            this.btnYazdir.ImageList = this.imgListInterface;
             this.btnYazdir.Location = new System.Drawing.Point(190, 349);
             this.btnYazdir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnYazdir.Name = "btnYazdir";
             this.btnYazdir.Size = new System.Drawing.Size(120, 40);
             this.btnYazdir.TabIndex = 1;
-            this.btnYazdir.Text = "Yazdır";
+            this.btnYazdir.Text = "    Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = false;
             this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
             // 
@@ -109,6 +113,13 @@
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // imgListInterface
+            // 
+            this.imgListInterface.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imgListInterface.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListInterface.ImageStream")));
+            this.imgListInterface.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgListInterface.Images.SetKeyName(0, "printer.png");
+            // 
             // frmOgrenciRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -142,5 +153,6 @@
         private PictureBox btnExit;
         private PictureBox btnGiris;
         private PictureBox btnBack;
+        private ImageList imgListInterface;
     }
 }

@@ -150,6 +150,7 @@
             // 
             // txtSifremiUnuttumSifre
             // 
+            this.txtSifremiUnuttumSifre.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtSifremiUnuttumSifre.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSifremiUnuttumSifre.Location = new System.Drawing.Point(223, 214);
             this.txtSifremiUnuttumSifre.Name = "txtSifremiUnuttumSifre";
@@ -158,6 +159,7 @@
             // 
             // txtSifremiUnuttumMail
             // 
+            this.txtSifremiUnuttumMail.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtSifremiUnuttumMail.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSifremiUnuttumMail.Location = new System.Drawing.Point(223, 171);
             this.txtSifremiUnuttumMail.Name = "txtSifremiUnuttumMail";

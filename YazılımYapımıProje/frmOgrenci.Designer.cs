@@ -82,7 +82,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightYellow;
+            this.panel1.BackColor = System.Drawing.Color.LemonChiffon;
             this.panel1.Controls.Add(this.btnOgrenciRaporAl);
             this.panel1.Controls.Add(this.btnAyarlar);
             this.panel1.Controls.Add(this.btnDenemeSinavi);
@@ -230,7 +230,7 @@
             // 
             // cbxGun
             // 
-            this.cbxGun.BackColor = System.Drawing.Color.LightYellow;
+            this.cbxGun.BackColor = System.Drawing.Color.LemonChiffon;
             this.cbxGun.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxGun.FormattingEnabled = true;
             this.cbxGun.Items.AddRange(new object[] {
@@ -254,7 +254,7 @@
             // 
             // cbxHafta
             // 
-            this.cbxHafta.BackColor = System.Drawing.Color.LightYellow;
+            this.cbxHafta.BackColor = System.Drawing.Color.LemonChiffon;
             this.cbxHafta.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxHafta.FormattingEnabled = true;
             this.cbxHafta.Items.AddRange(new object[] {
@@ -278,7 +278,7 @@
             // 
             // cbxAy
             // 
-            this.cbxAy.BackColor = System.Drawing.Color.LightYellow;
+            this.cbxAy.BackColor = System.Drawing.Color.LemonChiffon;
             this.cbxAy.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxAy.FormattingEnabled = true;
             this.cbxAy.Items.AddRange(new object[] {

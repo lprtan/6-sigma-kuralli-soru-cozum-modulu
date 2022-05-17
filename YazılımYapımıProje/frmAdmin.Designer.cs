@@ -89,7 +89,7 @@
             // 
             this.btnSil.BackColor = System.Drawing.Color.Orange;
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSil.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSil.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSil.ImageKey = "bin.png";
             this.btnSil.ImageList = this.imgListInterface;
@@ -97,7 +97,7 @@
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(114, 27);
             this.btnSil.TabIndex = 11;
-            this.btnSil.Text = "Sil";
+            this.btnSil.Text = "  Sil";
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
@@ -113,7 +113,7 @@
             // 
             this.btnOnay.BackColor = System.Drawing.Color.Orange;
             this.btnOnay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOnay.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOnay.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnOnay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOnay.ImageKey = "save.png";
             this.btnOnay.ImageList = this.imgListInterface;
@@ -121,7 +121,7 @@
             this.btnOnay.Name = "btnOnay";
             this.btnOnay.Size = new System.Drawing.Size(114, 27);
             this.btnOnay.TabIndex = 10;
-            this.btnOnay.Text = "Onayla";
+            this.btnOnay.Text = "    Onayla";
             this.btnOnay.UseVisualStyleBackColor = false;
             this.btnOnay.Click += new System.EventHandler(this.btnOnay_Click);
             // 
