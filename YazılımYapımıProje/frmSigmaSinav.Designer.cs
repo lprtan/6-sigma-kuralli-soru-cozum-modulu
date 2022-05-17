@@ -67,10 +67,9 @@
             // 
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(905, 16);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBack.Location = new System.Drawing.Point(792, 12);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(32, 37);
+            this.btnBack.Size = new System.Drawing.Size(28, 28);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 88;
             this.btnBack.TabStop = false;
@@ -80,10 +79,9 @@
             // 
             this.btnHomePage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
-            this.btnHomePage.Location = new System.Drawing.Point(944, 16);
-            this.btnHomePage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHomePage.Location = new System.Drawing.Point(826, 12);
             this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(32, 37);
+            this.btnHomePage.Size = new System.Drawing.Size(28, 28);
             this.btnHomePage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHomePage.TabIndex = 87;
             this.btnHomePage.TabStop = false;
@@ -93,10 +91,9 @@
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(983, 16);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExit.Location = new System.Drawing.Point(860, 12);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(32, 37);
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnExit.TabIndex = 86;
             this.btnExit.TabStop = false;
@@ -105,29 +102,30 @@
             // dgvList
             // 
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvList.Location = new System.Drawing.Point(602, 473);
+            this.dgvList.Location = new System.Drawing.Point(527, 355);
+            this.dgvList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvList.Name = "dgvList";
             this.dgvList.RowHeadersWidth = 51;
             this.dgvList.RowTemplate.Height = 29;
-            this.dgvList.Size = new System.Drawing.Size(24, 27);
+            this.dgvList.Size = new System.Drawing.Size(21, 20);
             this.dgvList.TabIndex = 85;
             this.dgvList.Visible = false;
             // 
             // lblDogruCevap
             // 
             this.lblDogruCevap.AutoSize = true;
-            this.lblDogruCevap.Location = new System.Drawing.Point(531, 399);
+            this.lblDogruCevap.Location = new System.Drawing.Point(465, 299);
             this.lblDogruCevap.Name = "lblDogruCevap";
-            this.lblDogruCevap.Size = new System.Drawing.Size(96, 20);
+            this.lblDogruCevap.Size = new System.Drawing.Size(76, 15);
             this.lblDogruCevap.TabIndex = 84;
             this.lblDogruCevap.Text = "Doğru Cevap";
             // 
             // lblSure
             // 
             this.lblSure.AutoSize = true;
-            this.lblSure.Location = new System.Drawing.Point(642, 366);
+            this.lblSure.Location = new System.Drawing.Point(562, 274);
             this.lblSure.Name = "lblSure";
-            this.lblSure.Size = new System.Drawing.Size(49, 20);
+            this.lblSure.Size = new System.Drawing.Size(39, 15);
             this.lblSure.TabIndex = 83;
             this.lblSure.Text = "Süre : ";
             // 
@@ -136,9 +134,10 @@
             this.btnSonraki.BackColor = System.Drawing.Color.Orange;
             this.btnSonraki.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSonraki.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSonraki.Location = new System.Drawing.Point(531, 448);
+            this.btnSonraki.Location = new System.Drawing.Point(465, 336);
+            this.btnSonraki.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSonraki.Name = "btnSonraki";
-            this.btnSonraki.Size = new System.Drawing.Size(64, 52);
+            this.btnSonraki.Size = new System.Drawing.Size(56, 39);
             this.btnSonraki.TabIndex = 82;
             this.btnSonraki.Text = ">";
             this.btnSonraki.UseVisualStyleBackColor = false;
@@ -148,49 +147,54 @@
             // 
             this.txtD.BackColor = System.Drawing.Color.LightYellow;
             this.txtD.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtD.Location = new System.Drawing.Point(266, 448);
+            this.txtD.Location = new System.Drawing.Point(233, 336);
+            this.txtD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtD.Multiline = true;
             this.txtD.Name = "txtD";
-            this.txtD.Size = new System.Drawing.Size(187, 53);
+            this.txtD.Size = new System.Drawing.Size(164, 41);
             this.txtD.TabIndex = 81;
             // 
             // txtC
             // 
             this.txtC.BackColor = System.Drawing.Color.LightYellow;
             this.txtC.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtC.Location = new System.Drawing.Point(14, 448);
+            this.txtC.Location = new System.Drawing.Point(12, 336);
+            this.txtC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtC.Multiline = true;
             this.txtC.Name = "txtC";
-            this.txtC.Size = new System.Drawing.Size(187, 53);
+            this.txtC.Size = new System.Drawing.Size(164, 41);
             this.txtC.TabIndex = 80;
             // 
             // txtB
             // 
             this.txtB.BackColor = System.Drawing.Color.LightYellow;
             this.txtB.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtB.Location = new System.Drawing.Point(266, 364);
+            this.txtB.Location = new System.Drawing.Point(233, 273);
+            this.txtB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtB.Multiline = true;
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(187, 53);
+            this.txtB.Size = new System.Drawing.Size(164, 41);
             this.txtB.TabIndex = 79;
             // 
             // txtA
             // 
             this.txtA.BackColor = System.Drawing.Color.LightYellow;
             this.txtA.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtA.Location = new System.Drawing.Point(14, 364);
+            this.txtA.Location = new System.Drawing.Point(12, 273);
+            this.txtA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtA.Multiline = true;
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(187, 53);
+            this.txtA.Size = new System.Drawing.Size(164, 41);
             this.txtA.TabIndex = 78;
             // 
             // rdbD
             // 
             this.rdbD.AutoSize = true;
             this.rdbD.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbD.Location = new System.Drawing.Point(459, 464);
+            this.rdbD.Location = new System.Drawing.Point(402, 348);
+            this.rdbD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbD.Name = "rdbD";
-            this.rdbD.Size = new System.Drawing.Size(43, 25);
+            this.rdbD.Size = new System.Drawing.Size(34, 19);
             this.rdbD.TabIndex = 77;
             this.rdbD.TabStop = true;
             this.rdbD.Text = "D";
@@ -200,9 +204,10 @@
             // 
             this.rdbC.AutoSize = true;
             this.rdbC.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbC.Location = new System.Drawing.Point(208, 464);
+            this.rdbC.Location = new System.Drawing.Point(182, 348);
+            this.rdbC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbC.Name = "rdbC";
-            this.rdbC.Size = new System.Drawing.Size(41, 25);
+            this.rdbC.Size = new System.Drawing.Size(33, 19);
             this.rdbC.TabIndex = 76;
             this.rdbC.TabStop = true;
             this.rdbC.Text = "C";
@@ -212,9 +217,10 @@
             // 
             this.rdbB.AutoSize = true;
             this.rdbB.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbB.Location = new System.Drawing.Point(461, 377);
+            this.rdbB.Location = new System.Drawing.Point(403, 283);
+            this.rdbB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbB.Name = "rdbB";
-            this.rdbB.Size = new System.Drawing.Size(42, 25);
+            this.rdbB.Size = new System.Drawing.Size(33, 19);
             this.rdbB.TabIndex = 75;
             this.rdbB.TabStop = true;
             this.rdbB.Text = "B";
@@ -224,9 +230,10 @@
             // 
             this.rdbA.AutoSize = true;
             this.rdbA.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbA.Location = new System.Drawing.Point(208, 377);
+            this.rdbA.Location = new System.Drawing.Point(182, 283);
+            this.rdbA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbA.Name = "rdbA";
-            this.rdbA.Size = new System.Drawing.Size(42, 25);
+            this.rdbA.Size = new System.Drawing.Size(34, 19);
             this.rdbA.TabIndex = 74;
             this.rdbA.TabStop = true;
             this.rdbA.Text = "A";
@@ -236,18 +243,18 @@
             // 
             this.rtbSoru.BackColor = System.Drawing.Color.LightYellow;
             this.rtbSoru.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rtbSoru.Location = new System.Drawing.Point(386, 60);
+            this.rtbSoru.Location = new System.Drawing.Point(338, 45);
+            this.rtbSoru.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtbSoru.Name = "rtbSoru";
-            this.rtbSoru.Size = new System.Drawing.Size(628, 292);
+            this.rtbSoru.Size = new System.Drawing.Size(550, 220);
             this.rtbSoru.TabIndex = 73;
             this.rtbSoru.Text = "Soru:  ";
             // 
             // pbResim
             // 
-            this.pbResim.Location = new System.Drawing.Point(14, 60);
-            this.pbResim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pbResim.Location = new System.Drawing.Point(12, 45);
             this.pbResim.Name = "pbResim";
-            this.pbResim.Size = new System.Drawing.Size(366, 293);
+            this.pbResim.Size = new System.Drawing.Size(320, 220);
             this.pbResim.TabIndex = 72;
             this.pbResim.TabStop = false;
             // 
@@ -259,17 +266,18 @@
             // lblKalanDakika
             // 
             this.lblKalanDakika.AutoSize = true;
-            this.lblKalanDakika.Location = new System.Drawing.Point(532, 366);
+            this.lblKalanDakika.Location = new System.Drawing.Point(465, 274);
             this.lblKalanDakika.Name = "lblKalanDakika";
-            this.lblKalanDakika.Size = new System.Drawing.Size(102, 20);
+            this.lblKalanDakika.Size = new System.Drawing.Size(80, 15);
             this.lblKalanDakika.TabIndex = 89;
             this.lblKalanDakika.Text = "Kalan Dakika :";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(708, 473);
+            this.button1.Location = new System.Drawing.Point(620, 355);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(82, 22);
             this.button1.TabIndex = 90;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -277,10 +285,10 @@
             // 
             // frmSigmaSinav
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(1029, 547);
+            this.ClientSize = new System.Drawing.Size(900, 410);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblKalanDakika);
             this.Controls.Add(this.btnBack);
@@ -301,7 +309,6 @@
             this.Controls.Add(this.rtbSoru);
             this.Controls.Add(this.pbResim);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSigmaSinav";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSigmaSınav";
