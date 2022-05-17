@@ -16,6 +16,7 @@ namespace YazılımYapımıProje
         public int AyarlarGun { get; set; }
         public int AyarlarHafta { get; set; }
         public int AyarlarAy { get; set; }
+        int sayac = 0;
         public frmOgrenci()
         {
             InitializeComponent();
@@ -97,7 +98,7 @@ namespace YazılımYapımıProje
 
         private void btnAyarlar_Click(object sender, EventArgs e)
         {
-            int sayac = 0;
+            
             sayac++;
             if (sayac % 2 == 0)
                 grpAyarlar.Visible = false;

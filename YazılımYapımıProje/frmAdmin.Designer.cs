@@ -96,7 +96,7 @@
             this.btnSil.Location = new System.Drawing.Point(674, 194);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(114, 27);
-            this.btnSil.TabIndex = 11;
+            this.btnSil.TabIndex = 2;
             this.btnSil.Text = "  Sil";
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -120,7 +120,7 @@
             this.btnOnay.Location = new System.Drawing.Point(674, 161);
             this.btnOnay.Name = "btnOnay";
             this.btnOnay.Size = new System.Drawing.Size(114, 27);
-            this.btnOnay.TabIndex = 10;
+            this.btnOnay.TabIndex = 1;
             this.btnOnay.Text = "    Onayla";
             this.btnOnay.UseVisualStyleBackColor = false;
             this.btnOnay.Click += new System.EventHandler(this.btnOnay_Click);

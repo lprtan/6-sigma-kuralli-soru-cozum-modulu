@@ -72,7 +72,7 @@
             this.ckbSifreyiGoster.Location = new System.Drawing.Point(265, 257);
             this.ckbSifreyiGoster.Name = "ckbSifreyiGoster";
             this.ckbSifreyiGoster.Size = new System.Drawing.Size(123, 25);
-            this.ckbSifreyiGoster.TabIndex = 17;
+            this.ckbSifreyiGoster.TabIndex = 6;
             this.ckbSifreyiGoster.Text = "Şifreyi Göster";
             this.ckbSifreyiGoster.UseVisualStyleBackColor = true;
             this.ckbSifreyiGoster.CheckedChanged += new System.EventHandler(this.ckbSifreyiGoster_CheckedChanged);
@@ -95,7 +95,7 @@
             this.lkbSifremiUnuttum.Location = new System.Drawing.Point(265, 327);
             this.lkbSifremiUnuttum.Name = "lkbSifremiUnuttum";
             this.lkbSifremiUnuttum.Size = new System.Drawing.Size(126, 21);
-            this.lkbSifremiUnuttum.TabIndex = 16;
+            this.lkbSifremiUnuttum.TabIndex = 5;
             this.lkbSifremiUnuttum.TabStop = true;
             this.lkbSifremiUnuttum.Text = "Şifremi Unuttum";
             this.lkbSifremiUnuttum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkbSifremiUnuttum_LinkClicked);
@@ -111,7 +111,7 @@
             this.btnGiris.Location = new System.Drawing.Point(223, 288);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(105, 36);
-            this.btnGiris.TabIndex = 14;
+            this.btnGiris.TabIndex = 3;
             this.btnGiris.Text = "      Giriş";
             this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
@@ -149,7 +149,7 @@
             this.btnKayıtOl.Location = new System.Drawing.Point(334, 288);
             this.btnKayıtOl.Name = "btnKayıtOl";
             this.btnKayıtOl.Size = new System.Drawing.Size(105, 36);
-            this.btnKayıtOl.TabIndex = 15;
+            this.btnKayıtOl.TabIndex = 4;
             this.btnKayıtOl.Text = "Kayıt Ol";
             this.btnKayıtOl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnKayıtOl.UseVisualStyleBackColor = false;
@@ -162,7 +162,7 @@
             this.txtGirisSifre.Location = new System.Drawing.Point(223, 214);
             this.txtGirisSifre.Name = "txtGirisSifre";
             this.txtGirisSifre.Size = new System.Drawing.Size(216, 37);
-            this.txtGirisSifre.TabIndex = 13;
+            this.txtGirisSifre.TabIndex = 2;
             // 
             // txtGirisKullaniciAdi
             // 
@@ -171,7 +171,7 @@
             this.txtGirisKullaniciAdi.Location = new System.Drawing.Point(223, 171);
             this.txtGirisKullaniciAdi.Name = "txtGirisKullaniciAdi";
             this.txtGirisKullaniciAdi.Size = new System.Drawing.Size(216, 37);
-            this.txtGirisKullaniciAdi.TabIndex = 12;
+            this.txtGirisKullaniciAdi.TabIndex = 1;
             // 
             // lblSifreGiris
             // 

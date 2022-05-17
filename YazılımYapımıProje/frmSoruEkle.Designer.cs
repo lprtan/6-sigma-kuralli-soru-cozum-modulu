@@ -119,7 +119,7 @@
             this.btnResim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnResim.Name = "btnResim";
             this.btnResim.Size = new System.Drawing.Size(31, 22);
-            this.btnResim.TabIndex = 53;
+            this.btnResim.TabIndex = 12;
             this.btnResim.Text = "...";
             this.btnResim.UseVisualStyleBackColor = false;
             this.btnResim.Click += new System.EventHandler(this.btnResim_Click);
@@ -137,7 +137,7 @@
             this.cmbUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUnit.Name = "cmbUnit";
             this.cmbUnit.Size = new System.Drawing.Size(133, 23);
-            this.cmbUnit.TabIndex = 52;
+            this.cmbUnit.TabIndex = 7;
             // 
             // cmbbolum
             // 
@@ -152,7 +152,7 @@
             this.cmbbolum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbbolum.Name = "cmbbolum";
             this.cmbbolum.Size = new System.Drawing.Size(133, 23);
-            this.cmbbolum.TabIndex = 51;
+            this.cmbbolum.TabIndex = 6;
             // 
             // label2
             // 
@@ -186,7 +186,7 @@
             this.txtSoru.Multiline = true;
             this.txtSoru.Name = "txtSoru";
             this.txtSoru.Size = new System.Drawing.Size(659, 87);
-            this.txtSoru.TabIndex = 48;
+            this.txtSoru.TabIndex = 1;
             this.txtSoru.Text = "Soru :";
             // 
             // btnEkle
@@ -198,7 +198,7 @@
             this.btnEkle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(133, 28);
-            this.btnEkle.TabIndex = 47;
+            this.btnEkle.TabIndex = 13;
             this.btnEkle.Text = "Soru Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
@@ -212,7 +212,7 @@
             this.rdbD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbD.Name = "rdbD";
             this.rdbD.Size = new System.Drawing.Size(34, 19);
-            this.rdbD.TabIndex = 46;
+            this.rdbD.TabIndex = 11;
             this.rdbD.TabStop = true;
             this.rdbD.Text = "D";
             this.rdbD.UseVisualStyleBackColor = false;
@@ -226,7 +226,7 @@
             this.rdbC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbC.Name = "rdbC";
             this.rdbC.Size = new System.Drawing.Size(33, 19);
-            this.rdbC.TabIndex = 45;
+            this.rdbC.TabIndex = 10;
             this.rdbC.TabStop = true;
             this.rdbC.Text = "C";
             this.rdbC.UseVisualStyleBackColor = false;
@@ -240,7 +240,7 @@
             this.rdbB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbB.Name = "rdbB";
             this.rdbB.Size = new System.Drawing.Size(33, 19);
-            this.rdbB.TabIndex = 44;
+            this.rdbB.TabIndex = 9;
             this.rdbB.TabStop = true;
             this.rdbB.Text = "B";
             this.rdbB.UseVisualStyleBackColor = false;
@@ -254,7 +254,7 @@
             this.rdbA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbA.Name = "rdbA";
             this.rdbA.Size = new System.Drawing.Size(34, 19);
-            this.rdbA.TabIndex = 43;
+            this.rdbA.TabIndex = 8;
             this.rdbA.TabStop = true;
             this.rdbA.Text = "A";
             this.rdbA.UseVisualStyleBackColor = false;
@@ -267,7 +267,7 @@
             this.txtCevap4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCevap4.Name = "txtCevap4";
             this.txtCevap4.Size = new System.Drawing.Size(133, 23);
-            this.txtCevap4.TabIndex = 42;
+            this.txtCevap4.TabIndex = 5;
             // 
             // txtCevap3
             // 
@@ -277,7 +277,7 @@
             this.txtCevap3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCevap3.Name = "txtCevap3";
             this.txtCevap3.Size = new System.Drawing.Size(133, 23);
-            this.txtCevap3.TabIndex = 41;
+            this.txtCevap3.TabIndex = 4;
             // 
             // txtCevap2
             // 
@@ -287,7 +287,7 @@
             this.txtCevap2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCevap2.Name = "txtCevap2";
             this.txtCevap2.Size = new System.Drawing.Size(133, 23);
-            this.txtCevap2.TabIndex = 40;
+            this.txtCevap2.TabIndex = 3;
             // 
             // txtCevap1
             // 
@@ -297,7 +297,7 @@
             this.txtCevap1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCevap1.Name = "txtCevap1";
             this.txtCevap1.Size = new System.Drawing.Size(133, 23);
-            this.txtCevap1.TabIndex = 39;
+            this.txtCevap1.TabIndex = 2;
             // 
             // pictureSoru
             // 

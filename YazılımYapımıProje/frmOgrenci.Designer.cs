@@ -105,7 +105,7 @@
             this.btnOgrenciRaporAl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOgrenciRaporAl.Name = "btnOgrenciRaporAl";
             this.btnOgrenciRaporAl.Size = new System.Drawing.Size(210, 38);
-            this.btnOgrenciRaporAl.TabIndex = 18;
+            this.btnOgrenciRaporAl.TabIndex = 4;
             this.btnOgrenciRaporAl.Text = "     Rapor Görüntüle";
             this.btnOgrenciRaporAl.UseVisualStyleBackColor = false;
             this.btnOgrenciRaporAl.Click += new System.EventHandler(this.btnOgrenciRaporAl_Click);
@@ -223,7 +223,7 @@
             this.btnAyarKaydet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAyarKaydet.Name = "btnAyarKaydet";
             this.btnAyarKaydet.Size = new System.Drawing.Size(189, 38);
-            this.btnAyarKaydet.TabIndex = 17;
+            this.btnAyarKaydet.TabIndex = 8;
             this.btnAyarKaydet.Text = "       Ayarları Kaydet";
             this.btnAyarKaydet.UseVisualStyleBackColor = false;
             this.btnAyarKaydet.Click += new System.EventHandler(this.btnAyarKaydet_Click);
@@ -240,7 +240,7 @@
             this.cbxGun.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxGun.Name = "cbxGun";
             this.cbxGun.Size = new System.Drawing.Size(121, 31);
-            this.cbxGun.TabIndex = 11;
+            this.cbxGun.TabIndex = 5;
             // 
             // lblAy
             // 
@@ -264,7 +264,7 @@
             this.cbxHafta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxHafta.Name = "cbxHafta";
             this.cbxHafta.Size = new System.Drawing.Size(121, 31);
-            this.cbxHafta.TabIndex = 12;
+            this.cbxHafta.TabIndex = 6;
             // 
             // lblHafta
             // 
@@ -288,7 +288,7 @@
             this.cbxAy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxAy.Name = "cbxAy";
             this.cbxAy.Size = new System.Drawing.Size(121, 31);
-            this.cbxAy.TabIndex = 13;
+            this.cbxAy.TabIndex = 7;
             // 
             // frmOgrenci
             // 

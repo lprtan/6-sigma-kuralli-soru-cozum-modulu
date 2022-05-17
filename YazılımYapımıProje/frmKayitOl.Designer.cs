@@ -113,7 +113,7 @@
             this.btnGirisYap.Location = new System.Drawing.Point(202, 349);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(145, 27);
-            this.btnGirisYap.TabIndex = 25;
+            this.btnGirisYap.TabIndex = 24;
             this.btnGirisYap.Text = "   Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = false;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
@@ -129,7 +129,7 @@
             this.btnKullaniciKayit.Location = new System.Drawing.Point(202, 316);
             this.btnKullaniciKayit.Name = "btnKullaniciKayit";
             this.btnKullaniciKayit.Size = new System.Drawing.Size(145, 27);
-            this.btnKullaniciKayit.TabIndex = 24;
+            this.btnKullaniciKayit.TabIndex = 23;
             this.btnKullaniciKayit.Text = "  Kayıt Ol";
             this.btnKullaniciKayit.UseVisualStyleBackColor = false;
             this.btnKullaniciKayit.Click += new System.EventHandler(this.btnKullaniciKayit_Click);
@@ -146,7 +146,7 @@
             this.cbxKullaniciType.Location = new System.Drawing.Point(202, 283);
             this.cbxKullaniciType.Name = "cbxKullaniciType";
             this.cbxKullaniciType.Size = new System.Drawing.Size(145, 27);
-            this.cbxKullaniciType.TabIndex = 23;
+            this.cbxKullaniciType.TabIndex = 22;
             // 
             // txtSifre
             // 

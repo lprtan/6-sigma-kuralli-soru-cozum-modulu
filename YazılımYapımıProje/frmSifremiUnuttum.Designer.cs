@@ -95,7 +95,7 @@
             this.btnGirisYap.Location = new System.Drawing.Point(223, 294);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(216, 31);
-            this.btnGirisYap.TabIndex = 17;
+            this.btnGirisYap.TabIndex = 4;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = false;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
@@ -121,7 +121,7 @@
             this.btnSifreGuncelle.Location = new System.Drawing.Point(223, 257);
             this.btnSifreGuncelle.Name = "btnSifreGuncelle";
             this.btnSifreGuncelle.Size = new System.Drawing.Size(216, 31);
-            this.btnSifreGuncelle.TabIndex = 16;
+            this.btnSifreGuncelle.TabIndex = 3;
             this.btnSifreGuncelle.Text = " Şifre Yenile";
             this.btnSifreGuncelle.UseVisualStyleBackColor = false;
             this.btnSifreGuncelle.Click += new System.EventHandler(this.btnSifreGuncelle_Click);
@@ -155,7 +155,7 @@
             this.txtSifremiUnuttumSifre.Location = new System.Drawing.Point(223, 214);
             this.txtSifremiUnuttumSifre.Name = "txtSifremiUnuttumSifre";
             this.txtSifremiUnuttumSifre.Size = new System.Drawing.Size(216, 37);
-            this.txtSifremiUnuttumSifre.TabIndex = 15;
+            this.txtSifremiUnuttumSifre.TabIndex = 2;
             // 
             // txtSifremiUnuttumMail
             // 
@@ -164,7 +164,7 @@
             this.txtSifremiUnuttumMail.Location = new System.Drawing.Point(223, 171);
             this.txtSifremiUnuttumMail.Name = "txtSifremiUnuttumMail";
             this.txtSifremiUnuttumMail.Size = new System.Drawing.Size(216, 37);
-            this.txtSifremiUnuttumMail.TabIndex = 14;
+            this.txtSifremiUnuttumMail.TabIndex = 1;
             // 
             // frmSifremiUnuttum
             // 

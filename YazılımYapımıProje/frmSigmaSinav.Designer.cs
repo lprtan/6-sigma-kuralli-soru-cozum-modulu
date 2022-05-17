@@ -227,7 +227,7 @@
             this.rdbD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbD.Name = "rdbD";
             this.rdbD.Size = new System.Drawing.Size(34, 19);
-            this.rdbD.TabIndex = 77;
+            this.rdbD.TabIndex = 4;
             this.rdbD.TabStop = true;
             this.rdbD.Text = "D";
             this.rdbD.UseVisualStyleBackColor = true;
@@ -241,7 +241,7 @@
             this.rdbC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbC.Name = "rdbC";
             this.rdbC.Size = new System.Drawing.Size(33, 19);
-            this.rdbC.TabIndex = 76;
+            this.rdbC.TabIndex = 3;
             this.rdbC.TabStop = true;
             this.rdbC.Text = "C";
             this.rdbC.UseVisualStyleBackColor = true;
@@ -255,7 +255,7 @@
             this.rdbB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbB.Name = "rdbB";
             this.rdbB.Size = new System.Drawing.Size(33, 19);
-            this.rdbB.TabIndex = 75;
+            this.rdbB.TabIndex = 2;
             this.rdbB.TabStop = true;
             this.rdbB.Text = "B";
             this.rdbB.UseVisualStyleBackColor = true;
@@ -269,7 +269,7 @@
             this.rdbA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbA.Name = "rdbA";
             this.rdbA.Size = new System.Drawing.Size(34, 19);
-            this.rdbA.TabIndex = 74;
+            this.rdbA.TabIndex = 1;
             this.rdbA.TabStop = true;
             this.rdbA.Text = "A";
             this.rdbA.UseVisualStyleBackColor = true;

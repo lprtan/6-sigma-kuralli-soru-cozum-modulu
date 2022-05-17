@@ -411,7 +411,6 @@ namespace YazılımYapımıProje
             sayac++;
             if (dgvList.Rows.Count == sayac)
             {
-                btnSonraki.Text = "Sınavı Bitir";
                 ds.Tables[0].Rows.Clear();
                 SiraylaGetir();
                 return;
@@ -457,6 +456,7 @@ namespace YazılımYapımıProje
             rtbSoru.Visible = true;
             pbResim.Visible = true;
             btnSonraki.Enabled = true;
+            btnBasla.Enabled = false;
         }
     }
 }
