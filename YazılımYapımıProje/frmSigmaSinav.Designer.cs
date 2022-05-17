@@ -53,6 +53,10 @@
             this.lblKalanDakika = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBasla = new System.Windows.Forms.Button();
+            this.pnlA = new System.Windows.Forms.Panel();
+            this.pnlB = new System.Windows.Forms.Panel();
+            this.pnlC = new System.Windows.Forms.Panel();
+            this.pnlD = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHomePage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
@@ -165,7 +169,6 @@
             // txtD
             // 
             this.txtD.BackColor = System.Drawing.Color.LightYellow;
-            this.txtD.Enabled = false;
             this.txtD.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtD.Location = new System.Drawing.Point(233, 336);
             this.txtD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -174,11 +177,11 @@
             this.txtD.Size = new System.Drawing.Size(164, 41);
             this.txtD.TabIndex = 81;
             this.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtD.Visible = false;
             // 
             // txtC
             // 
             this.txtC.BackColor = System.Drawing.Color.LightYellow;
-            this.txtC.Enabled = false;
             this.txtC.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtC.Location = new System.Drawing.Point(12, 336);
             this.txtC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -187,11 +190,11 @@
             this.txtC.Size = new System.Drawing.Size(164, 41);
             this.txtC.TabIndex = 80;
             this.txtC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtC.Visible = false;
             // 
             // txtB
             // 
             this.txtB.BackColor = System.Drawing.Color.LightYellow;
-            this.txtB.Enabled = false;
             this.txtB.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtB.Location = new System.Drawing.Point(233, 273);
             this.txtB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -200,11 +203,11 @@
             this.txtB.Size = new System.Drawing.Size(164, 41);
             this.txtB.TabIndex = 79;
             this.txtB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtB.Visible = false;
             // 
             // txtA
             // 
             this.txtA.BackColor = System.Drawing.Color.LightYellow;
-            this.txtA.Enabled = false;
             this.txtA.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtA.Location = new System.Drawing.Point(12, 273);
             this.txtA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -213,6 +216,7 @@
             this.txtA.Size = new System.Drawing.Size(164, 41);
             this.txtA.TabIndex = 78;
             this.txtA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtA.Visible = false;
             // 
             // rdbD
             // 
@@ -334,6 +338,42 @@
             this.btnBasla.UseVisualStyleBackColor = false;
             this.btnBasla.Click += new System.EventHandler(this.btnBasla_Click);
             // 
+            // pnlA
+            // 
+            this.pnlA.BackColor = System.Drawing.Color.LightYellow;
+            this.pnlA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlA.Location = new System.Drawing.Point(12, 273);
+            this.pnlA.Name = "pnlA";
+            this.pnlA.Size = new System.Drawing.Size(164, 41);
+            this.pnlA.TabIndex = 92;
+            // 
+            // pnlB
+            // 
+            this.pnlB.BackColor = System.Drawing.Color.LightYellow;
+            this.pnlB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlB.Location = new System.Drawing.Point(233, 273);
+            this.pnlB.Name = "pnlB";
+            this.pnlB.Size = new System.Drawing.Size(164, 41);
+            this.pnlB.TabIndex = 93;
+            // 
+            // pnlC
+            // 
+            this.pnlC.BackColor = System.Drawing.Color.LightYellow;
+            this.pnlC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlC.Location = new System.Drawing.Point(12, 336);
+            this.pnlC.Name = "pnlC";
+            this.pnlC.Size = new System.Drawing.Size(164, 41);
+            this.pnlC.TabIndex = 93;
+            // 
+            // pnlD
+            // 
+            this.pnlD.BackColor = System.Drawing.Color.LightYellow;
+            this.pnlD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlD.Location = new System.Drawing.Point(233, 336);
+            this.pnlD.Name = "pnlD";
+            this.pnlD.Size = new System.Drawing.Size(164, 41);
+            this.pnlD.TabIndex = 93;
+            // 
             // frmSigmaSinav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -360,6 +400,10 @@
             this.Controls.Add(this.rtbSoru);
             this.Controls.Add(this.pbResim);
             this.Controls.Add(this.dgvList);
+            this.Controls.Add(this.pnlA);
+            this.Controls.Add(this.pnlB);
+            this.Controls.Add(this.pnlC);
+            this.Controls.Add(this.pnlD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSigmaSinav";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -401,5 +445,9 @@
         private PictureBox pictureBox1;
         private ImageList imgListInterface;
         private Button btnBasla;
+        private Panel pnlA;
+        private Panel pnlB;
+        private Panel pnlC;
+        private Panel pnlD;
     }
 }

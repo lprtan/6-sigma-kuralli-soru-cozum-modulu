@@ -394,6 +394,10 @@ namespace YazılımYapımıProje
             lblSure.Text = "10";
             tmrKronometre.Start();
             rtbSoru.ReadOnly = true;
+            txtA.ReadOnly = true;
+            txtB.ReadOnly = true;
+            txtC.ReadOnly = true;
+            txtD.ReadOnly = true;
         }
         private void btnSonraki_Click(object sender, EventArgs e)
         {
@@ -442,10 +446,10 @@ namespace YazılımYapımıProje
 
         private void btnBasla_Click(object sender, EventArgs e)
         {
-            txtA.Enabled = true;
-            txtB.Enabled = true;
-            txtC.Enabled = true;
-            txtD.Enabled = true;
+            txtA.Visible = true;
+            txtB.Visible = true;
+            txtC.Visible = true;
+            txtD.Visible = true;
             rdbA.Enabled = true;
             rdbB.Enabled = true;
             rdbC.Enabled = true;
