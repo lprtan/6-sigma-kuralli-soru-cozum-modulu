@@ -50,7 +50,6 @@
             this.pbResim = new System.Windows.Forms.PictureBox();
             this.tmrKronometre = new System.Windows.Forms.Timer(this.components);
             this.lblKalanDakika = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHomePage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
@@ -119,6 +118,7 @@
             this.lblDogruCevap.Size = new System.Drawing.Size(76, 15);
             this.lblDogruCevap.TabIndex = 84;
             this.lblDogruCevap.Text = "Doğru Cevap";
+            this.lblDogruCevap.Visible = false;
             // 
             // lblSure
             // 
@@ -272,24 +272,12 @@
             this.lblKalanDakika.TabIndex = 89;
             this.lblKalanDakika.Text = "Kalan Dakika :";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(620, 355);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 22);
-            this.button1.TabIndex = 90;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmSigmaSinav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(900, 410);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblKalanDakika);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnHomePage);
@@ -345,6 +333,5 @@
         private PictureBox pbResim;
         private System.Windows.Forms.Timer tmrKronometre;
         private Label lblKalanDakika;
-        private Button button1;
     }
 }

@@ -22,7 +22,6 @@ namespace YazılımYapımıProje
         public int CAC { get; set; }
         private string x = null!;
         int buttonIndex = 0;
-        int zamansayac = 0;
         int sayac = 0;
         int devir = 0;
         public void UserIDCek()
@@ -187,8 +186,9 @@ namespace YazılımYapımıProje
                 rdbD.Enabled = false;
                 btnSonraki.Enabled = false;
                 btnSinavBitir.Enabled = false;
+                btnBasla.Enabled = false;
                 lsvRapor.Visible = true;
-                tmrKronometre.Stop();
+                btnRapor.Enabled = true;
                 return;
             }
             rdbA.Checked = false; rdbB.Checked = false; rdbC.Checked = false; rdbD.Checked = false;
@@ -200,24 +200,10 @@ namespace YazılımYapımıProje
             rdbB.Enabled = false;
             rdbC.Enabled = false;
             rdbD.Enabled = false;
+            btnRapor.Enabled = true;
             btnSonraki.Enabled = false;
-            devir++;
-            if (devir % 2 == 0)
-                lsvRapor.Visible = false;
-            else
-                lsvRapor.Visible = true;
+            lsvRapor.Visible = true;
             
-        }
-
-        private void tmrKronometre_Tick(object sender, EventArgs e)
-        {
-            zamansayac--;
-            lblSure.Text = zamansayac.ToString();
-        }
-
-        private void lblSure_TextChanged(object sender, EventArgs e)
-        {
-            progressBar1.Value = zamansayac * 10;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -241,10 +227,6 @@ namespace YazılımYapımıProje
 
         private void frmDenemeSinav_Load(object sender, EventArgs e)
         {
-            txtA.Enabled = false;
-            txtB.Enabled = false;
-            txtC.Enabled = false;
-            txtD.Enabled = false;
             UserIDCek();
             db.baglanti.Open();
             string veriler = "SELECT Question.QuestionID From Question INNER JOIN Sections ON Question.SectionID = Sections.SectionID INNER JOIN Sinav ON  Question.QuestionID = Sinav.QuestionID where Sinav.UserID = '" + UserID + "' and Sinav.CorrectAnswerCount < 4";
@@ -282,6 +264,22 @@ namespace YazılımYapımıProje
                 rapor.Add(new Paragraph(" " + lsvRapor.Items[i].Text + "            " + lsvRapor.Items[i].SubItems[1].Text + "                      " + lsvRapor.Items[i].SubItems[2].Text));
             }
             rapor.Close();
+        }
+
+        private void btnBasla_Click(object sender, EventArgs e)
+        {
+            pbResim.Visible = true;
+            rtbSoru.Visible = true;
+            btnRapor.Visible = true;
+            btnSinavBitir.Enabled = true;
+            btnSinavBitir.Visible = true;
+            btnSonraki.Enabled = true;
+            btnSonraki.Visible = true;
+            rdbA.Enabled = true;
+            rdbB.Enabled = true;
+            rdbC.Enabled = true;
+            rdbD.Enabled = true;
+            btnBasla.Enabled = false;
         }
     }
 }

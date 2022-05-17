@@ -31,14 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDenemeSinav));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.tmrKronometre = new System.Windows.Forms.Timer(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.btnGirisSayfası = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblSure = new System.Windows.Forms.Label();
             this.txtD = new System.Windows.Forms.TextBox();
             this.txtC = new System.Windows.Forms.TextBox();
             this.txtB = new System.Windows.Forms.TextBox();
@@ -55,6 +52,7 @@
             this.lsvRapor = new System.Windows.Forms.ListView();
             this.btnRapor = new System.Windows.Forms.Button();
             this.lblDogruCevap = new System.Windows.Forms.Label();
+            this.btnBasla = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
@@ -68,26 +66,16 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // tmrKronometre
-            // 
-            this.tmrKronometre.Tick += new System.EventHandler(this.tmrKronometre_Tick);
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 382);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(876, 23);
-            this.progressBar1.TabIndex = 61;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(747, 344);
+            this.dataGridView1.Location = new System.Drawing.Point(561, 354);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(26, 22);
             this.dataGridView1.TabIndex = 60;
+            this.dataGridView1.Visible = false;
             // 
             // btnBack
             // 
@@ -136,19 +124,10 @@
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
-            // lblSure
-            // 
-            this.lblSure.AutoSize = true;
-            this.lblSure.Location = new System.Drawing.Point(633, 283);
-            this.lblSure.Name = "lblSure";
-            this.lblSure.Size = new System.Drawing.Size(39, 15);
-            this.lblSure.TabIndex = 53;
-            this.lblSure.Text = "Süre : ";
-            this.lblSure.TextChanged += new System.EventHandler(this.lblSure_TextChanged);
-            // 
             // txtD
             // 
             this.txtD.BackColor = System.Drawing.Color.LightYellow;
+            this.txtD.Enabled = false;
             this.txtD.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtD.Location = new System.Drawing.Point(233, 336);
             this.txtD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -161,6 +140,7 @@
             // txtC
             // 
             this.txtC.BackColor = System.Drawing.Color.LightYellow;
+            this.txtC.Enabled = false;
             this.txtC.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtC.Location = new System.Drawing.Point(12, 336);
             this.txtC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -173,6 +153,7 @@
             // txtB
             // 
             this.txtB.BackColor = System.Drawing.Color.LightYellow;
+            this.txtB.Enabled = false;
             this.txtB.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtB.Location = new System.Drawing.Point(233, 273);
             this.txtB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -185,6 +166,7 @@
             // txtA
             // 
             this.txtA.BackColor = System.Drawing.Color.LightYellow;
+            this.txtA.Enabled = false;
             this.txtA.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtA.Location = new System.Drawing.Point(12, 273);
             this.txtA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -197,12 +179,13 @@
             // btnSinavBitir
             // 
             this.btnSinavBitir.BackColor = System.Drawing.Color.Orange;
+            this.btnSinavBitir.Enabled = false;
             this.btnSinavBitir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSinavBitir.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSinavBitir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSinavBitir.ImageKey = "checked.png";
             this.btnSinavBitir.ImageList = this.imgListInterfaces;
-            this.btnSinavBitir.Location = new System.Drawing.Point(521, 281);
+            this.btnSinavBitir.Location = new System.Drawing.Point(521, 312);
             this.btnSinavBitir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSinavBitir.Name = "btnSinavBitir";
             this.btnSinavBitir.Size = new System.Drawing.Size(82, 30);
@@ -220,15 +203,19 @@
             this.imgListInterfaces.Images.SetKeyName(1, "edit.png");
             this.imgListInterfaces.Images.SetKeyName(2, "checked.png");
             this.imgListInterfaces.Images.SetKeyName(3, "document.png");
+            this.imgListInterfaces.Images.SetKeyName(4, "running.png");
+            this.imgListInterfaces.Images.SetKeyName(5, "running (1).png");
+            this.imgListInterfaces.Images.SetKeyName(6, "running (2).png");
             // 
             // btnSonraki
             // 
             this.btnSonraki.BackColor = System.Drawing.Color.Orange;
+            this.btnSonraki.Enabled = false;
             this.btnSonraki.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSonraki.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSonraki.ImageKey = "right-arrow.png";
             this.btnSonraki.ImageList = this.imgListInterfaces;
-            this.btnSonraki.Location = new System.Drawing.Point(465, 281);
+            this.btnSonraki.Location = new System.Drawing.Point(465, 312);
             this.btnSonraki.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSonraki.Name = "btnSonraki";
             this.btnSonraki.Size = new System.Drawing.Size(50, 30);
@@ -240,6 +227,7 @@
             // 
             this.rdbD.AutoSize = true;
             this.rdbD.BackColor = System.Drawing.Color.LightYellow;
+            this.rdbD.Enabled = false;
             this.rdbD.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rdbD.Location = new System.Drawing.Point(402, 347);
             this.rdbD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -254,6 +242,7 @@
             // 
             this.rdbC.AutoSize = true;
             this.rdbC.BackColor = System.Drawing.Color.LightYellow;
+            this.rdbC.Enabled = false;
             this.rdbC.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rdbC.Location = new System.Drawing.Point(182, 347);
             this.rdbC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -268,6 +257,7 @@
             // 
             this.rdbB.AutoSize = true;
             this.rdbB.BackColor = System.Drawing.Color.LightYellow;
+            this.rdbB.Enabled = false;
             this.rdbB.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rdbB.Location = new System.Drawing.Point(404, 283);
             this.rdbB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -282,6 +272,7 @@
             // 
             this.rdbA.AutoSize = true;
             this.rdbA.BackColor = System.Drawing.Color.LightYellow;
+            this.rdbA.Enabled = false;
             this.rdbA.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rdbA.Location = new System.Drawing.Point(182, 283);
             this.rdbA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -301,6 +292,7 @@
             this.pbResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbResim.TabIndex = 42;
             this.pbResim.TabStop = false;
+            this.pbResim.Visible = false;
             // 
             // rtbSoru
             // 
@@ -312,6 +304,7 @@
             this.rtbSoru.Size = new System.Drawing.Size(550, 220);
             this.rtbSoru.TabIndex = 41;
             this.rtbSoru.Text = "Soru:  ";
+            this.rtbSoru.Visible = false;
             // 
             // lsvRapor
             // 
@@ -326,12 +319,13 @@
             // btnRapor
             // 
             this.btnRapor.BackColor = System.Drawing.Color.Orange;
+            this.btnRapor.Enabled = false;
             this.btnRapor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRapor.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRapor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRapor.ImageKey = "edit.png";
             this.btnRapor.ImageList = this.imgListInterfaces;
-            this.btnRapor.Location = new System.Drawing.Point(465, 336);
+            this.btnRapor.Location = new System.Drawing.Point(465, 346);
             this.btnRapor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRapor.Name = "btnRapor";
             this.btnRapor.Size = new System.Drawing.Size(138, 30);
@@ -350,22 +344,37 @@
             this.lblDogruCevap.Text = "Doğru Cevap :";
             this.lblDogruCevap.Visible = false;
             // 
+            // btnBasla
+            // 
+            this.btnBasla.BackColor = System.Drawing.Color.Orange;
+            this.btnBasla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBasla.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBasla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBasla.ImageKey = "running (2).png";
+            this.btnBasla.ImageList = this.imgListInterfaces;
+            this.btnBasla.Location = new System.Drawing.Point(521, 277);
+            this.btnBasla.Name = "btnBasla";
+            this.btnBasla.Size = new System.Drawing.Size(82, 30);
+            this.btnBasla.TabIndex = 64;
+            this.btnBasla.Text = "     Başla";
+            this.btnBasla.UseVisualStyleBackColor = false;
+            this.btnBasla.Click += new System.EventHandler(this.btnBasla_Click);
+            // 
             // frmDenemeSinav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(900, 410);
+            this.Controls.Add(this.btnBasla);
             this.Controls.Add(this.btnRapor);
             this.Controls.Add(this.lsvRapor);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnGirisSayfası);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblDogruCevap);
-            this.Controls.Add(this.lblSure);
             this.Controls.Add(this.txtD);
             this.Controls.Add(this.txtC);
             this.Controls.Add(this.txtB);
@@ -397,13 +406,11 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private ProgressBar progressBar1;
         private DataGridView dataGridView1;
         private PictureBox btnBack;
         private PictureBox btnExit;
         private PictureBox btnGirisSayfası;
         private PictureBox pictureBox1;
-        private Label lblSure;
         private TextBox txtD;
         private TextBox txtC;
         private TextBox txtB;
@@ -416,10 +423,10 @@
         private RadioButton rdbA;
         private PictureBox pbResim;
         private RichTextBox rtbSoru;
-        private System.Windows.Forms.Timer tmrKronometre;
         private ListView lsvRapor;
         private Button btnRapor;
         private ImageList imgListInterfaces;
         private Label lblDogruCevap;
+        private Button btnBasla;
     }
 }
