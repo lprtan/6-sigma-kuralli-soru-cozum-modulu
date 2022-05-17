@@ -13,12 +13,10 @@ using iTextSharp.text.pdf;
 
 namespace YazılımYapımıProje
 {
-
     public partial class frmOgrenciRapor : Form
     {
         DataBase db=new DataBase();
         frmSigmaSinav sigmaSinav = new frmSigmaSinav();
-        DataSet ds = new DataSet();
         public int UserID { get; set; }
         public frmOgrenciRapor()
         {
@@ -27,6 +25,7 @@ namespace YazılımYapımıProje
         public void verileriGoster(string veriler)
         {
             SqlDataAdapter dz = new SqlDataAdapter(veriler, db.baglanti);
+            DataSet ds = new DataSet();
             dz.Fill(ds);
             dvgOgrenciRapor.DataSource = ds.Tables[0];
         }
@@ -35,39 +34,32 @@ namespace YazılımYapımıProje
         {
             UserID = sigmaSinav.UserIDCek();
             db.baglanti.Open();
-            string RaporVerileri = "SELECT Sections.SectionName,Sinav.CorrectAnswerCount*16.67 As BaşarıOranı From Question INNER JOIN Sections ON Question.SectionID = Sections.SectionID INNER JOIN Sinav ON  Question.QuestionID = Sinav.QuestionID where Sinav.UserID ='" + UserID + "'";
+            string RaporVerileri = "SELECT Units.UnitName, Sinav.CorrectAnswerCount*16.67 As BaşarıOranı From Question INNER JOIN Units ON Question.UnitID = Units.UnitID INNER JOIN Sinav ON  Question.QuestionID = Sinav.QuestionID where Sinav.UserID = '"+ UserID+"'";
             SqlCommand OgrenciRaporAl = new SqlCommand(RaporVerileri, db.baglanti);
             OgrenciRaporAl.ExecuteNonQuery();
             db.baglanti.Close();
             verileriGoster(RaporVerileri);  
         }
-
         private void btnYazdir_Click(object sender, EventArgs e)
         {
-            Document doc = new Document();
-            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("RAPOR" + ".pdf", FileMode.Create));
-            doc.Open();
-            PdfPTable table = new PdfPTable(dvgOgrenciRapor.Columns.Count);
-
-            for (int j = 0; j < dvgOgrenciRapor.Columns.Count; j++)
+            iTextSharp.text.Document rapor = new iTextSharp.text.Document();
+            PdfWriter.GetInstance(rapor, new FileStream("C:\\Users\\Alptekin\\Desktop\\Sigma Sınav Raporu.pdf", FileMode.Create));
+            rapor.AddAuthor("Alptekin Bağ");
+            rapor.AddCreationDate();
+            rapor.AddCreator("Sigma Sınav Program");
+            rapor.AddSubject("Sınav Sonucu");
+            rapor.AddKeywords("Sigma Sınav");
+            if (rapor.IsOpen() == false)
             {
-                table.AddCell(new Phrase(dvgOgrenciRapor.Columns[j].HeaderText));
+                rapor.Open();
             }
-
-            table.HeaderRows = 1;
-
-            for (int i = 0; i < dvgOgrenciRapor.Rows.Count; i++)
+            rapor.Add(new Paragraph("Bölüm         Basari Orani \n"));
+            for (int i = 0; i < dvgOgrenciRapor.Rows.Count-1; i++)
             {
-                for (int k = 0; k < dvgOgrenciRapor.Columns.Count; k++)
-                {
-                    if (dvgOgrenciRapor[k, i].Value != null)
-                    {
-                        table.AddCell(new Phrase(dvgOgrenciRapor[k, i].Value.ToString()));
-                    }
-                }
+                rapor.Add(new Paragraph( dvgOgrenciRapor.Rows[i].Cells[0].Value.ToString() + "--------------->" + dvgOgrenciRapor.Rows[i].Cells[1].Value.ToString()));
             }
-            doc.Add(table);
-            doc.Close();
+            MessageBox.Show("Rapor Oluşturuldu");
+            rapor.Close();
         }
     }
 }

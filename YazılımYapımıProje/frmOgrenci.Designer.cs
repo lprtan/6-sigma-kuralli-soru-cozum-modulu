@@ -33,6 +33,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.imgListInterface = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOgrenciRaporAl = new System.Windows.Forms.Button();
             this.btnAyarlar = new System.Windows.Forms.Button();
             this.btnDenemeSinavi = new System.Windows.Forms.Button();
             this.btnSigma6 = new System.Windows.Forms.Button();
@@ -75,14 +76,26 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightYellow;
+            this.panel1.Controls.Add(this.btnOgrenciRaporAl);
             this.panel1.Controls.Add(this.btnAyarlar);
             this.panel1.Controls.Add(this.btnDenemeSinavi);
             this.panel1.Controls.Add(this.btnSigma6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 400);
+            this.panel1.Size = new System.Drawing.Size(229, 533);
             this.panel1.TabIndex = 25;
+            // 
+            // btnOgrenciRaporAl
+            // 
+            this.btnOgrenciRaporAl.Location = new System.Drawing.Point(72, 115);
+            this.btnOgrenciRaporAl.Name = "btnOgrenciRaporAl";
+            this.btnOgrenciRaporAl.Size = new System.Drawing.Size(94, 29);
+            this.btnOgrenciRaporAl.TabIndex = 18;
+            this.btnOgrenciRaporAl.Text = "button1";
+            this.btnOgrenciRaporAl.UseVisualStyleBackColor = true;
+            this.btnOgrenciRaporAl.Click += new System.EventHandler(this.btnOgrenciRaporAl_Click);
             // 
             // btnAyarlar
             // 
@@ -92,9 +105,10 @@
             this.btnAyarlar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAyarlar.ImageKey = "setting.png";
             this.btnAyarlar.ImageList = this.imgListInterface;
-            this.btnAyarlar.Location = new System.Drawing.Point(12, 131);
+            this.btnAyarlar.Location = new System.Drawing.Point(14, 175);
+            this.btnAyarlar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAyarlar.Name = "btnAyarlar";
-            this.btnAyarlar.Size = new System.Drawing.Size(180, 38);
+            this.btnAyarlar.Size = new System.Drawing.Size(206, 51);
             this.btnAyarlar.TabIndex = 1;
             this.btnAyarlar.Text = "Ayarlar";
             this.btnAyarlar.UseVisualStyleBackColor = false;
@@ -108,10 +122,9 @@
             this.btnDenemeSinavi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDenemeSinavi.ImageKey = "process.png";
             this.btnDenemeSinavi.ImageList = this.imgListInterface;
-            this.btnDenemeSinavi.Location = new System.Drawing.Point(12, 218);
-            this.btnDenemeSinavi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDenemeSinavi.Location = new System.Drawing.Point(14, 291);
             this.btnDenemeSinavi.Name = "btnDenemeSinavi";
-            this.btnDenemeSinavi.Size = new System.Drawing.Size(180, 38);
+            this.btnDenemeSinavi.Size = new System.Drawing.Size(206, 51);
             this.btnDenemeSinavi.TabIndex = 3;
             this.btnDenemeSinavi.Text = "    Deneme Sınavı";
             this.btnDenemeSinavi.UseVisualStyleBackColor = false;
@@ -125,9 +138,10 @@
             this.btnSigma6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSigma6.ImageKey = "process.png";
             this.btnSigma6.ImageList = this.imgListInterface;
-            this.btnSigma6.Location = new System.Drawing.Point(12, 175);
+            this.btnSigma6.Location = new System.Drawing.Point(14, 233);
+            this.btnSigma6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSigma6.Name = "btnSigma6";
-            this.btnSigma6.Size = new System.Drawing.Size(180, 38);
+            this.btnSigma6.Size = new System.Drawing.Size(206, 51);
             this.btnSigma6.TabIndex = 2;
             this.btnSigma6.Text = "     Sigma 6 Sınavı";
             this.btnSigma6.UseVisualStyleBackColor = false;
@@ -137,9 +151,10 @@
             // 
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(426, 12);
+            this.btnBack.Location = new System.Drawing.Point(487, 16);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(28, 28);
+            this.btnBack.Size = new System.Drawing.Size(32, 37);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 24;
             this.btnBack.TabStop = false;
@@ -149,9 +164,10 @@
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(460, 12);
+            this.btnExit.Location = new System.Drawing.Point(526, 16);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.Size = new System.Drawing.Size(32, 37);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnExit.TabIndex = 23;
             this.btnExit.TabStop = false;
@@ -167,9 +183,11 @@
             this.grpAyarlar.Controls.Add(this.lblHafta);
             this.grpAyarlar.Controls.Add(this.cbxAy);
             this.grpAyarlar.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpAyarlar.Location = new System.Drawing.Point(220, 98);
+            this.grpAyarlar.Location = new System.Drawing.Point(251, 131);
+            this.grpAyarlar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpAyarlar.Name = "grpAyarlar";
-            this.grpAyarlar.Size = new System.Drawing.Size(260, 213);
+            this.grpAyarlar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpAyarlar.Size = new System.Drawing.Size(297, 284);
             this.grpAyarlar.TabIndex = 22;
             this.grpAyarlar.TabStop = false;
             this.grpAyarlar.Text = "Ayarlar";
@@ -179,9 +197,9 @@
             // 
             this.lblGun.AutoSize = true;
             this.lblGun.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblGun.Location = new System.Drawing.Point(51, 48);
+            this.lblGun.Location = new System.Drawing.Point(58, 64);
             this.lblGun.Name = "lblGun";
-            this.lblGun.Size = new System.Drawing.Size(50, 23);
+            this.lblGun.Size = new System.Drawing.Size(62, 29);
             this.lblGun.TabIndex = 16;
             this.lblGun.Text = "Gün:";
             // 
@@ -193,10 +211,9 @@
             this.btnAyarKaydet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAyarKaydet.ImageKey = "save.png";
             this.btnAyarKaydet.ImageList = this.imgListInterface;
-            this.btnAyarKaydet.Location = new System.Drawing.Point(39, 150);
-            this.btnAyarKaydet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAyarKaydet.Location = new System.Drawing.Point(45, 200);
             this.btnAyarKaydet.Name = "btnAyarKaydet";
-            this.btnAyarKaydet.Size = new System.Drawing.Size(189, 32);
+            this.btnAyarKaydet.Size = new System.Drawing.Size(216, 43);
             this.btnAyarKaydet.TabIndex = 17;
             this.btnAyarKaydet.Text = "       Ayarları Kaydet";
             this.btnAyarKaydet.UseVisualStyleBackColor = false;
@@ -210,19 +227,18 @@
             this.cbxGun.Items.AddRange(new object[] {
             "1",
             "3"});
-            this.cbxGun.Location = new System.Drawing.Point(107, 45);
-            this.cbxGun.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxGun.Location = new System.Drawing.Point(122, 60);
             this.cbxGun.Name = "cbxGun";
-            this.cbxGun.Size = new System.Drawing.Size(121, 31);
+            this.cbxGun.Size = new System.Drawing.Size(138, 37);
             this.cbxGun.TabIndex = 11;
             // 
             // lblAy
             // 
             this.lblAy.AutoSize = true;
             this.lblAy.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAy.Location = new System.Drawing.Point(64, 118);
+            this.lblAy.Location = new System.Drawing.Point(73, 157);
             this.lblAy.Name = "lblAy";
-            this.lblAy.Size = new System.Drawing.Size(37, 23);
+            this.lblAy.Size = new System.Drawing.Size(47, 29);
             this.lblAy.TabIndex = 14;
             this.lblAy.Text = "Ay:";
             // 
@@ -234,19 +250,18 @@
             this.cbxHafta.Items.AddRange(new object[] {
             "7",
             "14"});
-            this.cbxHafta.Location = new System.Drawing.Point(107, 80);
-            this.cbxHafta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxHafta.Location = new System.Drawing.Point(122, 107);
             this.cbxHafta.Name = "cbxHafta";
-            this.cbxHafta.Size = new System.Drawing.Size(121, 31);
+            this.cbxHafta.Size = new System.Drawing.Size(138, 37);
             this.cbxHafta.TabIndex = 12;
             // 
             // lblHafta
             // 
             this.lblHafta.AutoSize = true;
             this.lblHafta.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblHafta.Location = new System.Drawing.Point(39, 83);
+            this.lblHafta.Location = new System.Drawing.Point(45, 111);
             this.lblHafta.Name = "lblHafta";
-            this.lblHafta.Size = new System.Drawing.Size(62, 23);
+            this.lblHafta.Size = new System.Drawing.Size(78, 29);
             this.lblHafta.TabIndex = 15;
             this.lblHafta.Text = "Hafta:";
             // 
@@ -258,23 +273,23 @@
             this.cbxAy.Items.AddRange(new object[] {
             "30",
             "60"});
-            this.cbxAy.Location = new System.Drawing.Point(107, 115);
-            this.cbxAy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxAy.Location = new System.Drawing.Point(122, 153);
             this.cbxAy.Name = "cbxAy";
-            this.cbxAy.Size = new System.Drawing.Size(121, 31);
+            this.cbxAy.Size = new System.Drawing.Size(138, 37);
             this.cbxAy.TabIndex = 13;
             // 
             // frmOgrenci
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(500, 400);
+            this.ClientSize = new System.Drawing.Size(571, 533);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.grpAyarlar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmOgrenci";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOgrenci";
@@ -305,5 +320,6 @@
         private ComboBox cbxHafta;
         private Label lblHafta;
         private ComboBox cbxAy;
+        private Button btnOgrenciRaporAl;
     }
 }

@@ -84,9 +84,10 @@
             this.btnExit.BackColor = System.Drawing.Color.OldLace;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(460, 12);
+            this.btnExit.Location = new System.Drawing.Point(526, 16);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.Size = new System.Drawing.Size(32, 37);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnExit.TabIndex = 26;
             this.btnExit.TabStop = false;
@@ -95,9 +96,10 @@
             // pbKayitOlIcon
             // 
             this.pbKayitOlIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbKayitOlIcon.Image")));
-            this.pbKayitOlIcon.Location = new System.Drawing.Point(202, 12);
+            this.pbKayitOlIcon.Location = new System.Drawing.Point(231, 16);
+            this.pbKayitOlIcon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbKayitOlIcon.Name = "pbKayitOlIcon";
-            this.pbKayitOlIcon.Size = new System.Drawing.Size(100, 100);
+            this.pbKayitOlIcon.Size = new System.Drawing.Size(114, 133);
             this.pbKayitOlIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbKayitOlIcon.TabIndex = 22;
             this.pbKayitOlIcon.TabStop = false;
@@ -110,9 +112,10 @@
             this.btnGirisYap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGirisYap.ImageKey = "user (14).png";
             this.btnGirisYap.ImageList = this.imgListInterface;
-            this.btnGirisYap.Location = new System.Drawing.Point(202, 349);
+            this.btnGirisYap.Location = new System.Drawing.Point(231, 465);
+            this.btnGirisYap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(145, 27);
+            this.btnGirisYap.Size = new System.Drawing.Size(166, 36);
             this.btnGirisYap.TabIndex = 25;
             this.btnGirisYap.Text = "   Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = false;
@@ -126,9 +129,10 @@
             this.btnKullaniciKayit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKullaniciKayit.ImageKey = "user (17).png";
             this.btnKullaniciKayit.ImageList = this.imgListInterface;
-            this.btnKullaniciKayit.Location = new System.Drawing.Point(202, 316);
+            this.btnKullaniciKayit.Location = new System.Drawing.Point(231, 421);
+            this.btnKullaniciKayit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKullaniciKayit.Name = "btnKullaniciKayit";
-            this.btnKullaniciKayit.Size = new System.Drawing.Size(145, 27);
+            this.btnKullaniciKayit.Size = new System.Drawing.Size(166, 36);
             this.btnKullaniciKayit.TabIndex = 24;
             this.btnKullaniciKayit.Text = "  Kayıt Ol";
             this.btnKullaniciKayit.UseVisualStyleBackColor = false;
@@ -142,54 +146,60 @@
             this.cbxKullaniciType.Items.AddRange(new object[] {
             "Öğrenci",
             "Öğretmen"});
-            this.cbxKullaniciType.Location = new System.Drawing.Point(202, 283);
+            this.cbxKullaniciType.Location = new System.Drawing.Point(231, 377);
+            this.cbxKullaniciType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxKullaniciType.Name = "cbxKullaniciType";
-            this.cbxKullaniciType.Size = new System.Drawing.Size(145, 27);
+            this.cbxKullaniciType.Size = new System.Drawing.Size(165, 32);
             this.cbxKullaniciType.TabIndex = 23;
             // 
             // txtSifre
             // 
             this.txtSifre.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtSifre.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtSifre.Location = new System.Drawing.Point(202, 250);
+            this.txtSifre.Location = new System.Drawing.Point(231, 333);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(145, 27);
+            this.txtSifre.Size = new System.Drawing.Size(165, 32);
             this.txtSifre.TabIndex = 21;
             // 
             // txtMail
             // 
             this.txtMail.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtMail.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtMail.Location = new System.Drawing.Point(202, 217);
+            this.txtMail.Location = new System.Drawing.Point(231, 289);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(145, 27);
+            this.txtMail.Size = new System.Drawing.Size(165, 32);
             this.txtMail.TabIndex = 20;
             // 
             // txtSoyad
             // 
             this.txtSoyad.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtSoyad.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtSoyad.Location = new System.Drawing.Point(202, 184);
+            this.txtSoyad.Location = new System.Drawing.Point(231, 245);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(145, 27);
+            this.txtSoyad.Size = new System.Drawing.Size(165, 32);
             this.txtSoyad.TabIndex = 19;
             // 
             // txtAd
             // 
             this.txtAd.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtAd.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtAd.Location = new System.Drawing.Point(202, 151);
+            this.txtAd.Location = new System.Drawing.Point(231, 201);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(145, 27);
+            this.txtAd.Size = new System.Drawing.Size(165, 32);
             this.txtAd.TabIndex = 18;
             // 
             // txtKullaniciAdiKayit
             // 
             this.txtKullaniciAdiKayit.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtKullaniciAdiKayit.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtKullaniciAdiKayit.Location = new System.Drawing.Point(202, 118);
+            this.txtKullaniciAdiKayit.Location = new System.Drawing.Point(231, 157);
+            this.txtKullaniciAdiKayit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtKullaniciAdiKayit.Name = "txtKullaniciAdiKayit";
-            this.txtKullaniciAdiKayit.Size = new System.Drawing.Size(145, 27);
+            this.txtKullaniciAdiKayit.Size = new System.Drawing.Size(165, 32);
             this.txtKullaniciAdiKayit.TabIndex = 17;
             // 
             // lblSifreKayit
@@ -197,9 +207,9 @@
             this.lblSifreKayit.AutoSize = true;
             this.lblSifreKayit.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblSifreKayit.ForeColor = System.Drawing.Color.Teal;
-            this.lblSifreKayit.Location = new System.Drawing.Point(141, 250);
+            this.lblSifreKayit.Location = new System.Drawing.Point(161, 333);
             this.lblSifreKayit.Name = "lblSifreKayit";
-            this.lblSifreKayit.Size = new System.Drawing.Size(55, 23);
+            this.lblSifreKayit.Size = new System.Drawing.Size(68, 29);
             this.lblSifreKayit.TabIndex = 11;
             this.lblSifreKayit.Text = "Şifre:";
             // 
@@ -208,9 +218,9 @@
             this.lblKullaniciType.AutoSize = true;
             this.lblKullaniciType.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblKullaniciType.ForeColor = System.Drawing.Color.Teal;
-            this.lblKullaniciType.Location = new System.Drawing.Point(75, 283);
+            this.lblKullaniciType.Location = new System.Drawing.Point(86, 377);
             this.lblKullaniciType.Name = "lblKullaniciType";
-            this.lblKullaniciType.Size = new System.Drawing.Size(121, 23);
+            this.lblKullaniciType.Size = new System.Drawing.Size(150, 29);
             this.lblKullaniciType.TabIndex = 12;
             this.lblKullaniciType.Text = "Kullanıcı Tipi:";
             // 
@@ -219,9 +229,9 @@
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMail.ForeColor = System.Drawing.Color.Teal;
-            this.lblMail.Location = new System.Drawing.Point(144, 217);
+            this.lblMail.Location = new System.Drawing.Point(165, 289);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(52, 23);
+            this.lblMail.Size = new System.Drawing.Size(64, 29);
             this.lblMail.TabIndex = 13;
             this.lblMail.Text = "Mail:";
             // 
@@ -230,9 +240,9 @@
             this.lblSoyism.AutoSize = true;
             this.lblSoyism.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblSoyism.ForeColor = System.Drawing.Color.Teal;
-            this.lblSoyism.Location = new System.Drawing.Point(114, 184);
+            this.lblSoyism.Location = new System.Drawing.Point(130, 245);
             this.lblSoyism.Name = "lblSoyism";
-            this.lblSoyism.Size = new System.Drawing.Size(82, 23);
+            this.lblSoyism.Size = new System.Drawing.Size(101, 29);
             this.lblSoyism.TabIndex = 14;
             this.lblSoyism.Text = "Soyisim:";
             // 
@@ -241,9 +251,9 @@
             this.lblAd.AutoSize = true;
             this.lblAd.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAd.ForeColor = System.Drawing.Color.Teal;
-            this.lblAd.Location = new System.Drawing.Point(146, 151);
+            this.lblAd.Location = new System.Drawing.Point(167, 201);
             this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(50, 23);
+            this.lblAd.Size = new System.Drawing.Size(63, 29);
             this.lblAd.TabIndex = 15;
             this.lblAd.Text = "İsim:";
             // 
@@ -252,18 +262,18 @@
             this.lblKullaniciAdiKayit.AutoSize = true;
             this.lblKullaniciAdiKayit.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblKullaniciAdiKayit.ForeColor = System.Drawing.Color.Teal;
-            this.lblKullaniciAdiKayit.Location = new System.Drawing.Point(78, 118);
+            this.lblKullaniciAdiKayit.Location = new System.Drawing.Point(89, 157);
             this.lblKullaniciAdiKayit.Name = "lblKullaniciAdiKayit";
-            this.lblKullaniciAdiKayit.Size = new System.Drawing.Size(118, 23);
+            this.lblKullaniciAdiKayit.Size = new System.Drawing.Size(147, 29);
             this.lblKullaniciAdiKayit.TabIndex = 16;
             this.lblKullaniciAdiKayit.Text = "Kullanıcı Adı:";
             // 
             // frmKayitOl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(500, 400);
+            this.ClientSize = new System.Drawing.Size(571, 533);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pbKayitOlIcon);
             this.Controls.Add(this.btnGirisYap);
@@ -281,9 +291,11 @@
             this.Controls.Add(this.lblAd);
             this.Controls.Add(this.lblKullaniciAdiKayit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmKayitOl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmKayitOl";
+            this.Load += new System.EventHandler(this.frmKayitOl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKayitOlIcon)).EndInit();
             this.ResumeLayout(false);

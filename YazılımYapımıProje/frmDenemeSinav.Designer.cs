@@ -310,9 +310,9 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(1021, 60);
+            this.listView1.Location = new System.Drawing.Point(819, 69);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(196, 293);
+            this.listView1.Size = new System.Drawing.Size(421, 293);
             this.listView1.TabIndex = 62;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 

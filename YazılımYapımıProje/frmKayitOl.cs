@@ -48,5 +48,10 @@ namespace YazılımYapımıProje
         {
             Application.Exit();
         }
+
+        private void frmKayitOl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

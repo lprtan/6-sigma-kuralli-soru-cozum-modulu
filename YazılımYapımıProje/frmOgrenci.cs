@@ -104,5 +104,12 @@ namespace YazılımYapımıProje
             else
                 grpAyarlar.Visible = true;
         }
+
+        private void btnOgrenciRaporAl_Click(object sender, EventArgs e)
+        {
+            frmOgrenciRapor frmOgrenciRapor = new frmOgrenciRapor();
+            frmOgrenciRapor.Show();
+            this.Hide();
+        }
     }
 }
