@@ -393,6 +393,7 @@ namespace YazılımYapımıProje
             SiraylaGetir();
             lblSure.Text = "10";
             tmrKronometre.Start();
+            rtbSoru.ReadOnly = true;
         }
         private void btnSonraki_Click(object sender, EventArgs e)
         {
@@ -439,12 +440,19 @@ namespace YazılımYapımıProje
             lblSure.Text = zamansayac.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBasla_Click(object sender, EventArgs e)
         {
-            if (--btnClickSayac>0)
-            {
-                btnSonraki_Click(btnSonraki, new EventArgs());
-            }
+            txtA.Enabled = true;
+            txtB.Enabled = true;
+            txtC.Enabled = true;
+            txtD.Enabled = true;
+            rdbA.Enabled = true;
+            rdbB.Enabled = true;
+            rdbC.Enabled = true;
+            rdbD.Enabled = true;
+            rtbSoru.Visible = true;
+            pbResim.Visible = true;
+            btnSonraki.Enabled = true;
         }
     }
 }

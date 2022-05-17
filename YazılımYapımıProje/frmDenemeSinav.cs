@@ -243,6 +243,11 @@ namespace YazılımYapımıProje
             lsvRapor.Columns.Add("DogruCevap", 100, HorizontalAlignment.Center);
             lsvRapor.View = View.Details;
             lsvRapor.Visible = false;
+            rtbSoru.ReadOnly = true;
+            txtA.ReadOnly = true;
+            txtB.ReadOnly = true;
+            txtC.ReadOnly = true;
+            txtD.ReadOnly = true;
         }
 
         private void btnRapor_Click(object sender, EventArgs e)
@@ -275,6 +280,10 @@ namespace YazılımYapımıProje
             btnSinavBitir.Visible = true;
             btnSonraki.Enabled = true;
             btnSonraki.Visible = true;
+            txtA.Visible = true;
+            txtB.Visible = true;
+            txtC.Visible = true;
+            txtD.Visible = true;
             rdbA.Enabled = true;
             rdbB.Enabled = true;
             rdbC.Enabled = true;

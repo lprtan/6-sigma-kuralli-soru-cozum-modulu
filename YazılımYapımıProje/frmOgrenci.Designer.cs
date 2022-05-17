@@ -72,6 +72,13 @@
             this.imgListInterface.Images.SetKeyName(6, "share.png");
             this.imgListInterface.Images.SetKeyName(7, "process.png");
             this.imgListInterface.Images.SetKeyName(8, "web.png");
+            this.imgListInterface.Images.SetKeyName(9, "artificial-intelligence.png");
+            this.imgListInterface.Images.SetKeyName(10, "assessment.png");
+            this.imgListInterface.Images.SetKeyName(11, "book (1).png");
+            this.imgListInterface.Images.SetKeyName(12, "book.png");
+            this.imgListInterface.Images.SetKeyName(13, "brain.png");
+            this.imgListInterface.Images.SetKeyName(14, "learning.png");
+            this.imgListInterface.Images.SetKeyName(15, "smart-human.png");
             // 
             // panel1
             // 
@@ -142,7 +149,7 @@
             this.btnSigma6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSigma6.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSigma6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSigma6.ImageKey = "process.png";
+            this.btnSigma6.ImageKey = "learning.png";
             this.btnSigma6.ImageList = this.imgListInterface;
             this.btnSigma6.Location = new System.Drawing.Point(5, 170);
             this.btnSigma6.Name = "btnSigma6";
@@ -212,10 +219,10 @@
             this.btnAyarKaydet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAyarKaydet.ImageKey = "save.png";
             this.btnAyarKaydet.ImageList = this.imgListInterface;
-            this.btnAyarKaydet.Location = new System.Drawing.Point(39, 150);
+            this.btnAyarKaydet.Location = new System.Drawing.Point(39, 160);
             this.btnAyarKaydet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAyarKaydet.Name = "btnAyarKaydet";
-            this.btnAyarKaydet.Size = new System.Drawing.Size(189, 32);
+            this.btnAyarKaydet.Size = new System.Drawing.Size(189, 38);
             this.btnAyarKaydet.TabIndex = 17;
             this.btnAyarKaydet.Text = "       Ayarları Kaydet";
             this.btnAyarKaydet.UseVisualStyleBackColor = false;
