@@ -43,7 +43,7 @@ namespace YazılımYapımıProje
         private void btnYazdir_Click(object sender, EventArgs e)
         {
             iTextSharp.text.Document rapor = new iTextSharp.text.Document();
-            PdfWriter.GetInstance(rapor, new FileStream("C:\\Users\\Alptekin\\Desktop\\Sigma Sınav Raporu.pdf", FileMode.Create));
+            PdfWriter.GetInstance(rapor, new FileStream("C:\\Users\\furka\\OneDrive\\Masaüstü\\Sigma Sınav Raporu.pdf", FileMode.Create));
             rapor.AddAuthor("Alptekin Bağ");
             rapor.AddCreationDate();
             rapor.AddCreator("Sigma Sınav Program");
@@ -60,6 +60,25 @@ namespace YazılımYapımıProje
             }
             MessageBox.Show("Rapor Oluşturuldu");
             rapor.Close();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            frmGiris frm = new frmGiris();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmOgrenci frmOgrenci = new frmOgrenci();
+            frmOgrenci.Show();
+            this.Hide();
         }
     }
 }
