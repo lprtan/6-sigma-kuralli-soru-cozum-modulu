@@ -18,34 +18,36 @@ namespace YazılımYapımıProje
         {
             InitializeComponent();
         }
-        DataBase db = new DataBase();
+        DataBase db = new DataBase(); //DataBase sınıfından nesne oLuşturulur
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
             db.baglanti.Open();
             SqlCommand Soruekle = new SqlCommand("insert into Question " +
             "(QuestionText,SectionID,UnitID,RightAnswer,a,b,c,d,PicturePath) " +
-            "values (@c1,@c2,@c3,@c4,@c5,@c6,@c7,@c8,@c9)", db.baglanti);
+            "values (@c1,@c2,@c3,@c4,@c5,@c6,@c7,@c8,@c9)", db.baglanti); //Veritabanına sorunun verileri gönderilir
 
-            Soruekle.Parameters.AddWithValue("@c5", txtCevap1.Text);
-            Soruekle.Parameters.AddWithValue("@c6", txtCevap2.Text);
+            //şıkkın text verisi veritabanına gönderilir
+            Soruekle.Parameters.AddWithValue("@c5", txtCevap1.Text); 
+            Soruekle.Parameters.AddWithValue("@c6", txtCevap2.Text); 
             Soruekle.Parameters.AddWithValue("@c7", txtCevap3.Text);
             Soruekle.Parameters.AddWithValue("@c8", txtCevap4.Text);
+
             if (rdbA.Checked == true)
             {
-                Soruekle.Parameters.AddWithValue("@c4", rdbA.Text);
+                Soruekle.Parameters.AddWithValue("@c4", rdbA.Text); //A şıkkı doğru cevap ise veritabnına gönderilir
             }
             else if (rdbB.Checked == true)
             {
-                Soruekle.Parameters.AddWithValue("@c4", rdbB.Text);
+                Soruekle.Parameters.AddWithValue("@c4", rdbB.Text); //B şıkkı doğru cevap ise veritabnına gönderilir
             }
             else if (rdbC.Checked == true)
             {
-                Soruekle.Parameters.AddWithValue("@c4", rdbC.Text);
+                Soruekle.Parameters.AddWithValue("@c4", rdbC.Text); //C şıkkı doğru cevap ise veritabnına gönderilir
             }
             else if (rdbD.Checked == true)
             {
-                Soruekle.Parameters.AddWithValue("@c4", rdbD.Text);
+                Soruekle.Parameters.AddWithValue("@c4", rdbD.Text); //D şıkkı doğru cevap ise veritabnına gönderilir
             }
             else
             {
@@ -53,13 +55,13 @@ namespace YazılımYapımıProje
 
             }
 
-            Soruekle.Parameters.AddWithValue("@c1", txtSoru.Text);
-            Soruekle.Parameters.AddWithValue("@c2", (cmbbolum.SelectedIndex) + 1);
-            Soruekle.Parameters.AddWithValue("@c3", (cmbUnit.SelectedIndex) + 1);
+            Soruekle.Parameters.AddWithValue("@c1", txtSoru.Text); //Soru text veritabanına gönderilir
+            Soruekle.Parameters.AddWithValue("@c2", (cmbbolum.SelectedIndex) + 1); //Ders adı veritabanına gönderilir
+            Soruekle.Parameters.AddWithValue("@c3", (cmbUnit.SelectedIndex) + 1);  //Konu adı veritabanına gönderilir
 
-            if (pictureSoru.Image != null)
+            if (pictureSoru.Image != null) //Sorunun fotoğrafının olup olmadığını kontrol eder
             {
-                Soruekle.Parameters.AddWithValue("@c9", lblPath.Text);
+                Soruekle.Parameters.AddWithValue("@c9", lblPath.Text); //Sorunun resmi veritabanına gönderilir
 
             }
 
@@ -71,6 +73,7 @@ namespace YazılımYapımıProje
 
         private void btnResim_Click(object sender, EventArgs e)
         {
+            //Fotoğrafın dosya yolunu getirir
             openFileDialog1.ShowDialog(this);
             pictureSoru.ImageLocation = openFileDialog1.FileName;
             lblPath.Text = openFileDialog1.FileName;
@@ -78,14 +81,14 @@ namespace YazılımYapımıProje
 
         private void btnGirisSayfası_Click(object sender, EventArgs e)
         {
-            frmGiris giris = new frmGiris();
-            giris.Show();
+            frmGiris frmGiris = new frmGiris(); //Girş sayfasyına yönlendirilir
+            frmGiris.Show();
             this.Hide();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //Uygulamyı kapatır
         }
     }
 }

@@ -23,45 +23,45 @@ namespace YazılımYapımıProje
 
         private void frmGiris_Load(object sender, EventArgs e)
         {
-            txtGirisSifre.UseSystemPasswordChar = true;
+            txtGirisSifre.UseSystemPasswordChar = true; //Girelen şifreye karakter atayarak gizliliği sağlanır
         }
 
         private void btnKayıtOl_Click(object sender, EventArgs e)
         {
-            frmKayitOl KayitOl = new frmKayitOl();
+            frmKayitOl KayitOl = new frmKayitOl(); //Kayıt ol ekranına yönlendirir
             KayitOl.Show();
             this.Hide();
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            DataBase db = new DataBase();
+            DataBase db = new DataBase(); //DataBase sınıfndan nesne oluşturulur
 
-            SqlCommand giris = new SqlCommand("SELECT * FROM Users where UserName='" + txtGirisKullaniciAdi.Text + "' AND Password='" + txtGirisSifre.Text + "'");
+            SqlCommand giris = new SqlCommand("SELECT * FROM Users where UserName='" + txtGirisKullaniciAdi.Text + "' AND Password='" + txtGirisSifre.Text + "'"); // Girilen kullanıcı adı ve şifre bilgis veritbanından çekilir
             db.baglanti.Open();
             giris.Connection = db.baglanti;
             SqlDataReader kontrol = giris.ExecuteReader();
 
-            if (kontrol.Read())
+            if (kontrol.Read()) //Girilen Kullanıcı adı ve şifre bilgisinin olup olmadığını kontrol eder
             {
 
-                switch (kontrol["UserTypeID"])
+                switch (kontrol["UserTypeID"]) //Kullanıcın tipine göre sayfalara yönlendirilir
                 {
                     case 1:
-                        AlinanKullaniciAdi = txtGirisKullaniciAdi.Text;
-                        frmDenemeSinav sinavForm = new frmDenemeSinav();
+                        AlinanKullaniciAdi = txtGirisKullaniciAdi.Text; //Girilen kullanıcı adı bilgisini atar
+                        frmDenemeSinav sinavForm = new frmDenemeSinav(); //Atanan veri Deneme Sınavı ekranına yolanır
 
-                        frmOgrenci OgrenciEkran = new frmOgrenci();
+                        frmOgrenci OgrenciEkran = new frmOgrenci(); //Öğrenci ekranına yönlendirilir
                         OgrenciEkran.Show();
                         this.Hide();
                         break;
                     case 3:
-                        frmAdmin AdminEkran = new frmAdmin();
+                        frmAdmin AdminEkran = new frmAdmin(); //Admin ekranına yönlendirilir
                         AdminEkran.Show();
                         this.Hide();
                         break;
                     case 2:
-                        frmSoruEkle OgretmenEkran = new frmSoruEkle();
+                        frmSoruEkle OgretmenEkran = new frmSoruEkle();  ////Öğretmen ekranına yönlendirilir
                         OgretmenEkran.Show();
                         this.Hide();
                         break;
@@ -80,7 +80,7 @@ namespace YazılımYapımıProje
 
         private void lkbSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmSifremiUnuttum SifremiUnuttum = new frmSifremiUnuttum();
+            frmSifremiUnuttum SifremiUnuttum = new frmSifremiUnuttum(); ////Şifremi unuttum  ekranına yönlendirilir
             SifremiUnuttum.Show();
             this.Hide();
         }
@@ -90,13 +90,13 @@ namespace YazılımYapımıProje
 
             {
                 {
-                    if (ckbSifreyiGoster.Checked)
+                    if (ckbSifreyiGoster.Checked) //ChekBox işaretlenip işaretlenmediği kontol edilir
                     {
-                        txtGirisSifre.UseSystemPasswordChar = false;
+                        txtGirisSifre.UseSystemPasswordChar = false; //Girelen şifreye karakter atayarak gizliliği sağlanır
                     }
                     else
                     {
-                        txtGirisSifre.UseSystemPasswordChar = true;
+                        txtGirisSifre.UseSystemPasswordChar = true;  //Girilen şifrenin gizliliği kaldırılır
                     }
                 }
             }
@@ -104,7 +104,7 @@ namespace YazılımYapımıProje
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //Uygulamadan Çıkış Yapar
         }
     }
 }

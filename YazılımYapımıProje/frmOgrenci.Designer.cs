@@ -219,7 +219,7 @@
             this.btnAyarKaydet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAyarKaydet.ImageKey = "save.png";
             this.btnAyarKaydet.ImageList = this.imgListInterface;
-            this.btnAyarKaydet.Location = new System.Drawing.Point(39, 160);
+            this.btnAyarKaydet.Location = new System.Drawing.Point(37, 160);
             this.btnAyarKaydet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAyarKaydet.Name = "btnAyarKaydet";
             this.btnAyarKaydet.Size = new System.Drawing.Size(189, 38);

@@ -285,7 +285,6 @@
             this.Name = "frmKayitOl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmKayitOl";
-            this.Load += new System.EventHandler(this.frmKayitOl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKayitOlIcon)).EndInit();
             this.ResumeLayout(false);

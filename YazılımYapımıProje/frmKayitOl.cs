@@ -17,19 +17,19 @@ namespace YazılımYapımıProje
         {
             InitializeComponent();
         }
-        DataBase db = new DataBase();
+        DataBase db = new DataBase(); //DateBase sınıfdan nesne oluşturur
 
         private void btnKullaniciKayit_Click(object sender, EventArgs e)
         {
             db.baglanti.Open();
-            SqlCommand kayitekle = new SqlCommand("insert into Users (UserName,Name,Surname,Mail,Password,UserTypeID) values (@p1,@p2,@p3,@p4,@p5,@p6)", db.baglanti);
+            SqlCommand kayitekle = new SqlCommand("insert into Users (UserName,Name,Surname,Mail,Password,UserTypeID) values (@p1,@p2,@p3,@p4,@p5,@p6)", db.baglanti); //Kullanıcıdan aldığı verileri veritabanına gönderir
 
-            kayitekle.Parameters.AddWithValue("@p1", txtKullaniciAdiKayit.Text);
-            kayitekle.Parameters.AddWithValue("@p2", txtAd.Text);
-            kayitekle.Parameters.AddWithValue("@p3", txtSoyad.Text);
-            kayitekle.Parameters.AddWithValue("@p4", txtMail.Text);
-            kayitekle.Parameters.AddWithValue("@p5", txtSifre.Text);
-            kayitekle.Parameters.AddWithValue("@p6", (cbxKullaniciType.SelectedIndex) + 1);
+            kayitekle.Parameters.AddWithValue("@p1", txtKullaniciAdiKayit.Text);  //Kullanıcı adını veritabanına ekler
+            kayitekle.Parameters.AddWithValue("@p2", txtAd.Text); //Adı veritabanına ekler
+            kayitekle.Parameters.AddWithValue("@p3", txtSoyad.Text);  //Soyadı veritabanına ekler
+            kayitekle.Parameters.AddWithValue("@p4", txtMail.Text);  //E Mail adrfesini veritabanına ekler
+            kayitekle.Parameters.AddWithValue("@p5", txtSifre.Text);  //Şifreyi veritabanına ekler
+            kayitekle.Parameters.AddWithValue("@p6", (cbxKullaniciType.SelectedIndex) + 1); //Kullanıcı tipi veritabanınına ekler 
 
             kayitekle.ExecuteNonQuery();
             db.baglanti.Close();
@@ -39,19 +39,14 @@ namespace YazılımYapımıProje
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            frmGiris GirisEkran = new frmGiris();
+            frmGiris GirisEkran = new frmGiris(); //Giriş ekranına yönlendirir
             GirisEkran.Show();
             this.Hide();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void frmKayitOl_Load(object sender, EventArgs e)
-        {
-
+            Application.Exit(); //Uygulamayı kapatır
         }
     }
 }

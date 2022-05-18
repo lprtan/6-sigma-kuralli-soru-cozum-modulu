@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOgrenciRapor));
             this.dvgOgrenciRapor = new System.Windows.Forms.DataGridView();
             this.btnYazdir = new System.Windows.Forms.Button();
+            this.imgListInterface = new System.Windows.Forms.ImageList(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.btnGiris = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
-            this.imgListInterface = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dvgOgrenciRapor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGiris)).BeginInit();
@@ -71,6 +71,13 @@
             this.btnYazdir.Text = "    Yazdır";
             this.btnYazdir.UseVisualStyleBackColor = false;
             this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
+            // 
+            // imgListInterface
+            // 
+            this.imgListInterface.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imgListInterface.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListInterface.ImageStream")));
+            this.imgListInterface.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgListInterface.Images.SetKeyName(0, "printer.png");
             // 
             // bunifuElipse1
             // 
@@ -112,13 +119,6 @@
             this.btnBack.TabIndex = 4;
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // imgListInterface
-            // 
-            this.imgListInterface.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imgListInterface.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListInterface.ImageStream")));
-            this.imgListInterface.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgListInterface.Images.SetKeyName(0, "printer.png");
             // 
             // frmOgrenciRapor
             // 
