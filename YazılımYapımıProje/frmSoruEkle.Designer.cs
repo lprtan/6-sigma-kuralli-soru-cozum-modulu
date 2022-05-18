@@ -95,7 +95,7 @@
             // pbSoruEkleIcon
             // 
             this.pbSoruEkleIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbSoruEkleIcon.Image")));
-            this.pbSoruEkleIcon.Location = new System.Drawing.Point(756, 268);
+            this.pbSoruEkleIcon.Location = new System.Drawing.Point(750, 284);
             this.pbSoruEkleIcon.Name = "pbSoruEkleIcon";
             this.pbSoruEkleIcon.Size = new System.Drawing.Size(100, 100);
             this.pbSoruEkleIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +115,7 @@
             // 
             this.btnResim.BackColor = System.Drawing.Color.Orange;
             this.btnResim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnResim.Location = new System.Drawing.Point(631, 16);
+            this.btnResim.Location = new System.Drawing.Point(606, 18);
             this.btnResim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnResim.Name = "btnResim";
             this.btnResim.Size = new System.Drawing.Size(31, 22);
@@ -151,8 +151,10 @@
             "Sürdürülebilir Kalkınma",
             "Elektrik Yükleri ve Elektriklenme",
             "Elektrik Yüklü Cisimler",
-            "Elektrik Enerjisinin Dönüşümü"});
-            this.cmbUnit.Location = new System.Drawing.Point(741, 189);
+            "Elektrik Enerjisinin Dönüşümü",
+            "Üçgenler",
+            "Atatürk\'ün hayatı"});
+            this.cmbUnit.Location = new System.Drawing.Point(728, 189);
             this.cmbUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUnit.Name = "cmbUnit";
             this.cmbUnit.Size = new System.Drawing.Size(158, 23);
@@ -170,8 +172,10 @@
             "MADDE VE ENDUSTRI",
             "BASİT MAKİNELER",
             "ENERJİ DÖNÜŞÜMLERİ VE ÇEVRE BİLİMİ",
-            "ELEKTRİK YÜKLERİ VE ELEKTRİK ENERJİSİ"});
-            this.cmbbolum.Location = new System.Drawing.Point(741, 162);
+            "ELEKTRİK YÜKLERİ VE ELEKTRİK ENERJİSİ",
+            "GEOMETRİ",
+            "TARİH"});
+            this.cmbbolum.Location = new System.Drawing.Point(728, 162);
             this.cmbbolum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbbolum.Name = "cmbbolum";
             this.cmbbolum.Size = new System.Drawing.Size(158, 23);
@@ -183,7 +187,7 @@
             this.label2.BackColor = System.Drawing.Color.LemonChiffon;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Orange;
-            this.label2.Location = new System.Drawing.Point(684, 188);
+            this.label2.Location = new System.Drawing.Point(671, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 50;
@@ -195,7 +199,7 @@
             this.label1.BackColor = System.Drawing.Color.LemonChiffon;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(677, 164);
+            this.label1.Location = new System.Drawing.Point(664, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 49;
@@ -208,7 +212,8 @@
             this.txtSoru.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoru.Multiline = true;
             this.txtSoru.Name = "txtSoru";
-            this.txtSoru.Size = new System.Drawing.Size(659, 87);
+            this.txtSoru.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSoru.Size = new System.Drawing.Size(634, 87);
             this.txtSoru.TabIndex = 1;
             this.txtSoru.Text = "Soru :";
             // 
@@ -217,10 +222,10 @@
             this.btnEkle.BackColor = System.Drawing.Color.Orange;
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEkle.Location = new System.Drawing.Point(741, 216);
+            this.btnEkle.Location = new System.Drawing.Point(728, 216);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(133, 28);
+            this.btnEkle.Size = new System.Drawing.Size(158, 28);
             this.btnEkle.TabIndex = 13;
             this.btnEkle.Text = "Soru Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
@@ -231,7 +236,7 @@
             this.rdbD.AutoSize = true;
             this.rdbD.BackColor = System.Drawing.Color.LemonChiffon;
             this.rdbD.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbD.Location = new System.Drawing.Point(702, 136);
+            this.rdbD.Location = new System.Drawing.Point(689, 136);
             this.rdbD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbD.Name = "rdbD";
             this.rdbD.Size = new System.Drawing.Size(34, 19);
@@ -245,7 +250,7 @@
             this.rdbC.AutoSize = true;
             this.rdbC.BackColor = System.Drawing.Color.LemonChiffon;
             this.rdbC.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbC.Location = new System.Drawing.Point(702, 109);
+            this.rdbC.Location = new System.Drawing.Point(689, 109);
             this.rdbC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbC.Name = "rdbC";
             this.rdbC.Size = new System.Drawing.Size(33, 19);
@@ -259,7 +264,7 @@
             this.rdbB.AutoSize = true;
             this.rdbB.BackColor = System.Drawing.Color.LemonChiffon;
             this.rdbB.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbB.Location = new System.Drawing.Point(702, 82);
+            this.rdbB.Location = new System.Drawing.Point(689, 82);
             this.rdbB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbB.Name = "rdbB";
             this.rdbB.Size = new System.Drawing.Size(33, 19);
@@ -273,7 +278,7 @@
             this.rdbA.AutoSize = true;
             this.rdbA.BackColor = System.Drawing.Color.LemonChiffon;
             this.rdbA.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbA.Location = new System.Drawing.Point(702, 56);
+            this.rdbA.Location = new System.Drawing.Point(689, 56);
             this.rdbA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbA.Name = "rdbA";
             this.rdbA.Size = new System.Drawing.Size(34, 19);
@@ -286,40 +291,40 @@
             // 
             this.txtCevap4.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtCevap4.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCevap4.Location = new System.Drawing.Point(741, 135);
+            this.txtCevap4.Location = new System.Drawing.Point(728, 135);
             this.txtCevap4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCevap4.Name = "txtCevap4";
-            this.txtCevap4.Size = new System.Drawing.Size(133, 23);
+            this.txtCevap4.Size = new System.Drawing.Size(158, 23);
             this.txtCevap4.TabIndex = 5;
             // 
             // txtCevap3
             // 
             this.txtCevap3.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtCevap3.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCevap3.Location = new System.Drawing.Point(741, 108);
+            this.txtCevap3.Location = new System.Drawing.Point(728, 108);
             this.txtCevap3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCevap3.Name = "txtCevap3";
-            this.txtCevap3.Size = new System.Drawing.Size(133, 23);
+            this.txtCevap3.Size = new System.Drawing.Size(158, 23);
             this.txtCevap3.TabIndex = 4;
             // 
             // txtCevap2
             // 
             this.txtCevap2.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtCevap2.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCevap2.Location = new System.Drawing.Point(741, 81);
+            this.txtCevap2.Location = new System.Drawing.Point(728, 81);
             this.txtCevap2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCevap2.Name = "txtCevap2";
-            this.txtCevap2.Size = new System.Drawing.Size(133, 23);
+            this.txtCevap2.Size = new System.Drawing.Size(158, 23);
             this.txtCevap2.TabIndex = 3;
             // 
             // txtCevap1
             // 
             this.txtCevap1.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtCevap1.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCevap1.Location = new System.Drawing.Point(741, 54);
+            this.txtCevap1.Location = new System.Drawing.Point(728, 54);
             this.txtCevap1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCevap1.Name = "txtCevap1";
-            this.txtCevap1.Size = new System.Drawing.Size(133, 23);
+            this.txtCevap1.Size = new System.Drawing.Size(158, 23);
             this.txtCevap1.TabIndex = 2;
             // 
             // pictureSoru
@@ -327,7 +332,7 @@
             this.pictureSoru.Location = new System.Drawing.Point(12, 11);
             this.pictureSoru.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureSoru.Name = "pictureSoru";
-            this.pictureSoru.Size = new System.Drawing.Size(659, 294);
+            this.pictureSoru.Size = new System.Drawing.Size(634, 294);
             this.pictureSoru.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureSoru.TabIndex = 38;
             this.pictureSoru.TabStop = false;

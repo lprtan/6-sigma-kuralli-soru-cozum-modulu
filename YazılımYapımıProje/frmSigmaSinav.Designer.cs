@@ -174,6 +174,7 @@
             this.txtD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtD.Multiline = true;
             this.txtD.Name = "txtD";
+            this.txtD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtD.Size = new System.Drawing.Size(164, 41);
             this.txtD.TabIndex = 81;
             this.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -187,6 +188,7 @@
             this.txtC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtC.Multiline = true;
             this.txtC.Name = "txtC";
+            this.txtC.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtC.Size = new System.Drawing.Size(164, 41);
             this.txtC.TabIndex = 80;
             this.txtC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -200,6 +202,7 @@
             this.txtB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtB.Multiline = true;
             this.txtB.Name = "txtB";
+            this.txtB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtB.Size = new System.Drawing.Size(164, 41);
             this.txtB.TabIndex = 79;
             this.txtB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -213,6 +216,7 @@
             this.txtA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtA.Multiline = true;
             this.txtA.Name = "txtA";
+            this.txtA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtA.Size = new System.Drawing.Size(164, 41);
             this.txtA.TabIndex = 78;
             this.txtA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -291,6 +295,7 @@
             this.pbResim.Location = new System.Drawing.Point(12, 45);
             this.pbResim.Name = "pbResim";
             this.pbResim.Size = new System.Drawing.Size(320, 220);
+            this.pbResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbResim.TabIndex = 72;
             this.pbResim.TabStop = false;
             this.pbResim.Visible = false;
