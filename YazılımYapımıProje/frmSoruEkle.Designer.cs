@@ -130,13 +130,32 @@
             this.cmbUnit.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cmbUnit.FormattingEnabled = true;
             this.cmbUnit.Items.AddRange(new object[] {
-            "Ünite1",
-            "Ünite2",
-            "Ünite3"});
+            "Mevsimlerin Olusumu",
+            "İklim ve Hava Hareketleri",
+            "Dna ve Genetik Kod",
+            "Kalıtım",
+            "Mutasyon ve Modifikasyon",
+            "Adaptasyon ",
+            "Biyoteknoloji",
+            "Basinc",
+            "Periyodik Sistem",
+            "Fiziksel ve Kimyasal Değişimler",
+            "Kimyasal Tepkimeler",
+            "Asitler ve Bazlar",
+            "Maddenin Isı ile Etkileşimi",
+            "Türkiye’de Kimya Endüstrisi",
+            "Basit Makineler",
+            "Besin Zinciri ve Enerji Akışı",
+            "Enerji Dönüşümleri",
+            "Madde Döngüleri ve Çevre Sorunları",
+            "Sürdürülebilir Kalkınma",
+            "Elektrik Yükleri ve Elektriklenme",
+            "Elektrik Yüklü Cisimler",
+            "Elektrik Enerjisinin Dönüşümü"});
             this.cmbUnit.Location = new System.Drawing.Point(741, 189);
             this.cmbUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUnit.Name = "cmbUnit";
-            this.cmbUnit.Size = new System.Drawing.Size(133, 23);
+            this.cmbUnit.Size = new System.Drawing.Size(158, 23);
             this.cmbUnit.TabIndex = 7;
             // 
             // cmbbolum
@@ -145,13 +164,17 @@
             this.cmbbolum.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cmbbolum.FormattingEnabled = true;
             this.cmbbolum.Items.AddRange(new object[] {
-            "Bölüm1",
-            "Bölüm2",
-            "Bölüm3"});
+            "MEVSİMLER VE İKLİM",
+            "DNA VE GENETİK KOD",
+            "BASINC",
+            "MADDE VE ENDUSTRI",
+            "BASİT MAKİNELER",
+            "ENERJİ DÖNÜŞÜMLERİ VE ÇEVRE BİLİMİ",
+            "ELEKTRİK YÜKLERİ VE ELEKTRİK ENERJİSİ"});
             this.cmbbolum.Location = new System.Drawing.Point(741, 162);
             this.cmbbolum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbbolum.Name = "cmbbolum";
-            this.cmbbolum.Size = new System.Drawing.Size(133, 23);
+            this.cmbbolum.Size = new System.Drawing.Size(158, 23);
             this.cmbbolum.TabIndex = 6;
             // 
             // label2

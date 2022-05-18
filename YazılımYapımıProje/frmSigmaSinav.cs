@@ -98,15 +98,15 @@ namespace YazılımYapımıProje
 
             TimeSpan GunSayisi = BugununTarihi - SorununCozulduguTarih; // İki tarihi arasında gün farkı alınır
 
-            if (Math.Abs(GunSayisi.Days) >= nGun && Math.Abs(GunSayisi.Days) < 7) //gün sayısınına göre kontrol eder
+            if (Math.Abs(GunSayisi.Days) >= nGun && Math.Abs(GunSayisi.Days) < nHafta) //gün sayısınına göre kontrol eder
             {
                 DogruSayisi = 1; //Dogru sayısınına atama yapılır 
                 Tarihkontrol.Close();
                 SoruYazdir(); //Doğru sayısına göre soru yazdırır
                 tmrKronometre.Interval = timeInterval + 6000; // Bir sorunun süresi tutulur
-                zamansayac += 1;
+                zamansayac += 1; 
             }
-            else if (Math.Abs(GunSayisi.Days) >= nHafta && Math.Abs(GunSayisi.Days) < 30) //gün sayısınına göre kontrol eder
+            else if (Math.Abs(GunSayisi.Days) >= nHafta && Math.Abs(GunSayisi.Days) < nAy) //gün sayısınına göre kontrol eder
             {
                 DogruSayisi = 2; //Dogru sayısınına atama yapılır 
                 Tarihkontrol.Close();

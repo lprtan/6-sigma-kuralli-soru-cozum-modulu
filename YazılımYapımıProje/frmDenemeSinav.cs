@@ -16,7 +16,8 @@ namespace YazılımYapımıProje
 {
     public partial class frmDenemeSinav : Form
     {
-        DataBase db = new DataBase();  //DataBase sınıfından nesne oluşturur
+        DataBase db = new DataBase(); //DataBase sınıfından nesne oluşturur
+        frmOgrenci frmOgrenci = new frmOgrenci(); //Öğrenci form sayfasından nesne oluşturur
         public int UserID { get; set; }  //Users Tablosunda UserID bilgisi 
       //  public int QuestionID { get; set; } // Question tablosunda QuestionID bigisi
         public int CAC { get; set; }  //Sinav tablosunda CorrectAnswerCount bilgisini 
@@ -135,10 +136,9 @@ namespace YazılımYapımıProje
                 //row sayısı birden büyük olduğunda rowu buttonindex e eşit olan soruidsini sorunoya eşitle
                 else if (dataGridView1.RowCount > 0)
                 {
-
-                    SoruNo = dataGridView1.Rows[buttonIndex].Cells["QuestionID"].Value.ToString();  
-                    SoruCek();  //SoruCek fonksiyonunu çağırır
-                    return;
+                    MessageBox.Show("Sigma Sınavı Çözmeden Deneme Sınavı Olamazsınız!!!");
+                    frmOgrenci.Show();
+                    this.Close();
                 }
             }
         }
@@ -235,7 +235,7 @@ namespace YazılımYapımıProje
             UserIDCek(); //UserIDCek fonksiyonu çağrılır
 
             db.baglanti.Open();
-            string veriler = "SELECT Question.QuestionID From Question INNER JOIN Sections ON Question.SectionID = Sections.SectionID INNER JOIN Sinav ON  Question.QuestionID = Sinav.QuestionID where Sinav.UserID = '" + UserID + "' and Sinav.CorrectAnswerCount < 4"; //Soru doğru sayısı 4'ten küçük olan soruların Kullanıcı bilgisine veritabanından çeker
+            string veriler = "SELECT TOP(20) Question.QuestionID From Question INNER JOIN Sections ON Question.SectionID = Sections.SectionID INNER JOIN Sinav ON  Question.QuestionID = Sinav.QuestionID where Sinav.UserID = '" + UserID + "' and Sinav.CorrectAnswerCount < 4 ORDER BY NEWID()"; //Soru doğru sayısı 4'ten küçük olan soruların Kullanıcı bilgisine veritabanından çeker
             SqlCommand komut = new SqlCommand(veriler, db.baglanti);
             komut.ExecuteNonQuery();
             db.baglanti.Close();
