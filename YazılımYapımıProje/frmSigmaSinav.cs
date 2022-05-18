@@ -212,8 +212,8 @@ namespace YazılımYapımıProje
         public void SoruKontrol()
         {
             SqlCommand sinavekle = new SqlCommand("insert into Sinav " +
-        "(QuestionID,UserID,CorrectAnswer,CozumTarihi) " +
-        "values (@c1,@c2,@c3,@c4)", db.baglanti); //Sinav tablosuna çözülen soruların verileri gönderilir
+        "(QuestionID,UserID,CorrectAnswer,CozumTarihi,CorrectAnswerCount) " +
+        "values (@c1,@c2,@c3,@c4,@c5)", db.baglanti); //Sinav tablosuna çözülen soruların verileri gönderilir
 
             sinavekle.Parameters.AddWithValue("@c1", QuestionID); //QuestionID verisi veritabnına eklenir
             sinavekle.Parameters.AddWithValue("@c2", UserID); //UserID verisi veritabnına eklenir
@@ -224,11 +224,14 @@ namespace YazılımYapımıProje
                 if (rdbA.Text == lblDogruCevap.Text) //Şıkkın doğru olup olmadığını kontrol eder
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 1); //Çözülen soru doğru ise Sorunun cevabını true yapar
+                    sinavekle.Parameters.AddWithValue("@c5",CAC+1);
                     sinavekle.ExecuteNonQuery();
                 }
                 else
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 0); //Çözülen soru yanlış ise Sorunun cevabını false yapar
+                    sinavekle.Parameters.AddWithValue("@c5", 0);
+
                     sinavekle.ExecuteNonQuery();
                 }
             }
@@ -237,11 +240,15 @@ namespace YazılımYapımıProje
                 if (rdbB.Text == lblDogruCevap.Text) //Şıkkın doğru olup olmadığını kontrol eder
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 1); //Çözülen soru doğru ise Sorunun cevabını true yapar
+                    sinavekle.Parameters.AddWithValue("@c5", CAC + 1);
+
                     sinavekle.ExecuteNonQuery();
                 }
                 else
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 0); //Çözülen soru yanlış ise Sorunun cevabını false yapar
+                    sinavekle.Parameters.AddWithValue("@c5", 0);
+
                     sinavekle.ExecuteNonQuery();
                 }
             }
@@ -250,11 +257,14 @@ namespace YazılımYapımıProje
                 if (rdbC.Text == lblDogruCevap.Text) //Şıkkın doğru olup olmadığını kontrol eder
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 1); //Çözülen soru doğru ise Sorunun cevabını true yapar
+                    sinavekle.Parameters.AddWithValue("@c5", CAC + 1);
+
                     sinavekle.ExecuteNonQuery();
                 }
                 else
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 0); //Çözülen soru yanlış ise Sorunun cevabını false yapar
+                    sinavekle.Parameters.AddWithValue("@c5", 0);
                     sinavekle.ExecuteNonQuery();
                 }
             }
@@ -263,17 +273,23 @@ namespace YazılımYapımıProje
                 if (rdbD.Text == lblDogruCevap.Text) //Şıkkın doğru olup olmadığını kontrol eder
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 1); //Çözülen soru doğru ise Sorunun cevabını true yapar
+                    sinavekle.Parameters.AddWithValue("@c5", CAC + 1);
+
                     sinavekle.ExecuteNonQuery();
                 }
                 else
                 {
                     sinavekle.Parameters.AddWithValue("@c3", 0); //Çözülen soru yanlış ise Sorunun cevabını false yapar
+                    sinavekle.Parameters.AddWithValue("@c5", 0);
+
                     sinavekle.ExecuteNonQuery();
                 }
             }
             else
             {
-                sinavekle.Parameters.AddWithValue("@c3", 0); //Çözülen soru yanlış ise Sorunun cevabını false yapar
+                sinavekle.Parameters.AddWithValue("@c3", 0); //Çözülen soru boş ise Sorunun cevabını false yapar
+                sinavekle.Parameters.AddWithValue("@c5", 0);
+
                 sinavekle.ExecuteNonQuery();
             }
         }
