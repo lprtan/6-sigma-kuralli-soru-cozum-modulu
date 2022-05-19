@@ -33,7 +33,10 @@ namespace YazılımYapımıProje
         private string x = null!;
         int buttonIndex = 0;
         int sayac = 1;
+        int zamansayac = 10;
         int DogruSayisi;
+        int timeInterval = 60000;
+        int btnClickSayac = 10;
 
         public void Ayarlar()
         {
@@ -72,8 +75,10 @@ namespace YazılımYapımıProje
             }
             else
             {
-                btnSonraki.Enabled = true;
-                MessageBox.Show("Sınav bitti ");
+                MessageBox.Show("Sınav bitmiştir \n Öğrenci sayfasına yönlendiriliyorsunuz....");
+                frmOgrenci frmOgrenci = new frmOgrenci();
+                frmOgrenci.Show();
+                this.Close();
             }
             db.baglanti.Close();
         }
@@ -98,36 +103,48 @@ namespace YazılımYapımıProje
                 DogruSayisi = 1;
                 Tarihkontrol.Close();
                 SoruYazdir();
+                tmrKronometre.Interval = timeInterval + 6000;
+                zamansayac += 1;
             }
             else if (Math.Abs(GunSayisi.Days) >= nHafta && Math.Abs(GunSayisi.Days) < 30)
             {
                 DogruSayisi = 2;
                 Tarihkontrol.Close();
                 SoruYazdir();
+                tmrKronometre.Interval = timeInterval + 6000;
+                zamansayac += 1;
             }
             else if (Math.Abs(GunSayisi.Days) >= nAy && Math.Abs(GunSayisi.Days) < 90)
             {
                 DogruSayisi = 3;
                 Tarihkontrol.Close();
                 SoruYazdir();
+                tmrKronometre.Interval = timeInterval + 6000;
+                zamansayac += 1;
             }
             else if (Math.Abs(GunSayisi.Days) >= 90 && Math.Abs(GunSayisi.Days) < 180)
             {
                 DogruSayisi = 4;
                 Tarihkontrol.Close();
                 SoruYazdir();
+                tmrKronometre.Interval = timeInterval + 6000;
+                zamansayac += 1;
             }
             else if (Math.Abs(GunSayisi.Days) >= 180 && Math.Abs(GunSayisi.Days) < 365)
             {
                 DogruSayisi = 5;
                 Tarihkontrol.Close();
                 SoruYazdir();
+                tmrKronometre.Interval = timeInterval + 6000;
+                zamansayac += 1;
             }
             else if (Math.Abs(GunSayisi.Days) >= 365)
             {
                 DogruSayisi = 6;
                 Tarihkontrol.Close();
                 SoruYazdir();
+                tmrKronometre.Interval = timeInterval + 6000;
+                zamansayac += 1;
             }
             else
             {
@@ -364,7 +381,6 @@ namespace YazılımYapımıProje
             dz.Fill(ds);
             dgvList.DataSource = ds.Tables[0];
         }
-
         private void frmSigmaSınav_Load(object sender, EventArgs e)
         {
             UserIDCek();
@@ -375,12 +391,18 @@ namespace YazılımYapımıProje
             db.baglanti.Close();
             verileriGoster(veriler);
             SiraylaGetir();
+            lblSure.Text = "10";
+            tmrKronometre.Start();
         }
-
         private void btnSonraki_Click(object sender, EventArgs e)
         {
+            btnClickSayac--;
             CorrectAnswerCount();
             SiraylaGetir();
+            if (zamansayac==0)
+            {
+                MessageBox.Show("Süreniz Bitmiştir");
+            }
             sayac++;
             if (dgvList.Rows.Count == sayac)
             {
@@ -395,24 +417,34 @@ namespace YazılımYapımıProje
             rdbC.Checked = false;
             rdbD.Checked = false;
         }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             frmOgrenci frmOgrenci = new frmOgrenci();
             frmOgrenci.Show();
             this.Hide();
         }
-
         private void btnHomePage_Click(object sender, EventArgs e)
         {
             frmGiris ogrnci = new frmGiris();
             ogrnci.Show();
             this.Hide();
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void tmrKronometre_Tick(object sender, EventArgs e)
+        {
+            zamansayac--;
+            lblSure.Text = zamansayac.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (--btnClickSayac>0)
+            {
+                btnSonraki_Click(btnSonraki, new EventArgs());
+            }
         }
     }
 }

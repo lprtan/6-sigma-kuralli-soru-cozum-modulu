@@ -109,7 +109,10 @@ namespace YazılımYapımıProje
             }
             else
             {
-                MessageBox.Show("Sınav bitti");
+                MessageBox.Show("Sınav bitmiştir \n Öğrenci sayfasına yönlendiriliyorsunuz....");
+                frmOgrenci frmOgrenci = new frmOgrenci();
+                frmOgrenci.Show();
+                this.Close();
             }
             db.baglanti.Close();
         }
@@ -195,7 +198,7 @@ namespace YazılımYapımıProje
 
         private void tmrKronometre_Tick(object sender, EventArgs e)
         {
-            zamansayac++;
+            zamansayac--;
             lblSure.Text = zamansayac.ToString();
         }
 
@@ -234,7 +237,7 @@ namespace YazılımYapımıProje
             verileriGoster(veriler);
             SiraylaGetir();
             lblSure.Text = "0";
-            tmrKronometre.Interval = 6000;
+            tmrKronometre.Interval = 60000;
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
             progressBar1.Step = 1;
