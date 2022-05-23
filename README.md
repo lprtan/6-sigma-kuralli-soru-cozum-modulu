@@ -10,29 +10,37 @@
 - [x] Admin Page Furkan-Alptekin
 - [x] Sigma Quiz Page Alperen-Furkan-Alptekin
 - [x] General Quiz Page Alptekin 
-- [x] Setting Page \Alperen 
+- [x] Setting Page Alperen 
 - [x] All Design Furkan
 
 ### LOGIN PAGE
-![Login Page](https://picsum.photos/id/654/500/500)
+![Login Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/kullanicigiris.png)
+
+### FORGOT PASS PAGE
+![FORGOT PASS Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/sifremiunuttum.png)
+
+### SIGN IN PAGE
+![SIGN IN Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/kaydol.png)
 
 ### STUDENT PAGE
-![Student Page](https://picsum.photos/id/239/500/500)
+![Student Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/ogrenci.png)
+
+### RAPOR PAGE
+![Rapor Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/ogrencirapor.png)
 
 ### TEACHER PAGE
-![TEACHER Page](https://picsum.photos/id/237/500/500)
+![TEACHER Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/soruekle.png)
 
 ### ADMIN PAGE
-![Admin Page](https://picsum.photos/id/237/500/500)
+![Admin Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/soruonayla_admin.png)
 
 ### SİGMA QUIZ PAGE
-![Sigma quiz Page](https://picsum.photos/id/237/500/500)
+![Sigma quiz Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/sigmasinav.png)
 
-### GENERAL PAGE
-![General Page](https://picsum.photos/id/237/500/500)
-
+### SİGMA QUIZ TEST PAGE
+![Sigma quiz test Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/denemesinav.png)
 ### SETTING PAGE
-![Settings Page](https://picsum.photos/id/23/500/500)
+![Settings Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/ayarlar.png)
 
 Yararlanılan Kaynak: [Microsoft Page](https://docs.microsoft.com/tr-tr/dotnet/api/?view=aspnetcore-6.0).
 
