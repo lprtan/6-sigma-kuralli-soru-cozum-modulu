@@ -25,11 +25,11 @@
 ### STUDENT PAGE
 ![Student Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/ogrenci.png)
 
-### RAPOR PAGE
-![Rapor Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/ogrencirapor.png)
+### REPORT PAGE
+![Report Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/ogrencirapor.png)
 
 ### TEACHER PAGE
-![TEACHER Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/soruekle.png)
+![Teacher Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/soruekle.png)
 
 ### ADMIN PAGE
 ![Admin Page](https://github.com/lprtan/YazilimYapimiProje/blob/master/Images/soruonayla_admin.png)
